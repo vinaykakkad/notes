@@ -2,7 +2,7 @@
 id: SBDE29Uv1A941yOcaAtGZ
 title: Lec 3
 desc: ''
-updated: 1642922902812
+updated: 1643000616284
 created: 1642922795725
 ---
 ## Overfitting and generalisation
@@ -35,7 +35,7 @@ data, but which is too complex - <code style="background-color: #43b02a40; paddi
 
 - ![Graphs](/assets/images/2022-01-17-12-11-11.png)
 - [ ] [code](https://github.com/probml/pyprobml/blob/master/scripts/linreg_poly_vs_degree.py)
-- from the fourth graph, we can see that as *degree of freedom*, the error on training set decreases
+- from the fourth graph, we can see that as *degree of freedom* increases, the error on training set decreases
   - but the error on testing set follows a *U-shaped curve*
   - **Thus we should choose the data that minimizes the loss on test set**
 - <blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">In practice we divide the data into 3 parts<ul><li>validation data - for model selection</li><li>training data - for model training</li><li>testing data- for estimating the performance</li></ul> </blockquote>

@@ -2,7 +2,7 @@
 id: BmxWSEoOhHxbfsbIbBBSN
 title: Lec 2
 desc: ''
-updated: 1642922750442
+updated: 1643001168394
 created: 1642921088327
 ---
 ## Capturing Uncertainity
@@ -84,4 +84,4 @@ created: 1642921088327
 - ![](/assets/images/2022-01-23-12-47-00.png)
 - ![](/assets/images/2022-01-23-12-55-41.png)
   - [ ] [code](https://github.com/probml/pyprobml/blob/master/scripts/linreg_2d_surface_demo.py)
-> It is important that the prediction function is a linear function of the parameter because a linear model induces a loss function $MSE(\theta)$ that has *unique global optimum*
+- <blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">It is important that the prediction function is a linear function of the parameter because a linear model induces a loss function MSE(θ) that has <b>unique global optimum</b></blockquote>
