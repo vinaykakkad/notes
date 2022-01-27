@@ -2,7 +2,7 @@
 id: jnYmiJo5s2BuF2CYJe4b1
 title: Lec 1
 desc: ''
-updated: 1643111212214
+updated: 1643204263155
 created: 1642880549600
 ---
 # Computer Vision
@@ -68,7 +68,8 @@ $$
 u = m_x f \frac{x_c}{z_c} \hspace{2mm},\hspace{2mm} v = m_y f \frac{y_c}{z_c}
 $$
 - the origin of the image sensor may be at the center, thus we consider a <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">principle point</code> with the pixel $(o_x, o_y)$ and the final equation is given by:
-$$
+$$ 
 u = f_x \frac{x_c}{z_c} + o_x \hspace{2mm},\hspace{2mm} v = f_y \frac{y_c}{z_c} + o_y
 $$
+^dAINqR5UIUcW
 - $f_x$ and $f_y$ are the effective focal length in pixels, in the $\hat{x}$ and $\hat{y}$ direction
