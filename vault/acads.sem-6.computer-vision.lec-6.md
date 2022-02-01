@@ -2,12 +2,12 @@
 id: rKL0p5CPTbP8562FTO8Mr
 title: Lec 6
 desc: ''
-updated: 1643713177314
+updated: 1643713763645
 created: 1643270579021
 ---
 # Thresholding
 
-- ![](/vault/assets/images/2022-01-30-15-52-25.png)
+- ![](/assets/images/2022-01-30-15-52-25.png)
 - thresholding helps us to get a sharper edge and get a better idea of shape
 - a simple approach would be to fix a bound and perform binary classification(edge, non-edge)
 
@@ -30,7 +30,7 @@ created: 1643270579021
 <details>
 <summary>edge derivative plots</summary>
 
-![](/vault/assets/images/2022-02-01-12-03-57.png)
+![](/assets/images/2022-02-01-12-03-57.png)
 
 </details>
 
@@ -44,22 +44,22 @@ created: 1643270579021
 <details>
 <summary>formulae for del-square</summary>
 
-![](/vault/assets/images/2022-02-01-16-03-54.png)
+![](/assets/images/2022-02-01-16-03-54.png)
 
 </details>
 
 ### Implementation
 
-- ![](/vault/assets/images/2022-02-01-16-05-17.png)
+- ![](/assets/images/2022-02-01-16-05-17.png)
 - this can be implemented using the convolution masks:
-- ![](/vault/assets/images/2022-02-01-16-28-48.png)
+- ![](/assets/images/2022-02-01-16-28-48.png)
 - when we appy this convolution masks, the convoluted matrix contains negative values
   - when plotting this image without normalising, we get an image where negative values give a blackish pixels, 0 gives greyish pixel and positive values gives brighter pixels
   - therefore before plotting the final image, we need to normalize it to get a prope image
 
 # Effect of noise
 
-![](/vault/assets/images/2022-02-01-12-19-45.png)
+![](/assets/images/2022-02-01-12-19-45.png)
 - if the noise increases, it becomes difficult to differentiate between noise and edge as the derivate detects rapid change
 
 <br>

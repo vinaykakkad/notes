@@ -10,7 +10,7 @@ created: 1643521022646
 <details>
 <summary>gradient plots</summary>
 
-![](/vault/assets/images/2022-01-30-11-22-19.png)
+![](/assets/images/2022-01-30-11-22-19.png)
 
 </details>
 
@@ -26,16 +26,16 @@ $$
 ## Finite differences for matrices
 
 - as the image has discrete intensity values for pixel, we find the finite differences 
-- ![](/vault//assets/images/2022-01-30-15-36-15.png)
+- ![](//assets/images/2022-01-30-15-36-15.png)
 - this operations can be expressed in the form of <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">kernels</code>
 
 ### Kernel examples
 
-![](/vault/assets/images/2022-01-30-15-39-17.png)
+![](/assets/images/2022-01-30-15-39-17.png)
 <details>
 <summary>smoothing vs localisation example</summary>
 
-![](/vault/assets/images/2022-01-30-15-46-09.png)
+![](/assets/images/2022-01-30-15-46-09.png)
 
 </details>
 
