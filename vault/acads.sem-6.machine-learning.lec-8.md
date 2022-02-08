@@ -15,30 +15,30 @@ created: 1644211663972
 
 - we pick the parameters that assign highest probability to the training data
 - we define MLE as
-- ![](/vault/assets/images/2022-02-07-11-43-45.png)
+- ![](/assets/images/2022-02-07-11-43-45.png)
 - we assume that the training examples are independently sampled from the same distribution, ie <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">iid</code>(indpendent and identically distributed)
 - the conditional likelihood then becomes
-- ![](/vault/assets/images/2022-02-07-11-50-56.png)
+- ![](/assets/images/2022-02-07-11-50-56.png)
   - **_as the examples are independent, the overall probability can be expressed as the product of individual probabilities_**
 - We use a log likelihood:
-- ![](/vault/assets/images/2022-02-07-11-54-31.png)
+- ![](/assets/images/2022-02-07-11-54-31.png)
   - it is mathematically convenient to use log function as the likelihood can be expessed as summation
   - $log$ is a monotonically increasing function and provides one to one mapping
 - The *MLE* is then given by:
-- ![](/vault/assets/images/2022-02-07-11-56-51.png)
+- ![](/assets/images/2022-02-07-11-56-51.png)
 
 <br>
 
 - most of the cost functions are designed to *minimize* const function, we can redfine objective function to be a *negative log likelihood* or <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">NLL</code>
-- ![](/vault/assets/images/2022-02-07-11-58-41.png)
+- ![](/assets/images/2022-02-07-11-58-41.png)
 - minimizing this gives us the $\hat{\theta_{mle}}$
 
 #### Optimal theta for unsupervised(unconditional) models
 
 - as we only have outputs and no inputs in this case, MLE becomes
-- ![](/vault/assets/images/2022-02-08-08-02-15.png)
+- ![](/assets/images/2022-02-08-08-02-15.png)
 - alternatively, we can maximize the *join likelihood* of inputs and outputs. The MLE in this case becomes
-- ![](/vault/assets/images/2022-02-08-08-07-39.png)
+- ![](/assets/images/2022-02-08-08-07-39.png)
 
 ### Example: MLE for Bernoulli distribution
 
@@ -47,7 +47,7 @@ created: 1644211663972
   - Y = 0 cooresponds to tails
 - Let $\theta = p(Y=1)$ be the probability of heads
 - MLE for such a *bernoulli dist.* can be given by:
-- ![](/vault/assets/images/2022-02-08-08-19-06.png)
+- ![](/assets/images/2022-02-08-08-19-06.png)
 - finding the derviative and setting it to 0, we get
 - $\hat{\theta_{mle}} = \frac{N_h}{N_h + N_t}$, which is similar to intuitive result
 

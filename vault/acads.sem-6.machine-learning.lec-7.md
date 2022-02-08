@@ -2,7 +2,7 @@
 id: stO81oij4841YX11cSuZI
 title: Lec 7
 desc: ''
-updated: 1644285940794
+updated: 1644294728560
 created: 1643780631948
 ---
 # Multivariate Models
@@ -55,3 +55,8 @@ created: 1643780631948
 
 - trends shown by small groups of data can disappear or reverse when the groups are combined
   - in small groups, y increases with x, but overall y decreases with x
+
+# TODO
+
+- [ ] mutlivariate gaaussian distribuiton
+- [ ] scripts
