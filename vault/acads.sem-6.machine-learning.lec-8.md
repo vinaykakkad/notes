@@ -2,7 +2,7 @@
 id: thpLKumUhUP0f83D2CMWq
 title: Lec 8
 desc: ''
-updated: 1644288988552
+updated: 1644386683578
 created: 1644211663972
 ---
 
@@ -54,3 +54,4 @@ created: 1644211663972
 <br>
 
 - __Here we have not incoporated *population risk* and thus there is a high change of overfitting the training set__
+  - The model in this case has enough parameters to perfectly fit the observed training data
