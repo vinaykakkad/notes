@@ -2,7 +2,7 @@
 id: PezPhIacmef48kh1E5p9d
 title: Lec 9
 desc: ''
-updated: 1644344196076
+updated: 1644479325215
 created: 1644305421621
 ---
 
@@ -47,6 +47,7 @@ created: 1644305421621
   - <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">Hough Transform</code>
 - some preprocessing is performed to improve the quality
   - i.e. filtering out some oultiers or noisy pixels
+
 <details>
 <summary>preprocessing process</summary>
 
