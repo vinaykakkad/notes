@@ -2,7 +2,7 @@
 id: kFdhjexbkBPW1a47YdOKh
 title: Lec 2
 desc: ''
-updated: 1643266027875
+updated: 1644747842768
 created: 1643181184689
 ---
 
@@ -20,10 +20,10 @@ $$
 \hat{z_cu} \\ \hat{z_cv} \\ \hat{z_c} 
 \end{pmatrix} =
 \begin{pmatrix}
-{f_xx_c + o_x} \\ {f_yy_c + o_y} \\ {z_c} 
+{f_xx_c + o_xz_c} \\ {f_yy_c + o_yz_c} \\ {z_c} 
 \end{pmatrix}
 $$
-- to capture the transformation from world coordinate $[x_c\hspace{2mm}y_c\hspace{2mm}z_c\hspace{2mm}1]$ to the image coordinate $[\hat{u}\hspace{2mm}\hat{v}\hspace{2mm}\hat{w}]$, we use a single 3x4 matrix
+- to capture the transformation from camera coordinate $[x_c\hspace{2mm}y_c\hspace{2mm}z_c\hspace{2mm}1]$ to the image coordinate $[\hat{u}\hspace{2mm}\hat{v}\hspace{2mm}\hat{w}]$, we use a single 3x4 matrix
 $$
 \begin{pmatrix}
 \hat{u} \\ \hat{v} \\ \hat{w} 
@@ -56,7 +56,7 @@ x_w\\y_w\\z_w
 t_x\\t_y\\t_z
 \end{pmatrix} 
 $$
-- this can be rewriiten in homogeneour system as
+- this can be rewriiten in homogeneous system as
 $$
 \begin{pmatrix}
 x_c\\y_c\\z_c\\1
