@@ -2,7 +2,7 @@
 id: BgB9oRCh7UiA8oSQuR6Ly
 title: Lec 5
 desc: ''
-updated: 1643537962825
+updated: 1644889224891
 created: 1643521022646
 ---
 # Edge Detection using Gradients
@@ -14,7 +14,7 @@ created: 1643521022646
 
 </details>
 
-- we want to detect *rapind change* in intensity, therefore we find the gradient of the image 
+- we want to detect *rapid change* in intensity, therefore we find the gradient of the image 
 - local maximas $\implies$ position of the edges 
 - height of the local $\implies$ maxima strength of the edges
 - for detecting edges in a 2d space, we use *partial derivate* 

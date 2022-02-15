@@ -56,7 +56,7 @@ x_w\\y_w\\z_w
 t_x\\t_y\\t_z
 \end{pmatrix} 
 $$
-- this can be rewriiten in homogeneous system as
+- this can be rewritten in homogeneous system as
 $$
 \begin{pmatrix}
 x_c\\y_c\\z_c\\1

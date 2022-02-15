@@ -2,7 +2,7 @@
 id: PmPoZMCNzvQB44gE1Tg5L
 title: Lec 5
 desc: ''
-updated: 1643747899831
+updated: 1644935322273
 created: 1643746638590
 ---
 # Examplar based methods
@@ -21,7 +21,7 @@ created: 1643746638590
 - **_Assumption: similar datapoints have similar labels_**
 - for a new input $x$, we look at the $K$ nearest neighbors and determine a probability distribution for the label
 - ![](/assets/images/2022-02-02-02-02-47.png)
-- in practice, the number of parameters becomes 2 $K$ and the distance function $d()$.  
+- there are two main parameters for *KNN* - number of neigbors $K$ and the distance function $D()$.  
 - **_A small value of k leads to overfitting and a large value of k leads to uncerfitting_**
 
 ### choosing the optimal k
