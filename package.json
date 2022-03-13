@@ -7,7 +7,6 @@
   "author": "Vinay Kakkad",
   "license": "MIT",
   "dependencies": {
-    "@dendronhq/dendron-11ty-legacy": "^0.80.0",
-    "@dendronhq/dendron-cli": "^0.80.0"
+    "@dendronhq/dendron-cli": "*"
   }
 }

@@ -2,7 +2,7 @@
 id: stO81oij4841YX11cSuZI
 title: Lec 7
 desc: ''
-updated: 1644294728560
+updated: 1646905556768
 created: 1643780631948
 ---
 # Multivariate Models
@@ -30,6 +30,7 @@ created: 1643780631948
 - normalizing the covariance, we get *(Pearson) __correlation coefficient__*
 - ![](/assets/images/2022-02-07-18-41-50.png)
   - range is $[-1, 1]$
+  
 <details>
 <summary>correlation matrix</summary>
 

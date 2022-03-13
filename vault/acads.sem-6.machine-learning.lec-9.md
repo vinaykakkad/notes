@@ -19,6 +19,7 @@ created: 1644384936817
 - ![](/assets/images/2022-02-09-11-43-41.png)
 - setting $\lambda=1$ and rescaling $p(\theta)$, we minimize the following
 - ![](/assets/images/2022-02-09-11-45-16.png)
+
 <details>
 <summary>minimizing this objective is equivalent to maximizing the posterior log</summary>
 
