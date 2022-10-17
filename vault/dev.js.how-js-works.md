@@ -2,7 +2,7 @@
 id: r81rounrbl7dbjbbax7zvzk
 title: How JS Works
 desc: ''
-updated: 1665322186026
+updated: 1666015323187
 created: 1665321974645
 ---
 
@@ -14,7 +14,7 @@ created: 1665321974645
 
 - has two main components
   - `variable environment` or `memory-space` for storing key value pairs of variables and functions
-  - `thread of exection` or `code-component` where code is executed
+  - `thread of execution` or `code-component` where code is executed
 
 # How Code is executed
 
