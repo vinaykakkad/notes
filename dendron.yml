@@ -18,7 +18,9 @@ commands:
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
-    copyNoteLink: {}
+    copyNoteLink:
+        aliasMode: title
+    templateHierarchy: template
 workspace:
     vaults:
         -
@@ -34,6 +36,7 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -69,12 +72,10 @@ workspace:
     dendronVersion: 0.83.0
     enableEditorDecorations: true
     enableFullHierarchyNoteTitle: false
-    enableHandlebarTemplates: false
     templateHierarchy: template
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
@@ -83,7 +84,6 @@ preview:
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     assetsPrefix: /notes
@@ -112,3 +112,4 @@ publishing:
     enablePrettyLinks: true
     enableTaskNotes: true
     theme: dark
+    searchMode: lookup
