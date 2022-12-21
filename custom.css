@@ -1,0 +1,39 @@
+body,
+.ant-layout {
+    font-size: medium;
+    background-color: #2e2e2e;
+}
+
+body,
+h1,
+h2,
+h3,
+h4 {
+    color: #ffffff;
+}
+
+h1,
+h2 {
+    font-weight: bolder;
+    padding: 3px 0px;
+    border-bottom: 1px solid #4e4e4e;
+}
+
+h3,
+h4 {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+a,
+a:hover,
+a:active {
+    /** Color for links, except ones that have been already visited. */
+    color: #FFD866;
+}
+
+code {
+    background-color: #ffd96650;
+    padding: 3px 6px;
+    border-radius: 6px;
+}

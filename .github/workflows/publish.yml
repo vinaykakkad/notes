@@ -1,0 +1,45 @@
+name: Dendron
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout source 🛎️
+      uses: actions/checkout@v2.3.1
+      with:
+        persist-credential: false
+
+    # Retain Node modules across builds
+    - name: Restore Node modules cache ⛓
+      uses: actions/cache@v2
+      id: node-modules-cache
+      with:
+        path: |
+          node_modules
+          .next/node_modules
+        key: node-modules-${{ hashFiles('yarn.lock')}}
+
+    - name: Install npm dependencies 👾
+      run: yarn
+
+    - name: Initialize or pull nextjs template 👨‍💻
+      run: "(test -d .next) && (echo 'updating dendron next...' && cd .next && git reset --hard && git clean -f && git pull && yarn && cd ..) || (echo 'init dendron next' && npx dendron publish init)"
+
+    - name: Delete next cache 💽
+      run: "(test -d .next/.next) && (rm -rf .next/.next && echo 'delete Next.js cache') || echo 'no Next.js cache found'"
+
+    - name: Export notes 📚
+      run: npx dendron publish export --target github --yes
+
+    - name: Deploy site ✨
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: pages
+        publish_dir: docs/
+        force_orphan: true

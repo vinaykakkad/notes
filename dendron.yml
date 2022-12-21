@@ -81,6 +81,7 @@ preview:
     automaticallyShowPreview: false
     enableFrontmatterTags: true
     enableHashesForFMTags: false
+    theme: custom
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true
