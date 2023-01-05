@@ -2,7 +2,7 @@
 id: r459rk8iofn446t6nshevjt
 title: Intro
 desc: ''
-updated: 1672923908412
+updated: 1672924359735
 created: 1672922272663
 ---
 
@@ -96,3 +96,9 @@ created: 1672922272663
   - `r`: can list files in the directory
   - `w`: can delete / move files in the directory
   - `x`: can access files, provide you have access to those individual files
+
+## Foreground and Background processes
+
+[stackexchange](https://unix.stackexchange.com/questions/175741/what-is-background-and-foreground-processes-in-jobs)
+
+- first answer
