@@ -2,9 +2,15 @@
 id: oQYRM3sMDt7Q6JWDzbjG4
 title: Shell Scripting
 desc: ''
-updated: 1642880891751
+updated: 1672923910585
 created: 1642880615533
 ---
+
+## Shell vs Terminal
+
+- kernel - server
+- shell - middleware
+- terminal - client
 
 ## shell prompt
 
