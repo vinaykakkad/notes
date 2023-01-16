@@ -1,6 +1,6 @@
 ---
 id: Rh3CSk5AzxljaDfFQC5wQ
-title: Lec 4
+title: 4 Bias Variance Tradeoff
 desc: ''
 updated: 1642997952584
 created: 1642923168514

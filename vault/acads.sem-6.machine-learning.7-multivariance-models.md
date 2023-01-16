@@ -1,6 +1,6 @@
 ---
 id: stO81oij4841YX11cSuZI
-title: Lec 7
+title: 7 Multivariance Models
 desc: ''
 updated: 1646905556768
 created: 1643780631948

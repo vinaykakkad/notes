@@ -1,6 +1,6 @@
 ---
 id: MEXC6Rz6vhnGF1xxGucSo
-title: Lec 11
+title: 11 Avoiding Overfitting
 desc: ''
 updated: 1644994861575
 created: 1644992487566

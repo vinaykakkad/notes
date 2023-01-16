@@ -1,6 +1,6 @@
 ---
 id: SBDE29Uv1A941yOcaAtGZ
-title: Lec 3
+title: 3 Verfitting and Generalisation
 desc: ''
 updated: 1643000616284
 created: 1642922795725

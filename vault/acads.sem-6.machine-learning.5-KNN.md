@@ -1,6 +1,6 @@
 ---
 id: PmPoZMCNzvQB44gE1Tg5L
-title: Lec 5
+title: 5-KNN
 desc: ''
 updated: 1644935322273
 created: 1643746638590

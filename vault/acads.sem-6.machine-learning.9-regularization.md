@@ -1,6 +1,6 @@
 ---
 id: DJi8CEAOjDzqGAxO5KP87
-title: Lec 9
+title: 9 Regularization
 desc: ''
 updated: 1644390032472
 created: 1644384936817

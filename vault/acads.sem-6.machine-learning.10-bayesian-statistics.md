@@ -1,6 +1,6 @@
 ---
 id: o9V4uumi3Tls8uGzJEcos
-title: Lec 10
+title: 10 Bayesian Statistics
 desc: ''
 updated: 1644951005537
 created: 1644818744038

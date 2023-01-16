@@ -1,6 +1,6 @@
 ---
 id: ei9JWoeceRbHDcPoNblcb
-title: Lec 6
+title: 6 Curse of Dimensionality
 desc: ''
 updated: 1643746611893
 created: 1643607271875

@@ -1,6 +1,6 @@
 ---
 id: BmxWSEoOhHxbfsbIbBBSN
-title: Lec 2
+title: 2-MLE-and-regression
 desc: ''
 updated: 1643001168394
 created: 1642921088327

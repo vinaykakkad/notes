@@ -1,6 +1,6 @@
 ---
 id: thpLKumUhUP0f83D2CMWq
-title: Lec 8
+title: 8-MLE-2
 desc: ''
 updated: 1644386683578
 created: 1644211663972
