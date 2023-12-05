@@ -2,7 +2,7 @@
 id: r81rounrbl7dbjbbax7zvzk
 title: How JS Works
 desc: ''
-updated: 1666015323187
+updated: 1696332046973
 created: 1665321974645
 ---
 
@@ -24,9 +24,9 @@ created: 1665321974645
       - variables are stored as undefined
       - for functions the entire code is stored in memory
   - *phase 2*: execution
-    - line by line execution and variables are executed
-    - after function a new context(in call stack) is created and entire process is repeated
-    - after returning the new context is deleted and control is returned back to global context
+    - every context is executed line by line
+    - when a function is called, a new context(in call stack) is created and entire process is repeated
+    - when the function returns, the new context is deleted and control is returned back to global context
 
 ## Call Stack
 

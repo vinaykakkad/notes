@@ -1507,7 +1507,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     font-variant: tabular-nums;
     line-height: 1.5715;
-    background-color: #303030;
+    background-color: #1d1e20;
     font-feature-settings: 'tnum'
 }
 
@@ -2798,7 +2798,7 @@ mark {
     display: none;
     width: 8px;
     height: 8px;
-    background-color: #303030;
+    background-color: #1d1e20;
     border: 2px solid #00adb5;
     border-radius: 8px;
     transform: translateX(-50%);
@@ -3084,7 +3084,7 @@ mark {
     text-align: center;
     background: #b0272e;
     border-radius: 10px;
-    box-shadow: 0 0 0 1px #303030
+    box-shadow: 0 0 0 1px #1d1e20
 }
 
 .ant-badge-count a,
@@ -3112,7 +3112,7 @@ mark {
     height: 6px;
     background: #b0272e;
     border-radius: 100%;
-    box-shadow: 0 0 0 1px #303030
+    box-shadow: 0 0 0 1px #1d1e20
 }
 
 .ant-badge-dot.ant-scroll-number {
@@ -4684,7 +4684,7 @@ mark {
     left: -1px;
     z-index: 1;
     display: none;
-    background: #303030;
+    background: #1d1e20;
     border-radius: inherit;
     opacity: .35;
     transition: opacity .2s;
@@ -5276,7 +5276,7 @@ a.ant-btn-sm {
     line-height: 1.5715;
     list-style: none;
     font-feature-settings: 'tnum';
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-picker-calendar-header {
@@ -5299,7 +5299,7 @@ a.ant-btn-sm {
 }
 
 .ant-picker-calendar .ant-picker-panel {
-    background: #303030;
+    background: #1d1e20;
     border: 0;
     border-top: 1px solid #424242;
     border-radius: 0
@@ -5345,7 +5345,7 @@ a.ant-btn-sm {
     display: block;
     width: 100%;
     text-align: right;
-    background: #303030;
+    background: #1d1e20;
     border: 0
 }
 
@@ -5477,7 +5477,7 @@ a.ant-btn-sm {
     list-style: none;
     font-feature-settings: 'tnum';
     position: relative;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px
 }
 
@@ -5637,7 +5637,7 @@ a.ant-btn-sm {
     margin: 0;
     padding: 0;
     list-style: none;
-    background: #303030;
+    background: #1d1e20;
     border-top: 1px solid #424242
 }
 
@@ -6012,7 +6012,7 @@ a.ant-btn-sm {
     padding: 0;
     color: transparent;
     font-size: 0;
-    background: #303030;
+    background: #1d1e20;
     border: 0;
     border-radius: 1px;
     outline: 0;
@@ -6031,7 +6031,7 @@ a.ant-btn-sm {
 }
 
 .ant-carousel .slick-dots li.slick-active button {
-    background: #303030;
+    background: #1d1e20;
     opacity: 1
 }
 
@@ -6203,7 +6203,7 @@ a.ant-btn-sm {
 
 .ant-cascader-picker-clear {
     z-index: 2;
-    background: #303030;
+    background: #1d1e20;
     cursor: pointer;
     opacity: 0;
     transition: color .3s ease, opacity .15s ease
@@ -6241,7 +6241,7 @@ a.ant-btn-sm {
     z-index: 1050;
     font-size: 14px;
     white-space: nowrap;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2)
 }
@@ -6745,7 +6745,7 @@ a.ant-btn-sm {
 
 .ant-collapse-content {
     color: rgba(255, 255, 255, .85);
-    background-color: #303030;
+    background-color: #1d1e20;
     border-top: 1px solid #6f6c6c
 }
 
@@ -7165,7 +7165,7 @@ textarea.ant-picker-input>input {
     right: 0;
     color: rgba(255, 255, 255, .3);
     line-height: 1;
-    background: #303030;
+    background: #1d1e20;
     transform: translateY(-50%);
     cursor: pointer;
     opacity: 0;
@@ -7351,14 +7351,14 @@ textarea.ant-picker-input>input {
     width: 10px;
     height: 10px;
     border: 5px solid #424242;
-    border-color: #303030 #303030 transparent transparent;
+    border-color: #1d1e20 #1d1e20 transparent transparent;
     content: ''
 }
 
 .ant-picker-panel-container {
     overflow: hidden;
     vertical-align: top;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2);
     transition: margin .3s
@@ -7390,7 +7390,7 @@ textarea.ant-picker-input>input {
     display: inline-flex;
     flex-direction: column;
     text-align: center;
-    background: #303030;
+    background: #1d1e20;
     border: 1px solid #424242;
     border-radius: 4px;
     outline: 0
@@ -7692,7 +7692,7 @@ tr>.ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after {
 }
 
 .ant-picker-cell-disabled::before {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-picker-cell-disabled.ant-picker-cell-today .ant-picker-cell-inner::before {
@@ -8530,7 +8530,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     position: relative;
     z-index: 1;
     overflow: auto;
-    background-color: #303030;
+    background-color: #1d1e20;
     background-clip: padding-box;
     border: 0
 }
@@ -8579,7 +8579,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-drawer-header,
 .ant-drawer-header-no-title {
     color: rgba(255, 255, 255, .85);
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-drawer-wrapper-body {
@@ -8623,8 +8623,8 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 
 .ant-drawer .ant-picker-clear {
-    background: #303030;
-    background-color: #303030
+    background: #1d1e20;
+    background-color: #1d1e20
 }
 
 .ant-drawer .ant-anchor-wrapper,
@@ -8632,11 +8632,11 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-drawer .ant-collapse-content,
 .ant-drawer .ant-slider-handle,
 .ant-drawer .ant-timeline-item-head {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-drawer .ant-transfer-list-header {
-    background: #303030;
+    background: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -8654,7 +8654,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 
 .ant-drawer .ant-table.ant-table-small thead>tr>th {
-    background-color: #303030;
+    background-color: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -8662,7 +8662,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-drawer .ant-table,
 .ant-drawer .ant-table tbody>tr>td.ant-table-cell-fix-left,
 .ant-drawer .ant-table tbody>tr>td.ant-table-cell-fix-right {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-drawer .ant-table .ant-table-row-expand-icon,
@@ -8704,7 +8704,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 
 .ant-drawer .ant-picker-calendar-full .ant-picker-panel {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-drawer .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
@@ -8712,16 +8712,16 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 }
 
 .ant-drawer .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
-    background-color: #303030;
-    border-bottom: 1px solid #303030
+    background-color: #1d1e20;
+    border-bottom: 1px solid #1d1e20
 }
 
 .ant-drawer .ant-badge-count {
-    box-shadow: 0 0 0 1px #303030
+    box-shadow: 0 0 0 1px #1d1e20
 }
 
 .ant-drawer .ant-tree-show-line .ant-tree-switcher {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-drawer-rtl {
@@ -8823,7 +8823,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-dropdown-placement-topLeft>.ant-dropdown-arrow,
 .ant-dropdown-placement-topRight>.ant-dropdown-arrow {
     bottom: 6.2px;
-    border-color: transparent #303030 #303030 transparent;
+    border-color: transparent #1d1e20 #1d1e20 transparent;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, .07)
 }
 
@@ -8844,7 +8844,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,
 .ant-dropdown-placement-bottomRight>.ant-dropdown-arrow {
     top: 6px;
-    border-color: #303030 transparent transparent #303030;
+    border-color: #1d1e20 transparent transparent #1d1e20;
     box-shadow: -2px -2px 5px rgba(0, 0, 0, .06)
 }
 
@@ -8867,7 +8867,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     padding: 4px 0;
     text-align: left;
     list-style-type: none;
-    background-color: #303030;
+    background-color: #1d1e20;
     background-clip: padding-box;
     border-radius: 4px;
     outline: 0;
@@ -9084,7 +9084,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 
 .ant-dropdown-menu-dark,
 .ant-dropdown-menu-dark .ant-dropdown-menu {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-dropdown-menu-dark .ant-dropdown-menu-item,
@@ -18061,7 +18061,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     right: 0;
     width: 22px;
     height: 100%;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 0 4px 4px 0;
     opacity: 0;
     transition: opacity .24s linear .1s
@@ -18163,7 +18163,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-layout,
@@ -18184,7 +18184,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-layout-header {
     flex: 0 0 auto;
     color: rgba(255, 255, 255, .85);
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-layout-header {
@@ -18206,7 +18206,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 .ant-layout-sider {
     position: relative;
     min-width: 0;
-    background: #303030;
+    background: #1d1e20;
     transition: all .2s
 }
 
@@ -18256,7 +18256,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     font-size: 18px;
     line-height: 42px;
     text-align: center;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
     transition: background .3s ease
@@ -18877,7 +18877,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     box-sizing: border-box;
     font-size: 14px;
     font-variant: initial;
-    background-color: #303030;
+    background-color: #1d1e20;
     border-radius: 4px;
     outline: 0;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2)
@@ -18930,7 +18930,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
 
 .ant-mentions-dropdown-menu-item-disabled:hover {
     color: rgba(255, 255, 255, .3);
-    background-color: #303030;
+    background-color: #1d1e20;
     cursor: not-allowed
 }
 
@@ -18991,7 +18991,7 @@ _:-ms-fullscreen .ant-picker-range-wrapper .ant-picker-year-panel .ant-picker-ce
     line-height: 0;
     text-align: left;
     list-style: none;
-    background: #303030;
+    background: #1d1e20;
     outline: 0;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2);
     transition: background .3s, width .3s cubic-bezier(.2, 0, 0, 1) 0s
@@ -19279,7 +19279,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-menu-submenu>.ant-menu {
-    background-color: #303030;
+    background-color: #1d1e20;
     border-radius: 4px
 }
 
@@ -19290,7 +19290,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-menu-submenu-popup>.ant-menu {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-menu-submenu-arrow,
@@ -19704,7 +19704,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-menu.ant-menu-dark,
 .ant-menu.ant-menu-dark .ant-menu-sub {
     color: rgba(255, 255, 255, .65);
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-menu-dark .ant-menu-sub .ant-menu-submenu-title .ant-menu-submenu-arrow,
@@ -19740,7 +19740,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-menu-dark .ant-menu-inline.ant-menu-sub {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-menu-dark.ant-menu-horizontal {
@@ -19752,7 +19752,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
     top: 0;
     margin-top: 0;
     padding: 0 20px;
-    border-color: #303030;
+    border-color: #1d1e20;
     border-bottom: 0
 }
 
@@ -20029,7 +20029,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-message-notice-content {
     display: inline-block;
     padding: 10px 16px;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2);
     pointer-events: all
@@ -20143,7 +20143,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 
 .ant-modal-content {
     position: relative;
-    background-color: #303030;
+    background-color: #1d1e20;
     background-clip: padding-box;
     border: 0;
     border-radius: 4px;
@@ -20189,7 +20189,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-modal-header {
     padding: 16px 24px;
     color: rgba(255, 255, 255, .85);
-    background: #303030;
+    background: #1d1e20;
     border-bottom: 1px solid #424242;
     border-radius: 4px 4px 0 0
 }
@@ -20325,11 +20325,11 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-modal .ant-picker-clear,
 .ant-modal .ant-slider-handle,
 .ant-modal .ant-timeline-item-head {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-modal .ant-transfer-list-header {
-    background: #303030;
+    background: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -20338,7 +20338,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-modal .ant-table.ant-table-small thead>tr>th {
-    background-color: #303030;
+    background-color: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -20346,7 +20346,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-modal .ant-table,
 .ant-modal .ant-table tbody>tr>td.ant-table-cell-fix-left,
 .ant-modal .ant-table tbody>tr>td.ant-table-cell-fix-right {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-modal .ant-table .ant-table-row-expand-icon,
@@ -20381,7 +20381,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-modal .ant-picker-calendar-full .ant-picker-panel {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-modal .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
@@ -20389,16 +20389,16 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-modal .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
-    background-color: #303030;
-    border-bottom: 1px solid #303030
+    background-color: #1d1e20;
+    border-bottom: 1px solid #1d1e20
 }
 
 .ant-modal .ant-badge-count {
-    box-shadow: 0 0 0 1px #303030
+    box-shadow: 0 0 0 1px #1d1e20
 }
 
 .ant-modal .ant-tree-show-line .ant-tree-switcher {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-modal-wrap-rtl {
@@ -20449,11 +20449,11 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-notification .ant-picker-clear,
 .ant-notification .ant-slider-handle,
 .ant-notification .ant-timeline-item-head {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-notification .ant-transfer-list-header {
-    background: #303030;
+    background: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -20462,7 +20462,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-notification .ant-table.ant-table-small thead>tr>th {
-    background-color: #303030;
+    background-color: #1d1e20;
     border-bottom: 1px solid #3a3a3a
 }
 
@@ -20470,7 +20470,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 .ant-notification .ant-table,
 .ant-notification .ant-table tbody>tr>td.ant-table-cell-fix-left,
 .ant-notification .ant-table tbody>tr>td.ant-table-cell-fix-right {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-notification .ant-table .ant-table-row-expand-icon,
@@ -20505,7 +20505,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-notification .ant-picker-calendar-full .ant-picker-panel {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-notification .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date {
@@ -20513,16 +20513,16 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
 }
 
 .ant-notification .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
-    background-color: #303030;
-    border-bottom: 1px solid #303030
+    background-color: #1d1e20;
+    border-bottom: 1px solid #1d1e20
 }
 
 .ant-notification .ant-badge-count {
-    box-shadow: 0 0 0 1px #303030
+    box-shadow: 0 0 0 1px #1d1e20
 }
 
 .ant-notification .ant-tree-show-line .ant-tree-switcher {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-notification {
@@ -20572,7 +20572,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
     overflow: hidden;
     line-height: 1.5715;
     word-wrap: break-word;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2)
 }
@@ -20750,7 +20750,7 @@ table tr th.ant-table-selection-column .ant-radio-wrapper {
     font-feature-settings: 'tnum';
     position: relative;
     padding: 16px 24px;
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-page-header-ghost {
@@ -21500,7 +21500,7 @@ textarea.ant-pagination-options-quick-jumper input {
 }
 
 .ant-popover-inner {
-    background-color: #303030;
+    background-color: #1d1e20;
     background-clip: padding-box;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2);
@@ -21576,7 +21576,7 @@ textarea.ant-pagination-options-quick-jumper input {
     width: 6px;
     height: 6px;
     margin: auto;
-    background-color: #303030;
+    background-color: #1d1e20;
     content: '';
     pointer-events: auto
 }
@@ -21890,7 +21890,7 @@ textarea.ant-pagination-options-quick-jumper input {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 10px;
     opacity: 0;
     -webkit-animation: ant-progress-active 2.4s cubic-bezier(.23, 1, .32, 1) infinite;
@@ -22710,7 +22710,7 @@ span.ant-transfer-list-search-action {
 }
 
 .ant-select-disabled.ant-select-multiple .ant-select-selector {
-    background: #303030;
+    background: #1d1e20;
     cursor: not-allowed
 }
 
@@ -22756,7 +22756,7 @@ span.ant-transfer-list-search-action {
 
 .ant-select-disabled.ant-select-multiple .ant-select-selection-item {
     color: #595959;
-    border-color: #303030;
+    border-color: #1d1e20;
     cursor: not-allowed
 }
 
@@ -22957,7 +22957,7 @@ span.ant-transfer-list-search-action {
 }
 
 .ant-select-multiple.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector input {
@@ -23089,7 +23089,7 @@ span.ant-transfer-list-search-action {
     line-height: 1;
     text-align: center;
     text-transform: none;
-    background: #303030;
+    background: #1d1e20;
     cursor: pointer;
     opacity: 0;
     transition: color .3s ease, opacity .15s ease;
@@ -23119,7 +23119,7 @@ span.ant-transfer-list-search-action {
     overflow: hidden;
     font-size: 14px;
     font-variant: initial;
-    background-color: #303030;
+    background-color: #1d1e20;
     border-radius: 4px;
     outline: 0;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2)
@@ -23214,7 +23214,7 @@ span.ant-transfer-list-search-action {
 }
 
 .ant-select-item-option-disabled.ant-select-item-option-selected {
-    background-color: #303030
+    background-color: #1d1e20
 }
 
 .ant-select-item-option-grouped {
@@ -23656,7 +23656,7 @@ span.ant-transfer-list-search-action {
     width: 14px;
     height: 14px;
     margin-top: -5px;
-    background-color: #303030;
+    background-color: #1d1e20;
     border: solid 2px #225658;
     border-radius: 50%;
     box-shadow: 0;
@@ -23729,7 +23729,7 @@ span.ant-transfer-list-search-action {
     width: 8px;
     height: 8px;
     margin-left: -4px;
-    background-color: #303030;
+    background-color: #1d1e20;
     border: 2px solid #424242;
     border-radius: 50%;
     cursor: pointer
@@ -23758,7 +23758,7 @@ span.ant-transfer-list-search-action {
 
 .ant-slider-disabled .ant-slider-dot,
 .ant-slider-disabled .ant-slider-handle {
-    background-color: #303030;
+    background-color: #1d1e20;
     border-color: rgba(255, 255, 255, .3) !important;
     box-shadow: none
 }
@@ -23876,7 +23876,7 @@ span.ant-transfer-list-search-action {
     top: 50%;
     width: 100%;
     padding-top: 5px;
-    text-shadow: 0 1px 2px #303030
+    text-shadow: 0 1px 2px #1d1e20
 }
 
 .ant-spin-nested-loading>div>.ant-spin.ant-spin-show-text .ant-spin-dot {
@@ -23922,7 +23922,7 @@ span.ant-transfer-list-search-action {
     display: none \9;
     width: 100%;
     height: 100%;
-    background: #303030;
+    background: #1d1e20;
     opacity: 0;
     transition: all .3s;
     content: '';
@@ -24028,7 +24028,7 @@ span.ant-transfer-list-search-action {
 @media all and (-ms-high-contrast:none),
 (-ms-high-contrast:active) {
     .ant-spin-blur {
-        background: #303030;
+        background: #1d1e20;
         opacity: .5
     }
 }
@@ -25258,7 +25258,7 @@ span.ant-transfer-list-search-action {
     font-feature-settings: 'tnum';
     position: relative;
     font-size: 14px;
-    background: #303030;
+    background: #1d1e20;
     border-radius: 4px
 }
 
@@ -25380,7 +25380,7 @@ span.ant-transfer-list-search-action {
 .ant-table-summary {
     position: relative;
     z-index: 2;
-    background: #303030
+    background: #1d1e20
 }
 
 div.ant-table-summary {
@@ -25535,7 +25535,7 @@ td.ant-table-column-sort {
     list-style: none;
     font-feature-settings: 'tnum';
     min-width: 120px;
-    background-color: #303030;
+    background-color: #1d1e20;
     border-radius: 4px;
     box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .48), 0 6px 16px 0 rgba(0, 0, 0, .32), 0 9px 28px 8px rgba(0, 0, 0, .2)
 }
@@ -25563,7 +25563,7 @@ td.ant-table-column-sort {
     justify-content: space-between;
     padding: 7px 8px 7px 3px;
     overflow: hidden;
-    background-color: #303030;
+    background-color: #1d1e20;
     border-top: 1px solid #424242
 }
 
@@ -25728,7 +25728,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 }
 
 .ant-table-tbody>tr.ant-table-placeholder:hover>td {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-table-cell-fix-left,
@@ -25736,7 +25736,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
     position: -webkit-sticky !important;
     position: sticky !important;
     z-index: 2;
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-table-cell-fix-left-first::after,
@@ -25816,7 +25816,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
     position: -webkit-sticky;
     position: sticky;
     z-index: 3;
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-table-sticky-scroll {
@@ -26298,7 +26298,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
     overflow-y: auto;
     text-align: left;
     list-style-type: none;
-    background-color: #303030;
+    background-color: #1d1e20;
     background-clip: padding-box;
     border-radius: 4px;
     outline: 0;
@@ -26343,7 +26343,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 .ant-tabs-card>.ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card>div>.ant-tabs-nav .ant-tabs-tab-active {
     color: #00adb5;
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-tabs-card>.ant-tabs-nav .ant-tabs-ink-bar,
@@ -26365,7 +26365,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 
 .ant-tabs-card.ant-tabs-top>.ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-top>div>.ant-tabs-nav .ant-tabs-tab-active {
-    border-bottom-color: #303030
+    border-bottom-color: #1d1e20
 }
 
 .ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab,
@@ -26375,7 +26375,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 
 .ant-tabs-card.ant-tabs-bottom>.ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-bottom>div>.ant-tabs-nav .ant-tabs-tab-active {
-    border-top-color: #303030
+    border-top-color: #1d1e20
 }
 
 .ant-tabs-card.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab+.ant-tabs-tab,
@@ -26392,7 +26392,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 
 .ant-tabs-card.ant-tabs-left>.ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-left>div>.ant-tabs-nav .ant-tabs-tab-active {
-    border-right-color: #303030
+    border-right-color: #1d1e20
 }
 
 .ant-tabs-card.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab,
@@ -26402,7 +26402,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
 
 .ant-tabs-card.ant-tabs-right>.ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-right>div>.ant-tabs-nav .ant-tabs-tab-active {
-    border-left-color: #303030
+    border-left-color: #1d1e20
 }
 
 .ant-tabs {
@@ -26946,7 +26946,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: #303030;
+    background-color: #1d1e20;
     border: 2px solid transparent;
     border-radius: 100px
 }
@@ -27531,7 +27531,7 @@ tr.ant-table-expanded-row .ant-descriptions-view table {
     height: 40px;
     padding: 8px 12px 9px;
     color: rgba(255, 255, 255, .85);
-    background: #303030;
+    background: #1d1e20;
     border-bottom: 1px solid #424242;
     border-radius: 4px 4px 0 0
 }
@@ -28264,7 +28264,7 @@ a.ant-typography:active {
 }
 
 .ant-tree-show-line .ant-tree-switcher {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-tree-show-line .ant-tree-switcher-line-icon {
@@ -28772,7 +28772,7 @@ a.ant-typography:active {
 }
 
 .ant-select-tree-show-line .ant-select-tree-switcher {
-    background: #303030
+    background: #1d1e20
 }
 
 .ant-select-tree-show-line .ant-select-tree-switcher-line-icon {
@@ -29866,7 +29866,7 @@ div.ant-typography-edit-content.ant-typography-rtl {
 }
 
 ::-webkit-scrollbar-track {
-    background: #303030
+    background: #1d1e20
 }
 
 ::-webkit-scrollbar-thumb {

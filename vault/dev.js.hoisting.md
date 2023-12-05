@@ -2,7 +2,7 @@
 id: 71vmk221iuw1r44eg87i9k1
 title: Hoisting
 desc: ''
-updated: 1666015344199
+updated: 1696330891519
 created: 1666015185595
 ---
 # Hoisting in JS
@@ -19,5 +19,6 @@ created: 1666015185595
 
 - accessing variable: return `undefined`
 - accessing a named function: returns `the code of the function`
+- calling the function: executes the function without any errors
 - accessing anonymous function: returns `undefined` (is ultimately an variable)
 - accessing undeclared variable: returns `not-defined` error
