@@ -1,0 +1,66 @@
+<h1 id="10-bayesian-statistics">10 Bayesian Statistics<a aria-hidden="true" class="anchor-heading icon-link" href="#10-bayesian-statistics"></a></h1>
+<h2 id="approaches-for-machine-learning">Approaches for Machine Learning<a aria-hidden="true" class="anchor-heading icon-link" href="#approaches-for-machine-learning"></a></h2>
+<ul>
+<li><em>frequentist</em> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mo separator="true">;</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(D;\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span></span>)
+<ul>
+<li>find such a <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></span> that maximizes that given data</li>
+<li>this approach does not consider <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></span> as a random variable
+<ul>
+<li>i.e. the value of parameters does not depend on any prior event</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>bayesian statistics</em> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>D</mi><mi mathvariant="normal">∣</mi><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(D|\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span></span>)
+<ul>
+<li>in this approach the value of params depends on prior knowledge
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(\theta)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span></span></span> can be encoded as a distribution
+<ul>
+<li>i.e. prior knowledge can be incoporated in the distribution</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="weight-decay">Weight Decay<a aria-hidden="true" class="anchor-heading icon-link" href="#weight-decay"></a></h2>
+<ul>
+<li>using regression with very high degree of polynomial results in overfitting
+<ul>
+<li>we tried to reduce the degree of polynomial to generalize the model</li>
+</ul>
+</li>
+<li>another solutions is to penalize the magnitude of weights(<em>regression coefficients</em>)</li>
+</ul>
+<br>
+<ul>
+<li>we use a <em>zero-mean Gaussian</em> prior to penalize the weights, and the resulting MAP is given by</li>
+<li><img src="/notes/assets/images/2022-02-16-00-09-17.png">
+<ul>
+<li>here we use <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi></mrow><annotation encoding="application/x-tex">w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span></span> instead of <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></span>, since we only penalize the weight vector and not bias terms or noise variances</li>
+</ul>
+</li>
+<li>this is called <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">l<sub>2</sub>regularization</code> or <strong><em>weight decay</em></strong></li>
+<li>in case of linear regression, this kind of penalization scheme is called <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">ridge regression</code></li>
+</ul>
+<h2 id="finding-the-optimal-regularization-parameter">Finding the optimal regularization parameter<a aria-hidden="true" class="anchor-heading icon-link" href="#finding-the-optimal-regularization-parameter"></a></h2>
+<ul>
+<li>picking a small <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\lambda \implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7184em;vertical-align:-0.024em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span></span> focussing on minimising empirical risk <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span></span> <em>overfitting</em></li>
+<li>picking a large <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\lambda \implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7184em;vertical-align:-0.024em;"></span><span class="mord mathnormal">λ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span></span> focussing on prior <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>  </mtext><mo>⟹</mo><mtext>  </mtext></mrow><annotation encoding="application/x-tex">\implies</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.549em;vertical-align:-0.024em;"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⟹</span><span class="mspace" style="margin-right:0.2778em;"></span></span></span></span></span> <em>underfitting</em></li>
+<li>we use validation set to find the optimal <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi></mrow><annotation encoding="application/x-tex">\lambda</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">λ</span></span></span></span></span></li>
+</ul>
+<p><img src="/notes/assets/images/2022-02-15-23-59-38.png"></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/probml/pyprobml/blob/master/scripts/linreg_poly_ridge.py">code</a></li>
+</ul>
+<h1 id="todo">TODO<a aria-hidden="true" class="anchor-heading icon-link" href="#todo"></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> bias variance dilemma</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> finding validation method for small data
+<ul>
+<li>cross validation</li>
+</ul>
+</li>
+</ul>

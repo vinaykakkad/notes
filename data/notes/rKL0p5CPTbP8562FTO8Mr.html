@@ -1,0 +1,75 @@
+<h1 id="lec-6">Lec 6<a aria-hidden="true" class="anchor-heading icon-link" href="#lec-6"></a></h1>
+<h1 id="thresholding">Thresholding<a aria-hidden="true" class="anchor-heading icon-link" href="#thresholding"></a></h1>
+<ul>
+<li><img src="/notes/assets/images/2022-01-30-15-52-25.png"></li>
+<li>thresholding helps us to get a sharper edge and get a better idea of shape</li>
+<li>a simple approach would be to fix a bound and perform binary classification(edge, non-edge)</li>
+</ul>
+<h2 id="hysteresis-thresholding">Hysteresis Thresholding<a aria-hidden="true" class="anchor-heading icon-link" href="#hysteresis-thresholding"></a></h2>
+<ul>
+<li>if the gradient at a pixel is:
+<ul>
+<li>above <em>high threshold</em> <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>h</mi></msub></mrow><annotation encoding="application/x-tex">T_h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">h</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>, classify it as <strong>edge</strong></li>
+<li>below <em>low threshold</em> <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>l</mi></msub></mrow><annotation encoding="application/x-tex">T_l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>, classify it as <strong>non-edge</strong></li>
+<li>for any pixel in between
+<ul>
+<li>iteratively classify based on the neighbors</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="implementation">Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#implementation"></a></h3>
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>h</mi></msub><mo>:</mo><msub><mi>T</mi><mi>l</mi></msub><mo>=</mo><mn>1</mn><mo>:</mo><mn>2</mn><mspace width="0.2845em"></mspace><mi>o</mi><mi>r</mi><mn>1</mn><mo>:</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">T_h:T_l = 1:2\hspace{1mm}or1:3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">h</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2845em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span></span></li>
+<li>select <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>h</mi></msub></mrow><annotation encoding="application/x-tex">T_h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">h</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> such that edges cannot be ignored - <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">seed points</code></li>
+<li>from the seed move to the <em>8-neighborhood</em> as long as the pixels does not fall below <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>l</mi></msub></mrow><annotation encoding="application/x-tex">T_l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<h1 id="edge-detection-using-second-derivative">Edge Detection using Second Derivative<a aria-hidden="true" class="anchor-heading icon-link" href="#edge-detection-using-second-derivative"></a></h1>
+<details>
+<summary>edge derivative plots</summary>
+<p><img src="/notes/assets/images/2022-02-01-12-03-57.png"></p>
+</details>
+<ul>
+<li>first derivative gives us the strength and direction</li>
+<li>second derivative is used to detect <em>polarity</em></li>
+<li><em>zero crossing</em> indicates the presence of edge and can locate thick edges</li>
+</ul>
+<h2 id="discrete-lapacian-operator">Discrete lapacian operator<a aria-hidden="true" class="anchor-heading icon-link" href="#discrete-lapacian-operator"></a></h2>
+<ul>
+<li>finite differences of second order are given given by the <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">del square</code> (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">∇</mi><mn>2</mn></msub><mi>I</mi></mrow><annotation encoding="application/x-tex">\nabla_2 I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord">∇</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span></span>)
+<details>
+<summary>formulae for del-square</summary>
+</details></li>
+</ul>
+<p><img src="/notes/assets/images/2022-02-01-16-03-54.png"></p>
+
+<h3 id="implementation-1">Implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#implementation-1"></a></h3>
+<ul>
+<li><img src="/notes/assets/images/2022-02-01-16-05-17.png"></li>
+<li>this can be implemented using the convolution masks:</li>
+<li><img src="/notes/assets/images/2022-02-01-16-28-48.png"></li>
+<li>when we appy this convolution masks, the convoluted matrix contains negative values
+<ul>
+<li>when plotting this image without normalising, we get an image where negative values give a blackish pixels, 0 gives greyish pixel and positive values gives brighter pixels</li>
+<li>therefore before plotting the final image, we need to normalize it to get a prope image</li>
+</ul>
+</li>
+</ul>
+<h1 id="effect-of-noise">Effect of noise<a aria-hidden="true" class="anchor-heading icon-link" href="#effect-of-noise"></a></h1>
+<p><img src="/notes/assets/images/2022-02-01-12-19-45.png"></p>
+<ul>
+<li>if the noise increases, it becomes difficult to differentiate between noise and edge as the derivate detects rapid change</li>
+</ul>
+<br>
+<ul>
+<li>noise in the image is almost invisible </li>
+<li>but <em>difference filters</em> respond very strongly to noise</li>
+<li>noise changes the neighborhood and the outcome is very different</li>
+<li>solutions
+<ul>
+<li>if the frequency is high, remove using low pass filter</li>
+<li>use kernels of higher size to decrease noise sensitivity</li>
+</ul>
+</li>
+</ul>

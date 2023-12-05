@@ -1,0 +1,98 @@
+<h1 id="intro">Intro<a aria-hidden="true" class="anchor-heading icon-link" href="#intro"></a></h1>
+<h2 id="shell-vs-terminal">Shell vs Terminal<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-vs-terminal"></a></h2>
+<ul>
+<li>kernel - server</li>
+<li>shell - middleware</li>
+<li>terminal - client</li>
+</ul>
+<h2 id="directory-structure">Directory Structure<a aria-hidden="true" class="anchor-heading icon-link" href="#directory-structure"></a></h2>
+<p><img src="/notes/assets/images/2023-01-05-18-13-15.png"></p>
+<h3 id="bin"><code>/bin</code><a aria-hidden="true" class="anchor-heading icon-link" href="#bin"></a></h3>
+<ul>
+<li>contains binaries and executable programs</li>
+<li>most of the command that we use are inside this directory</li>
+</ul>
+<blockquote style="background-color: #FF313120; padding:4px 3px; border-radius: 5px; border-left: 0.25em solid #FF3131; padding-left: 0.75em">cd is not a binary, it is built in shell command</blockquote>
+<ul>
+<li><code>/sbin</code> contains kernel mode binaries</li>
+</ul>
+<h3 id="boot"><code>/boot</code><a aria-hidden="true" class="anchor-heading icon-link" href="#boot"></a></h3>
+<ul>
+<li>contains static boot loader files</li>
+<li><code>GRUB</code> files are here</li>
+</ul>
+<h3 id="var"><code>/var</code><a aria-hidden="true" class="anchor-heading icon-link" href="#var"></a></h3>
+<ul>
+<li>contains log files, packages and database files</li>
+</ul>
+<h3 id="usr---user-system-resources"><code>/usr</code> - user system resources<a aria-hidden="true" class="anchor-heading icon-link" href="#usr---user-system-resources"></a></h3>
+<ul>
+<li>non-essential binaries are here</li>
+</ul>
+<h3 id="dev"><code>/dev</code><a aria-hidden="true" class="anchor-heading icon-link" href="#dev"></a></h3>
+<ul>
+<li>terminal devices, disk drives, USB's are included here</li>
+</ul>
+<h3 id="etc"><code>/etc</code><a aria-hidden="true" class="anchor-heading icon-link" href="#etc"></a></h3>
+<ul>
+<li>contains system configuration files</li>
+<li>should be text files, cannot be executables</li>
+</ul>
+<h3 id="mnt"><code>/mnt</code><a aria-hidden="true" class="anchor-heading icon-link" href="#mnt"></a></h3>
+<ul>
+<li>all external drivers are available here</li>
+</ul>
+<h2 id="shell-variable">Shell Variable<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-variable"></a></h2>
+<ul>
+<li>default datatype is string</li>
+<li>are accessed using <code>$</code></li>
+</ul>
+<h3 id="some-builtins">Some builtins<a aria-hidden="true" class="anchor-heading icon-link" href="#some-builtins"></a></h3>
+<ul>
+<li><code>PATH</code></li>
+<li><code>?</code>: returns the status code of last-entered command</li>
+</ul>
+<h2 id="a-script-file">A Script file<a aria-hidden="true" class="anchor-heading icon-link" href="#a-script-file"></a></h2>
+<blockquote style="background-color: #0096FF20; padding:4px 3px; border-radius: 5px; border-left: 0.25em solid #0096FF; padding-left: 0.75em">in linux, extension does not matter</blockquote>
+<ul>
+<li>kernel uses the interpreter mentioned in the <code>shebang</code></li>
+</ul>
+<pre class="language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token comment"># usr/bin/env bash</span>
+</code></pre>
+<ul>
+<li>status code of script is the status code of the last executed command</li>
+</ul>
+<h2 id="trivia">Trivia<a aria-hidden="true" class="anchor-heading icon-link" href="#trivia"></a></h2>
+<ul>
+<li>bash: bourne again shell</li>
+<li>pwd: print working directory</li>
+</ul>
+<h2 id="some-useful-manuals">Some useful manuals<a aria-hidden="true" class="anchor-heading icon-link" href="#some-useful-manuals"></a></h2>
+<ul>
+<li><code>man</code></li>
+<li><code>whatis</code>: one line description of commands</li>
+<li><code>apropos</code>: when you don't know the exact spelling</li>
+</ul>
+<h2 id="access-right-code">Access Right Code<a aria-hidden="true" class="anchor-heading icon-link" href="#access-right-code"></a></h2>
+<p><img src="/notes/assets/images/2023-01-05-18-31-23.png"></p>
+<ul>
+<li>meaning for files
+<ul>
+<li><code>r</code>: can read and copy</li>
+<li><code>w</code>: can change the file</li>
+<li><code>x</code>: can execute the file</li>
+</ul>
+</li>
+<li>meaning for directory
+<ul>
+<li><code>r</code>: can list files in the directory</li>
+<li><code>w</code>: can delete / move files in the directory</li>
+<li><code>x</code>: can access files, provide you have access to those individual files</li>
+</ul>
+</li>
+</ul>
+<h2 id="foreground-and-background-processes">Foreground and Background processes<a aria-hidden="true" class="anchor-heading icon-link" href="#foreground-and-background-processes"></a></h2>
+<p><a href="https://unix.stackexchange.com/questions/175741/what-is-background-and-foreground-processes-in-jobs">stackexchange</a></p>
+<ul>
+<li>first answer</li>
+</ul>

@@ -1,0 +1,47 @@
+<h1 id="lec-4">Lec 4<a aria-hidden="true" class="anchor-heading icon-link" href="#lec-4"></a></h1>
+<h1 id="edge-detection">Edge Detection<a aria-hidden="true" class="anchor-heading icon-link" href="#edge-detection"></a></h1>
+<ul>
+<li>identifying discontinuity in an image</li>
+<li>to get better idea about the shape and semantics</li>
+<li>provides more information than pixel level</li>
+</ul>
+<h2 id="edge-formation">Edge Formation<a aria-hidden="true" class="anchor-heading icon-link" href="#edge-formation"></a></h2>
+<ul>
+<li>rapid change in intensity</li>
+<li>can be caused by:
+<ul>
+<li><img src="/notes/assets/images/2022-01-30-10-37-43.png"></li>
+<li>intensity or color change</li>
+<li>surface normal discontinuity</li>
+<li>depth discontinuity</li>
+<li>surface color discontinuity</li>
+<li>illumination discontinuity</li>
+</ul>
+</li>
+</ul>
+<h2 id="edge-types">Edge Types<a aria-hidden="true" class="anchor-heading icon-link" href="#edge-types"></a></h2>
+<p><img src="/notes/assets/images/2022-01-30-10-45-04.png"></p>
+<ul>
+<li><strong><em>due to sampling and quantization, real edges are noisy</em></strong></li>
+</ul>
+<h2 id="edge-detector-and-performance">Edge Detector and Performance<a aria-hidden="true" class="anchor-heading icon-link" href="#edge-detector-and-performance"></a></h2>
+<ul>
+<li>We need edge operator to produce:
+<ul>
+<li>Edge position
+<ul>
+<li>sub pixel level accuracy</li>
+</ul>
+</li>
+<li>Edge magnitude – Strength</li>
+<li>Edge Orientation – Direction</li>
+</ul>
+</li>
+<li>Performance measurement
+<ul>
+<li>High detection rate</li>
+<li>Good localization</li>
+<li>Low noise sensitivity</li>
+</ul>
+</li>
+</ul>

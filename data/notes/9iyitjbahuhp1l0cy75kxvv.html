@@ -1,0 +1,82 @@
+<h1 id="asynchrnous-programming">Asynchrnous Programming<a aria-hidden="true" class="anchor-heading icon-link" href="#asynchrnous-programming"></a></h1>
+<h1 id="asynchronism">Asynchronism<a aria-hidden="true" class="anchor-heading icon-link" href="#asynchronism"></a></h1>
+<ul>
+<li>occurrence of events independent of the main program flow
+<ul>
+<li>not limited to multiple threads / processes</li>
+</ul>
+</li>
+</ul>
+<h2 id="why-async">Why Async?<a aria-hidden="true" class="anchor-heading icon-link" href="#why-async"></a></h2>
+<p><img src="/notes/assets/images/2023-01-09-18-49-42.png"></p>
+<ul>
+<li>due to the <code>GIL</code>, python will have multiple threads at single time, but it still runs a single <strong>CPU instruction</strong> at single time
+<ul>
+<li>there are ways to go around the <code>GIL</code> with <code>multiprocessing</code> and <code>c-python</code></li>
+</ul>
+</li>
+</ul>
+<blockquote style="background-color: #0096FF20; padding:4px 3px; border-radius: 5px; border-left: 0.25em solid #0096FF; padding-left: 0.75em">Python runs thread concurrently, but not in parallel</blockquote>
+<details>
+<summary>concurrent and parallel</summary>
+<p><img src="/notes/assets/images/2023-01-10-11-38-43.png"></p>
+</details>
+<ul>
+<li>in general:
+<ul>
+<li>multithreading is good for <strong>io-bound</strong> tasks</li>
+<li>multiprocessing is good for <strong>cpu-bound</strong> tasks</li>
+</ul>
+</li>
+</ul>
+<h3 id="generator-analogy-for-async">Generator Analogy for async<a aria-hidden="true" class="anchor-heading icon-link" href="#generator-analogy-for-async"></a></h3>
+<ul>
+<li><a href="/notes/notes/ztnm6bj51bu4saqs0m9lg4j">Generators</a> does work in chunks of multiple <code>next()</code> executions
+<ul>
+<li>similarity: work is picked-up where we last left the execution in <code>async</code> and in <code>generator</code></li>
+<li><code>async</code> would give the control to some other <code>coroutine</code> when it is being waited</li>
+</ul>
+</li>
+</ul>
+<h1 id="example">Example<a aria-hidden="true" class="anchor-heading icon-link" href="#example"></a></h1>
+<ul>
+<li><a href="https://github.com/mikeckennedy/async-await-jetbrains-webcast/tree/master/code/producer_consumer">code link</a></li>
+</ul>
+<details>
+<summary>Performance Improvements</summary>
+<p><img src="/notes/assets/images/2023-01-10-13-33-13.png"></p>
+<p><img src="/notes/assets/images/2023-01-10-13-33-27.png"></p>
+</details>
+<h2 id="async-function-anatomy">Async function anatomy<a aria-hidden="true" class="anchor-heading icon-link" href="#async-function-anatomy"></a></h2>
+<p><img src="/notes/assets/images/2023-01-10-13-32-24.png"></p>
+<h1 id="common-methods-of-asyncio">Common methods of asyncio<a aria-hidden="true" class="anchor-heading icon-link" href="#common-methods-of-asyncio"></a></h1>
+<ul>
+<li><code>coroutines</code></li>
+<li><code>asyncio.run()</code></li>
+<li><code>asyncio.wait_for()</code></li>
+<li><code>execute</code></li>
+<li><code>task</code> and <code>create_task</code></li>
+<li>loops
+<ul>
+<li><code>get_event_loop</code></li>
+<li><code>run_until_complete</code></li>
+<li><code>close</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="todos">TODOs<a aria-hidden="true" class="anchor-heading icon-link" href="#todos"></a></h1>
+<ul>
+<li>remaining part from jetbrains videos</li>
+<li>comparison with js (futures and promises)</li>
+<li>ten thousand meters blog</li>
+<li><a href="https://docs.python.org/3/library/asyncio.html">python docs</a>
+<ul>
+<li>can start from coroutines and tasks part</li>
+</ul>
+</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/notes/notes/lw02n68zvdx7xmjtdn6ost0">Python Asyncio</a></li>
+</ol>

@@ -1,0 +1,12 @@
+
+- [ ] data loading
+  - [ ] why and how colate numpy
+- [ ] model
+  - shapes shapes shapes
+- [ ] tain and eval utils
+  - [ ] E - changes in eval functions
+- [ ] train function
+  - [ ] toch.optim -> optax
+    - [ ] init params
+    - [ ] loss function
+    - [ ] backprop / update

@@ -1,0 +1,464 @@
+
+- [Abbreviations](#abbreviations)
+- [Lecture 5](#lecture-5)
+- [Full Adders vs Half Adders](#full-adders-vs-half-adders)
+- [Full adder with GPK](#full-adder-with-gpk)
+- [Full Adder Implementations](#full-adder-implementations)
+  - [Ripple Carry Adder](#ripple-carry-adder)
+  - [Using Generate and Propagate](#using-generate-and-propagate)
+    - [Expanding equations for carry out (carry look ahead adders)](#expanding-equations-for-carry-out-carry-look-ahead-adders)
+- [What impacts the delay of GATES](#what-impacts-the-delay-of-gates)
+- [Lecture 6](#lecture-6)
+  - [Look-ahead adder](#look-ahead-adder)
+  - [Hierarchial look-ahead adder](#hierarchial-look-ahead-adder)
+  - [Think / Revise about](#think--revise-about)
+- [Lecture 7, 8](#lecture-7-8)
+  - [Carry Skip Adders](#carry-skip-adders)
+  - [Hierarchial CSA](#hierarchial-csa)
+  - [Carry Select Adders](#carry-select-adders)
+    - [Conditional Sum Adder](#conditional-sum-adder)
+- [Lecture 9](#lecture-9)
+  - [Bit Serial Adder](#bit-serial-adder)
+  - [General Structure for Adders using generate and propagate](#general-structure-for-adders-using-generate-and-propagate)
+- [List of Multipliers](#list-of-multipliers)
+- [Lecture 10 (Intro CSA)](#lecture-10-intro-csa)
+- [Lecture 11 (CSA Numerical \&\& trick for signed numbers)](#lecture-11-csa-numerical--trick-for-signed-numbers)
+- [Lecture 12 (CSA Signed Number numerical \& Booth re-coding)](#lecture-12-csa-signed-number-numerical--booth-re-coding)
+- [Lecture 13 (LSM, RSM, booth example(4, 8, CSA signed))](#lecture-13-lsm-rsm-booth-example4-8-csa-signed)
+- [Lecture 14 (Baugh Wooley Multiplier \& fixed point notation)](#lecture-14-baugh-wooley-multiplier--fixed-point-notation)
+- [Lecture 15](#lecture-15)
+- [Lecture 16](#lecture-16)
+
+# Abbreviations
+
+- RCA (ripple carry adder)
+- CLA (carry look-ahead adder)
+- CSA (carry skip adders)
+- CSA (carry select adders)
+- BSA (bit serial adder)
+- PTA (prefix tree adder)
+- CSA (carry save adder)
+
+# Lecture 5
+
+# Full Adders vs Half Adders
+
+- half adders
+  - `sum` = a `xor` b
+  - `carry` = a * b
+- full adders
+  - `sum` = (a `xor` b) `xor` c
+  - `carry` = ab + bc + ac = MAJ(a, b, c)
+    - MAJ = majority gate
+
+# Full adder with GPK
+
+![](/assets/images/2022-11-22-11-26-40.png)
+
+- g = generate (irrespective of C_in, C_out will be 1)
+- p = propagate (C_out = C_in)
+- k = kill (irrespective of C_in, C_out will be 0)
+
+- equations
+  - g = a `and` b
+  - p = a `xor` b
+  
+# Full Adder Implementations
+
+<details>
+<summary>sum of products implementation (DNW)</summary>
+
+![](/assets/images/2022-11-22-11-27-17.png)
+
+</details>
+
+<details>
+<summary>using half adders (DNW)</summary>
+
+![](/assets/images/2022-11-22-11-27-39.png)
+
+</details>
+
+## Ripple Carry Adder
+
+![](/assets/images/2022-11-22-11-28-03.png)
+
+- acts as subtractor when `m = 1`
+  - xor gates give 1's complement of B
+  - M is also C_0, indirectly adds 1 => we get 2's complement of B
+- overflow
+  - only check this when `a` and `b` are in `signed 2's representation', and both are +ve or -ve
+  - do not check in this case
+- carry flag
+  - when `a` and `b` are `unsigned`
+
+## Using Generate and Propagate
+
+- substituting the values of P and G in equations of full adders
+  - `sum` = P `xor` C
+  - `carry` = G + P * C
+    - carry is one when
+      - current stage is generate or
+      - current is propagate and incoming carry is one
+
+### Expanding equations for carry out (carry look ahead adders)
+
+![](/assets/images/2022-11-22-11-28-37.png)
+
+# What impacts the delay of GATES
+
+- number of inputs
+- fan-outs (how many times a output is used again)
+- strength of gate (ignore)
+- pattern of inputs
+
+<details>
+<summary>glitchy behavior</summary>
+
+![](/assets/images/2022-11-22-11-29-43.png)
+
+</details>
+
+- [ ] ***derive RCA equation -> GPK equation***
+- [ ] ***multiple stage c_out equation***
+
+# Lecture 6
+
+## Look-ahead adder
+
+- we get `p` and `g` from `a` and `b` in one get delay
+- and all the c_out can be obtained from `p` and `g` in two gate delay(`and` & `or`)
+- finding `sum` will need another one-gate delay of `XOR`
+  - **thus carry look-ahead is faster than ripple carry adder**
+  - **cost is additional circuits to figure out c_outs**
+  - **layers are roughly independent of the no. of bits we add**
+
+## Hierarchial look-ahead adder
+
+![](/assets/images/2022-11-23-11-21-50.png)
+
+- we make groups of 4 to add one more layer
+- we do this to avoid using large gates
+
+<details>
+<summary>equations</summary>
+
+![](/assets/images/2022-11-23-11-22-19.png)
+
+![](/assets/images/2022-11-23-11-22-41.png)
+
+</details>
+
+<details>
+<summary>3 level 64 bit adder</summary>
+
+![](/assets/images/2022-11-23-11-23-14.png)
+
+</details>
+
+## Think / Revise about
+
+- [ ] ***is the block generating carry or `g`?***
+- [ ] ***how many instances of smaller blocks would be used?***
+- [ ] ***which carry / `g` is generated by which block?***
+
+# Lecture 7, 8
+
+## Carry Skip Adders
+
+<details>
+<summary>simple CSA circuit</summary>
+
+![](/assets/images/2022-11-23-10-58-23.png)
+
+</details>
+
+- ***general strategy to speed-up is to figure out the carry faster***
+- for any stage if propagate signal is set, we skip carry to next stage
+
+## Hierarchial CSA
+
+<details>
+<summary>circuit diagram</summary>
+
+![](/assets/images/2022-11-23-10-51-25.png)
+
+</details>
+
+- for 32 bit CSA, we have 2 levels of skipping (8bit and 32 bit)
+- for 128 bit CSA, we have 3 levels of skipping (8bit, 32bit and 128 bit)
+- ***if we are using RCA of `x` bit, maximum rippling would of size `2x`***
+
+## Carry Select Adders
+
+- we divide a higher order number into lower order groups
+- normally, we would need c_in from groups on left to execute the RCA for groups on right
+- in carry select adders, we find sum for both cases (cin = [0 | 1]) and select after the groups on left have completed
+- for 8 bit num:
+  - RCA would have delay of `8 FA`, requires `8 FA`
+  - CSA would have delay of `4 FA`, requires `12 FA` + some `mux`
+
+<details>
+<summary>circuit diagram</summary>
+
+![](/assets/images/2022-11-23-11-07-23.png)
+
+</details>
+
+- each k bit adder can be implemented using 3 k/2 bit adders
+- ***main idea: all adders work in parallel, and the above idea can be used recursively***
+
+### Conditional Sum Adder
+
+- when we use 1 bit RCAs, the adder is known as conditional sum adder
+
+- [ ] ***workout one addition through circuit***
+- [ ] ***multiple stage c_out equation***
+- [ ] ***carry skip and conditional sum -- numerical [Examples](https://drive.google.com/drive/u/1/folders/1XyUdKoB9A_qtemFwSmVRS0SI1lVFQP2v)***
+
+# Lecture 9
+
+## Bit Serial Adder
+
+<details>
+<summary>circuit</summary>
+
+![](/assets/images/2022-11-23-11-53-34.png)
+
+</details>
+
+- n bit number, we only have a `FA` and a `FF`
+- we would need n cycle to find the answer
+
+## General Structure for Adders using generate and propagate
+
+![](/assets/images/2022-11-23-11-57-32.png)
+
+- we simplify the diagram in terms of prefix tree
+
+<details>
+<summary>4 bit RCA as prefix tree </summary>
+
+![](/assets/images/2022-11-23-12-01-06.png)
+
+</details>
+
+brent kung
+
+- 3 types of boxes
+- gray: 3 in -> 1 out
+- black: 4 in -> 2 out
+
+- [ ] ***given a diagram, write out some equations***
+
+# List of Multipliers
+
+- unsgined
+  - left shift and right shift (serial multiplication)
+- singed operands
+  - booth recoding (radix 2, 4, 8)
+  - baugh-wooley method
+- squareing
+  - special case of multiplication
+
+# Lecture 10 (Intro CSA)
+
+- adding more than 2 nums
+  - iteratively adding pairs of 2
+  - thinking about binary multiplication
+    - column counting
+    - 10 to 4 counter
+      - 10 -> 3 + 3 + 3 + 1 using 3 FA
+      - 4, 3 -> 2, 2, 1 using 2 FA
+      - columns represent 2^i
+      - keep using full orders until every column has < 3 elements
+      - 3 dot -> use FA else HA
+      - finally use a ripply carry, GA
+    - wallace and dada tree
+      - at every stage we use 3 rows and FA and will 2 ans
+      - 2 ans -> carry save adder
+    - if the expression is of the form y = 2w + 4x + y + 3z
+      - we just shift w by one column
+      - we shift x by 2 cols
+      - when we shift, size of number increases by one
+- advantage of CSA
+  - from 7 * delay of RCA
+  - to 1 * delay of RCA + some delay of FA
+
+# Lecture 11 (CSA Numerical && trick for signed numbers)
+
+- formula for addition of n, x bit numbers
+  - x + log2(n) --> size of accumulator
+  - accumulator for  
+- numerical
+- understanding diag
+  - input 3 numbers from col (0 -> k - 1)
+    - output
+      - 1 number from col (1 -> k) carry vector
+      - 1 number from col (0 -> k - 1) sum vector
+  - for making diag
+    - do one numerical
+    - then do numerical
+
+- comparison with traditional method (iterative, time multiplexing)
+
+- addition using binary tree of CPAs
+  - delay not very bad
+  - size of k (adders increase)
+
+- signed numbers
+  - check msb
+    - if 1 --> negative
+    - else positive
+  - finding value
+    - method 1
+      - find 2's complement (1's complement + 1)
+      - add - sign
+    - method 2
+      - if msb is one treat is -1 * 2 ^ MSB
+      - add others simply
+
+- combination of columns with +/-  
+
+- difference between squaring and multiplying
+  - multiplying is optimized for squaring
+
+- signed numbers for csa
+  - extending signed numbers
+    - copy the MSB to left side
+  - in columns
+    - flip the msb
+    - add -1 in the msb column
+
+# Lecture 12 (CSA Signed Number numerical & Booth re-coding)
+
+- flip msb add -1 in that column
+- to remove -1 -> shift -1 and add 1 in that column
+
+- size of the -ve wala vector
+- max size of single vector + log2(total number of vector)
+
+- start
+  - based on the column of msb, figure out a new vector of size
+    - calculating size
+      - -3 * (2 ^ power of column) --> bits required to represent this
+    - convert 3 -1s to a new vector
+      - this vector is the signed representation of -3 * ...
+    - add the flipped vectors and the -1 wala vector
+
+```text
+- csa steps signed nos
+  - flip MSBs, combine -1s
+  - based on largest input and #input find size of -wala vector
+  - based on -wala size and sum of -1, find vector (signed rep of sum in -wala size)
+  - use sign extension to make every vector of equal bit
+
+- wherever possible reduce rows by moving ones from one row to empty
+```
+
+- multiplication
+  - done using multi operand addition
+
+- optimizing multiplication -> square
+
+- booth
+  - finding value of binary -> decimal
+    - if we have burst of 1s (011110)
+      - final value
+        - = 2 ^ (4 + 1) - 2 ^ 1
+        - = 32 - 2
+        - = 30
+  - booth re-coding (radix 2)
+    - look at window of 2 nums
+      - 00 -> 0
+      - 10 -> -1
+      - 11 -> 0
+      - 01 -> 1
+
+# Lecture 13 (LSM, RSM, booth example(4, 8, CSA signed))
+
+- LSM (a, b)
+  - find bits in ans
+  - 1. start with all 0
+  - 2. ls
+  - 3. add msb
+  - repeat till lsb
+  - advantage
+    - process become iterative
+  - cost
+    - shifter, ffs, adder, and gates, shifter(to find a single bit)
+- RSM (a, b)
+  - find bits in ans + 1
+  - start with all 0
+  - rs
+  - add lsb on right side
+  - repeat and append carry in beginning
+
+- radix 4 booth (signed a, b)
+  - window has overlap of 1 bit with previous window
+  - encode second operand(b)
+    - find possible values of a needed (3, 2, 1, 0, -1, -2, -3)
+  - find bits in ans
+    - start with all 0
+    - 4 booth => shift twice
+    - add a*msb(b_coded)
+  - repeat
+  - ***extension is alway sign extension***
+- radix 8 (signed a, b)
+  - window has overlap of 1 bit
+  - same step as above
+
+- radix with csa signed trick
+- advantage of signed trick over sign extension
+  - reduce size of adder
+
+# Lecture 14 (Baugh Wooley Multiplier & fixed point notation)
+
+- msb negative contributor, others positive
+- take 2's complement of negative contributors and make vectors
+- fill the vectors in empty rows
+- combine 2's wherever possible
+
+- fxp
+  - (bd, ad) -- d = decimal
+  - finding the resolution, largest and smallest numbers
+    - singed and unsigned
+    - where to round off
+
+# Lecture 15
+
+- Divide and Conquer Multiplier (unsigned)
+  - triangle lines wala structure
+  - do simple group multiplication
+    - combine rows wherever possible
+  - steps #1
+    - find multiplication of groups
+    - add using carry save adder
+      - place items carefully
+      - add lsb of both number
+      - msb = lsb + bits req
+  - steps #2
+    - write everything directly
+- clk based carry-save adder
+  - normally
+    - 100 clock cycles, T_cycle is function of no. of bits
+  - with CSA
+    - 100 cycles, size does not impact only 1 FA delay
+- Newton-Raphson Method (approximation)
+  - x_(i+1) = x_i - f(x_i) / f'(x_i)
+  - to find 1/d
+    - f(x) = D - 1/x
+      - x_i+1 = x_i (2 - d.xi)
+      - division in converted to multilier(2) and sub(1)
+  - to find 1/root(some number)
+    - figuring out the fxp req
+
+# Lecture 16
+
+- find root using some other equation
+- what is a good function
+
+- Cordic (circular)
+  - rotating a vector by `a`
+    - x = xcosa - ysina
+    - y = xsina + ycosa

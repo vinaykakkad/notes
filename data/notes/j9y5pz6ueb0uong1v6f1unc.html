@@ -1,0 +1,110 @@
+<h1 id="var-let-const">Var Let Const<a aria-hidden="true" class="anchor-heading icon-link" href="#var-let-const"></a></h1>
+<h1 id="lexical-environment-and-scope">Lexical environment and scope<a aria-hidden="true" class="anchor-heading icon-link" href="#lexical-environment-and-scope"></a></h1>
+<ul>
+<li>memory space of the current execution context + LE of parent</li>
+<li>recursive expansion (LE of parent -> LE of parent of parent ) is <code>scope chain</code>
+<ul>
+<li>recursively we reach the global</li>
+<li><strong>*parent of global is none**</strong></li>
+<li><strong><em>LE of some parent function is stored as closure</em></strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="scope">Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#scope"></a></h2>
+<ul>
+<li>part of which can access a variable is scope of variable</li>
+</ul>
+<h1 id="shortest-js-code">Shortest JS code<a aria-hidden="true" class="anchor-heading icon-link" href="#shortest-js-code"></a></h1>
+<ul>
+<li>even when we don't have anything in our code, JS engines creates a global object
+<ul>
+<li>window in case of browsers</li>
+<li>and in the global context <code>this</code> variables refers to the global object</li>
+</ul>
+</li>
+</ul>
+<p><img src="/notes/assets/images/2022-10-17-20-30-44.png"></p>
+<h1 id="let-and-const">Let and Const<a aria-hidden="true" class="anchor-heading icon-link" href="#let-and-const"></a></h1>
+<ul>
+<li>memory is assigned before execution to every variable(var, let, const)</li>
+<li>but in case of <code>let</code> and <code>const</code> memory is not allocated in the global space
+<ul>
+<li>it is allocated in something, that is known as the <code>temporal dead zone</code></li>
+<li><strong><em>therefore we cannot access let and const variable without initialization</em></strong></li>
+<li><strong><em>it will give us an reference error</em></strong></li>
+<li>return values for:
+<ul>
+<li>var without initialization: <code>undefined</code></li>
+<li>let, const without initialization: <code>reference error</code></li>
+<li>any variable without declaration: <code>reference error</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="re-declaration-vs-re-initialization">Re-declaration vs re-initialization<a aria-hidden="true" class="anchor-heading icon-link" href="#re-declaration-vs-re-initialization"></a></h2>
+<ul>
+<li>only var can be re-declared in the same scope</li>
+<li>var and let can be re-initialized, const cannot be</li>
+<li>const cannot be declared without initialization</li>
+</ul>
+<h2 id="errors">Errors<a aria-hidden="true" class="anchor-heading icon-link" href="#errors"></a></h2>
+<ul>
+<li>syntax error: when we re-declare some variable
+<ul>
+<li>or when we declare const without initialization</li>
+</ul>
+</li>
+<li>type error: when we re-initialize cost</li>
+<li>reference error: when we access something that is not in the current memory space (TDZ or un-declared)</li>
+</ul>
+<h1 id="block-scope">Block Scope<a aria-hidden="true" class="anchor-heading icon-link" href="#block-scope"></a></h1>
+<ul>
+<li>block or compound statement
+<ul>
+<li>group of statement surrounded within curly braces</li>
+</ul>
+</li>
+<li>block scoped variables
+<ul>
+<li><code>let</code> and <code>const</code> are block scoped variables
+<ul>
+<li>i.e. if they are defined within a block, they won't be accessible outside it
+<ul>
+<li><strong><em>will throw reference error(not defined)</em></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">- let and const are block scoped => their memory allocation will happen in the nearest block memory space<br>- var is function scoped=> its memory allocation will happen in the nearest function memory space</blockquote>
+<h2 id="shadowing">Shadowing<a aria-hidden="true" class="anchor-heading icon-link" href="#shadowing"></a></h2>
+<ul>
+<li>shadowing is when a globally declared variable is used / declared inside a block scope
+<ul>
+<li>for <code>var</code>
+<ul>
+<li>as it is not block scope, the new variable refers to the same memory address</li>
+<li><strong><em><code>var</code> is function scope</em></strong></li>
+</ul>
+</li>
+<li>for <code>let</code> and <code>const</code>
+<ul>
+<li>the are block scoped variables</li>
+<li>memory is allocated in a separate memory space (block)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="illegal-shadowing">Illegal Shadowing<a aria-hidden="true" class="anchor-heading icon-link" href="#illegal-shadowing"></a></h3>
+<ul>
+<li>when a <code>let</code> or <code>const</code> variable is declared in global scope and we try to declare a <code>var</code> variable inside a block
+<ul>
+<li>it will throw an syntax error due to <code>illegal-shadowing</code></li>
+</ul>
+</li>
+</ul>
+<p><img src="/notes/assets/images/2023-10-03-17-13-44.png"></p>

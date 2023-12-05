@@ -1,0 +1,662 @@
+{
+  "roots": [
+    {
+      "key": "H8OS9Ap2DDjZ7XSIZWpQT",
+      "title": "Acads",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "d8PKo09LSN88vNc7MOk1T",
+          "title": "Sem 6",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "S64b0OlCF4BigiCwOZ3e5",
+              "title": "Big Data Analytics",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "kj2OZpfrI93bGmYCBMLgM",
+                  "title": "Lec 1",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "RPmQFNcvUb89M2nYu802I",
+              "title": "Computer Networks",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "ZnnjqzTxyepMvwsX6Lytr",
+              "title": "Computer Vision",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "7iwle7bwr3wgmqx19n1i3sh",
+                  "title": "Deep Learning",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "jnYmiJo5s2BuF2CYJe4b1",
+                  "title": "Lec 1",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "s9k71a9JQIZGzZjsXUmWR",
+                  "title": "Lec 10",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "kFdhjexbkBPW1a47YdOKh",
+                  "title": "Lec 2",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "Y2iLGKl9mabCkYXe9njir",
+                  "title": "Lec 3",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ifmGOHRpG2boYwe9mTk8d",
+                  "title": "Lec 4",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "BgB9oRCh7UiA8oSQuR6Ly",
+                  "title": "Lec 5",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "rKL0p5CPTbP8562FTO8Mr",
+                  "title": "Lec 6",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "U9lUxkH7Gix1SnSBfN7bb",
+                  "title": "Lec 7",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "KCOBAxohhtwsLjnxlV4w2",
+                  "title": "Lec 8",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "PezPhIacmef48kh1E5p9d",
+                  "title": "Lec 9",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "Tkka57jlsUneqiwb6VK1Z",
+              "title": "Fundamentals of Environmental Studies",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "hXsCdZz8wGcRX1j2ul3AW",
+                  "title": "Lec 1",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "gI3HOwMaDPupfjkZGGVZz",
+                  "title": "Lec 2",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "BJt6j2bNDhOoQKtcmGZp4",
+                  "title": "Lec 4",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "key": "TN2l8VL0nEIPfVAADRxm5",
+              "title": "Machine Learning",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "KD1xsuehs6CiHzKbTJtCC",
+                  "title": "1-Introduction",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "o9V4uumi3Tls8uGzJEcos",
+                  "title": "10 Bayesian Statistics",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "MEXC6Rz6vhnGF1xxGucSo",
+                  "title": "11 Avoiding Overfitting",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "BmxWSEoOhHxbfsbIbBBSN",
+                  "title": "2-MLE-and-regression",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "SBDE29Uv1A941yOcaAtGZ",
+                  "title": "3 Verfitting and Generalisation",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "Rh3CSk5AzxljaDfFQC5wQ",
+                  "title": "4 Bias Variance Tradeoff",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "PmPoZMCNzvQB44gE1Tg5L",
+                  "title": "5-KNN",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "ei9JWoeceRbHDcPoNblcb",
+                  "title": "6 Curse of Dimensionality",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "stO81oij4841YX11cSuZI",
+                  "title": "7 Multivariance Models",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "thpLKumUhUP0f83D2CMWq",
+                  "title": "8-MLE-2",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "DJi8CEAOjDzqGAxO5KP87",
+                  "title": "9 Regularization",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "3flb46vfacm3gin43z633bg",
+          "title": "Sem 7",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "kvnu5kew5wvkwmka2si2ftc",
+              "title": "Aca",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "9joakunj7egivkoo8jxaar6",
+                  "title": "Adders",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                },
+                {
+                  "key": "60ial221sf2kqr5a6v67fjv",
+                  "title": "Intro",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "m2fe4910vhlj3cwsbw45wfc",
+      "title": "Archive",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "p9l8ptl7bskaee2p920uziq",
+          "title": "Acads",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "unp1bqfnow0w4xw4pdwxsd3",
+              "title": "Sem 6",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "huq1pbaeqc3zby297lcdmnu",
+                  "title": "Machine Learning",
+                  "icon": "plusOutlined",
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": [
+                    {
+                      "key": "im6ddcj0duixhbp1zdo25xq",
+                      "title": "Decision Trees",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "lm8hdx9tjk5aqitlcvdqtb1",
+          "title": "Cs",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "8opnas8cdnt6jk96eyiv181",
+              "title": "Dl",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "3zk3gn7stqvl4qi0qeu2hz0",
+                  "title": "Pytorch",
+                  "icon": "plusOutlined",
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": [
+                    {
+                      "key": "mnujjdth4kn8mnozy4xlz16",
+                      "title": "Quickstart",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "35a46skqrqiqp2dn2abgana",
+              "title": "Os",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "c8q7hkwe6ynjl1lqtjppdpb",
+                  "title": "Intro",
+                  "icon": null,
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "tpmpx2xkasjhbntai7ejfx3",
+      "title": "Capture",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "paeeqd28g50sypy53mq6m8s",
+          "title": "Dev",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "t2ichjginaesbclr4uiw1fw",
+              "title": "Python",
+              "icon": "plusOutlined",
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": [
+                {
+                  "key": "xrw9257ex1h94sfvwweuywe",
+                  "title": "Functional Programming",
+                  "icon": "plusOutlined",
+                  "hasTitleNumberOutlined": false,
+                  "vaultName": "vault",
+                  "children": [
+                    {
+                      "key": "9iyitjbahuhp1l0cy75kxvv",
+                      "title": "Asynchrnous Programming",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": [
+                        {
+                          "key": "lw02n68zvdx7xmjtdn6ost0",
+                          "title": "Python Asyncio",
+                          "icon": null,
+                          "hasTitleNumberOutlined": false,
+                          "vaultName": "vault",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "key": "ztnm6bj51bu4saqs0m9lg4j",
+                      "title": "Generators",
+                      "icon": null,
+                      "hasTitleNumberOutlined": false,
+                      "vaultName": "vault",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ydBpHsjLwIGYomDZo8NtB",
+      "title": "CLI",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "r459rk8iofn446t6nshevjt",
+          "title": "Intro",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "oQYRM3sMDt7Q6JWDzbjG4",
+          "title": "Shell Scripting",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "g9m1mlmymq7qvcjzi8ap2qu",
+      "title": "Dev",
+      "icon": "plusOutlined",
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "28qngwsk8m7bvqg9s7bz7f7",
+          "title": "JS",
+          "icon": "plusOutlined",
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "71vmk221iuw1r44eg87i9k1",
+              "title": "Hoisting",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "r81rounrbl7dbjbbax7zvzk",
+              "title": "How JS Works",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "j9y5pz6ueb0uong1v6f1unc",
+              "title": "Var Let Const",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "H8OS9Ap2DDjZ7XSIZWpQT": null,
+    "d8PKo09LSN88vNc7MOk1T": "H8OS9Ap2DDjZ7XSIZWpQT",
+    "S64b0OlCF4BigiCwOZ3e5": "d8PKo09LSN88vNc7MOk1T",
+    "kj2OZpfrI93bGmYCBMLgM": "S64b0OlCF4BigiCwOZ3e5",
+    "RPmQFNcvUb89M2nYu802I": "d8PKo09LSN88vNc7MOk1T",
+    "ZnnjqzTxyepMvwsX6Lytr": "d8PKo09LSN88vNc7MOk1T",
+    "7iwle7bwr3wgmqx19n1i3sh": "ZnnjqzTxyepMvwsX6Lytr",
+    "jnYmiJo5s2BuF2CYJe4b1": "ZnnjqzTxyepMvwsX6Lytr",
+    "s9k71a9JQIZGzZjsXUmWR": "ZnnjqzTxyepMvwsX6Lytr",
+    "kFdhjexbkBPW1a47YdOKh": "ZnnjqzTxyepMvwsX6Lytr",
+    "Y2iLGKl9mabCkYXe9njir": "ZnnjqzTxyepMvwsX6Lytr",
+    "ifmGOHRpG2boYwe9mTk8d": "ZnnjqzTxyepMvwsX6Lytr",
+    "BgB9oRCh7UiA8oSQuR6Ly": "ZnnjqzTxyepMvwsX6Lytr",
+    "rKL0p5CPTbP8562FTO8Mr": "ZnnjqzTxyepMvwsX6Lytr",
+    "U9lUxkH7Gix1SnSBfN7bb": "ZnnjqzTxyepMvwsX6Lytr",
+    "KCOBAxohhtwsLjnxlV4w2": "ZnnjqzTxyepMvwsX6Lytr",
+    "PezPhIacmef48kh1E5p9d": "ZnnjqzTxyepMvwsX6Lytr",
+    "Tkka57jlsUneqiwb6VK1Z": "d8PKo09LSN88vNc7MOk1T",
+    "hXsCdZz8wGcRX1j2ul3AW": "Tkka57jlsUneqiwb6VK1Z",
+    "gI3HOwMaDPupfjkZGGVZz": "Tkka57jlsUneqiwb6VK1Z",
+    "BJt6j2bNDhOoQKtcmGZp4": "Tkka57jlsUneqiwb6VK1Z",
+    "TN2l8VL0nEIPfVAADRxm5": "d8PKo09LSN88vNc7MOk1T",
+    "KD1xsuehs6CiHzKbTJtCC": "TN2l8VL0nEIPfVAADRxm5",
+    "o9V4uumi3Tls8uGzJEcos": "TN2l8VL0nEIPfVAADRxm5",
+    "MEXC6Rz6vhnGF1xxGucSo": "TN2l8VL0nEIPfVAADRxm5",
+    "BmxWSEoOhHxbfsbIbBBSN": "TN2l8VL0nEIPfVAADRxm5",
+    "SBDE29Uv1A941yOcaAtGZ": "TN2l8VL0nEIPfVAADRxm5",
+    "Rh3CSk5AzxljaDfFQC5wQ": "TN2l8VL0nEIPfVAADRxm5",
+    "PmPoZMCNzvQB44gE1Tg5L": "TN2l8VL0nEIPfVAADRxm5",
+    "ei9JWoeceRbHDcPoNblcb": "TN2l8VL0nEIPfVAADRxm5",
+    "stO81oij4841YX11cSuZI": "TN2l8VL0nEIPfVAADRxm5",
+    "thpLKumUhUP0f83D2CMWq": "TN2l8VL0nEIPfVAADRxm5",
+    "DJi8CEAOjDzqGAxO5KP87": "TN2l8VL0nEIPfVAADRxm5",
+    "3flb46vfacm3gin43z633bg": "H8OS9Ap2DDjZ7XSIZWpQT",
+    "kvnu5kew5wvkwmka2si2ftc": "3flb46vfacm3gin43z633bg",
+    "9joakunj7egivkoo8jxaar6": "kvnu5kew5wvkwmka2si2ftc",
+    "60ial221sf2kqr5a6v67fjv": "kvnu5kew5wvkwmka2si2ftc",
+    "m2fe4910vhlj3cwsbw45wfc": null,
+    "p9l8ptl7bskaee2p920uziq": "m2fe4910vhlj3cwsbw45wfc",
+    "unp1bqfnow0w4xw4pdwxsd3": "p9l8ptl7bskaee2p920uziq",
+    "huq1pbaeqc3zby297lcdmnu": "unp1bqfnow0w4xw4pdwxsd3",
+    "im6ddcj0duixhbp1zdo25xq": "huq1pbaeqc3zby297lcdmnu",
+    "lm8hdx9tjk5aqitlcvdqtb1": "m2fe4910vhlj3cwsbw45wfc",
+    "8opnas8cdnt6jk96eyiv181": "lm8hdx9tjk5aqitlcvdqtb1",
+    "3zk3gn7stqvl4qi0qeu2hz0": "8opnas8cdnt6jk96eyiv181",
+    "mnujjdth4kn8mnozy4xlz16": "3zk3gn7stqvl4qi0qeu2hz0",
+    "35a46skqrqiqp2dn2abgana": "lm8hdx9tjk5aqitlcvdqtb1",
+    "c8q7hkwe6ynjl1lqtjppdpb": "35a46skqrqiqp2dn2abgana",
+    "tpmpx2xkasjhbntai7ejfx3": null,
+    "paeeqd28g50sypy53mq6m8s": "tpmpx2xkasjhbntai7ejfx3",
+    "t2ichjginaesbclr4uiw1fw": "paeeqd28g50sypy53mq6m8s",
+    "xrw9257ex1h94sfvwweuywe": "t2ichjginaesbclr4uiw1fw",
+    "9iyitjbahuhp1l0cy75kxvv": "xrw9257ex1h94sfvwweuywe",
+    "lw02n68zvdx7xmjtdn6ost0": "9iyitjbahuhp1l0cy75kxvv",
+    "ztnm6bj51bu4saqs0m9lg4j": "xrw9257ex1h94sfvwweuywe",
+    "ydBpHsjLwIGYomDZo8NtB": null,
+    "r459rk8iofn446t6nshevjt": "ydBpHsjLwIGYomDZo8NtB",
+    "oQYRM3sMDt7Q6JWDzbjG4": "ydBpHsjLwIGYomDZo8NtB",
+    "g9m1mlmymq7qvcjzi8ap2qu": null,
+    "28qngwsk8m7bvqg9s7bz7f7": "g9m1mlmymq7qvcjzi8ap2qu",
+    "71vmk221iuw1r44eg87i9k1": "28qngwsk8m7bvqg9s7bz7f7",
+    "r81rounrbl7dbjbbax7zvzk": "28qngwsk8m7bvqg9s7bz7f7",
+    "j9y5pz6ueb0uong1v6f1unc": "28qngwsk8m7bvqg9s7bz7f7"
+  },
+  "notesLabelById": {
+    "H8OS9Ap2DDjZ7XSIZWpQT": "Acads",
+    "d8PKo09LSN88vNc7MOk1T": "Sem 6",
+    "S64b0OlCF4BigiCwOZ3e5": "Big Data Analytics",
+    "kj2OZpfrI93bGmYCBMLgM": "Lec 1",
+    "RPmQFNcvUb89M2nYu802I": "Computer Networks",
+    "ZnnjqzTxyepMvwsX6Lytr": "Computer Vision",
+    "7iwle7bwr3wgmqx19n1i3sh": "Deep Learning",
+    "jnYmiJo5s2BuF2CYJe4b1": "Lec 1",
+    "s9k71a9JQIZGzZjsXUmWR": "Lec 10",
+    "kFdhjexbkBPW1a47YdOKh": "Lec 2",
+    "Y2iLGKl9mabCkYXe9njir": "Lec 3",
+    "ifmGOHRpG2boYwe9mTk8d": "Lec 4",
+    "BgB9oRCh7UiA8oSQuR6Ly": "Lec 5",
+    "rKL0p5CPTbP8562FTO8Mr": "Lec 6",
+    "U9lUxkH7Gix1SnSBfN7bb": "Lec 7",
+    "KCOBAxohhtwsLjnxlV4w2": "Lec 8",
+    "PezPhIacmef48kh1E5p9d": "Lec 9",
+    "Tkka57jlsUneqiwb6VK1Z": "Fundamentals of Environmental Studies",
+    "hXsCdZz8wGcRX1j2ul3AW": "Lec 1",
+    "gI3HOwMaDPupfjkZGGVZz": "Lec 2",
+    "BJt6j2bNDhOoQKtcmGZp4": "Lec 4",
+    "TN2l8VL0nEIPfVAADRxm5": "Machine Learning",
+    "KD1xsuehs6CiHzKbTJtCC": "1-Introduction",
+    "o9V4uumi3Tls8uGzJEcos": "10 Bayesian Statistics",
+    "MEXC6Rz6vhnGF1xxGucSo": "11 Avoiding Overfitting",
+    "BmxWSEoOhHxbfsbIbBBSN": "2-MLE-and-regression",
+    "SBDE29Uv1A941yOcaAtGZ": "3 Verfitting and Generalisation",
+    "Rh3CSk5AzxljaDfFQC5wQ": "4 Bias Variance Tradeoff",
+    "PmPoZMCNzvQB44gE1Tg5L": "5-KNN",
+    "ei9JWoeceRbHDcPoNblcb": "6 Curse of Dimensionality",
+    "stO81oij4841YX11cSuZI": "7 Multivariance Models",
+    "thpLKumUhUP0f83D2CMWq": "8-MLE-2",
+    "DJi8CEAOjDzqGAxO5KP87": "9 Regularization",
+    "3flb46vfacm3gin43z633bg": "Sem 7",
+    "kvnu5kew5wvkwmka2si2ftc": "Aca",
+    "9joakunj7egivkoo8jxaar6": "Adders",
+    "60ial221sf2kqr5a6v67fjv": "Intro",
+    "m2fe4910vhlj3cwsbw45wfc": "Archive",
+    "p9l8ptl7bskaee2p920uziq": "Acads",
+    "unp1bqfnow0w4xw4pdwxsd3": "Sem 6",
+    "huq1pbaeqc3zby297lcdmnu": "Machine Learning",
+    "im6ddcj0duixhbp1zdo25xq": "Decision Trees",
+    "lm8hdx9tjk5aqitlcvdqtb1": "Cs",
+    "8opnas8cdnt6jk96eyiv181": "Dl",
+    "3zk3gn7stqvl4qi0qeu2hz0": "Pytorch",
+    "mnujjdth4kn8mnozy4xlz16": "Quickstart",
+    "35a46skqrqiqp2dn2abgana": "Os",
+    "c8q7hkwe6ynjl1lqtjppdpb": "Intro",
+    "tpmpx2xkasjhbntai7ejfx3": "Capture",
+    "paeeqd28g50sypy53mq6m8s": "Dev",
+    "t2ichjginaesbclr4uiw1fw": "Python",
+    "xrw9257ex1h94sfvwweuywe": "Functional Programming",
+    "9iyitjbahuhp1l0cy75kxvv": "Asynchrnous Programming",
+    "lw02n68zvdx7xmjtdn6ost0": "Python Asyncio",
+    "ztnm6bj51bu4saqs0m9lg4j": "Generators",
+    "ydBpHsjLwIGYomDZo8NtB": "CLI",
+    "r459rk8iofn446t6nshevjt": "Intro",
+    "oQYRM3sMDt7Q6JWDzbjG4": "Shell Scripting",
+    "g9m1mlmymq7qvcjzi8ap2qu": "Dev",
+    "28qngwsk8m7bvqg9s7bz7f7": "JS",
+    "71vmk221iuw1r44eg87i9k1": "Hoisting",
+    "r81rounrbl7dbjbbax7zvzk": "How JS Works",
+    "j9y5pz6ueb0uong1v6f1unc": "Var Let Const"
+  }
+}

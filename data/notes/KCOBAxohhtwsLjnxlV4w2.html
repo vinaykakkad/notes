@@ -1,0 +1,56 @@
+<h1 id="lec-8">Lec 8<a aria-hidden="true" class="anchor-heading icon-link" href="#lec-8"></a></h1>
+<h2 id="canny-edge-detection-steps-in-detail">Canny edge detection steps in detail<a aria-hidden="true" class="anchor-heading icon-link" href="#canny-edge-detection-steps-in-detail"></a></h2>
+<ul>
+<li>smoothing with 2D gaussain filter - <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mi>σ</mi></msub><mo>∗</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">n_{\sigma} * I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6153em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span></span></li>
+<li>compute image gradient using <em>sobel</em> operator - <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><msub><mi>n</mi><mi>σ</mi></msub><mo>∗</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">\nabla n_{\sigma} * I</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord">∇</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">σ</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span></span></span></span></li>
+</ul>
+<details>
+<summary>find the magnitude and direction of the gradient</summary>
+<p><img src="/notes/assets/images/2022-02-08-23-31-51.png"></p>
+<ul>
+<li>brighter the point, higher the magnitude</li>
+<li>direction is given by the green arrow</li>
+</ul>
+</details>
+<details>
+<summary>compute the <i>laplacian</i> along the direction of gradient</summary>
+<p><img src="/notes/assets/images/2022-02-08-23-34-58.png"></p>
+<ul>
+<li>instead of the normal 2D laplacian, canny used a 1D laplacian along the direction of the gradient</li>
+</ul>
+</details>
+<ul>
+<li>apply non maximum supression to remove false positives</li>
+<li>apply hysteresis threshold</li>
+</ul>
+<details>
+<summary>canny edge detection results</summary>
+<p><img src="/notes/assets/images/2022-02-08-23-44-44.png"></p>
+</details>
+<h1 id="corner">Corner<a aria-hidden="true" class="anchor-heading icon-link" href="#corner"></a></h1>
+<p><img src="/notes/assets/images/2022-02-03-13-53-42.png"></p>
+<ul>
+<li>rapid change of intensity in two direction within a small region or meeting of two edges</li>
+</ul>
+<h2 id="corner-detection">Corner Detection<a aria-hidden="true" class="anchor-heading icon-link" href="#corner-detection"></a></h2>
+<details>
+<summary>gradients for flat, edge and corner region</summary>
+<p><img src="/notes/assets/images/2022-02-03-14-04-14.png"></p>
+</details>
+<ul>
+<li>plotting the distribution of <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">I_x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> and <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">I_y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span>, we get</li>
+<li><img src="/notes/assets/images/2022-02-03-14-16-17.png">
+<ul>
+<li>these elliptical distributions can be <em>parmaterized</em> based on the <em>semi-minor axis</em> and <em>semi-major axis</em> of the ellipses
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>:</mo><mi>s</mi><mi>e</mi><mi>m</mi><mi>i</mi><mtext> </mtext><mi>m</mi><mi>a</mi><mi>j</mi><mi>o</mi><mi>r</mi><mtext> </mtext><mi>a</mi><mi>x</mi><mi>i</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\lambda_1: semi\,major\,axis</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.854em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">se</span><span class="mord mathnormal">mi</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">maj</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span></span></span></span></span></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>:</mo><mi>s</mi><mi>e</mi><mi>m</mi><mi>i</mi><mtext> </mtext><mi>m</mi><mi>i</mi><mi>n</mi><mi>o</mi><mi>r</mi><mtext> </mtext><mi>a</mi><mi>x</mi><mi>i</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\lambda_2: semi\,minor\,axis</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">se</span><span class="mord mathnormal">mi</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">min</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mord mathnormal">i</span><span class="mord mathnormal">s</span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="todo">TODO<a aria-hidden="true" class="anchor-heading icon-link" href="#todo"></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> non maximal supression, hystersis threshold and its code </li>
+</ul>

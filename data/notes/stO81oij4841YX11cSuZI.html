@@ -1,0 +1,68 @@
+<h1 id="7-multivariance-models">7 Multivariance Models<a aria-hidden="true" class="anchor-heading icon-link" href="#7-multivariance-models"></a></h1>
+<h1 id="multivariate-models">Multivariate Models<a aria-hidden="true" class="anchor-heading icon-link" href="#multivariate-models"></a></h1>
+<ul>
+<li>measure of dependence of one <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">RV</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span></span></span></span> on others</li>
+</ul>
+<h2 id="covariance">Covariance<a aria-hidden="true" class="anchor-heading icon-link" href="#covariance"></a></h2>
+<ul>
+<li>measures the degree of linearity(dependency) between two <em>random variables</em></li>
+<li><img src="/notes/assets/images/2022-02-02-11-40-37.png"></li>
+<li>for higher dimension, we define a <em>covariance matrix</em> <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">Σ</span></span></span></span></span></li>
+<li><img src="/notes/assets/images/2022-02-02-11-44-24.png">
+<ul>
+<li>covariance matrix is <strong><em>positive definite symmetric matrix</em></strong>  
+<ul>
+<li>easy to perform eigenvalue decomposition and the eigenvalues are real</li>
+</ul>
+</li>
+<li>range is <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo>−</mo><mi mathvariant="normal">∞</mi><mo separator="true">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[-\infty, \infty]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">−</span><span class="mord">∞</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∞</span><span class="mclose">]</span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h3 id="imortant-properties">Imortant Properties<a aria-hidden="true" class="anchor-heading icon-link" href="#imortant-properties"></a></h3>
+<ul>
+<li><img src="/notes/assets/images/2022-02-07-18-39-14.png"></li>
+<li><img src="/notes/assets/images/2022-02-07-18-39-35.png"></li>
+<li><img src="/notes/assets/images/2022-02-07-18-40-00.png"></li>
+</ul>
+<h2 id="correlationdegree-of-linearity">Correlation(degree of linearity)<a aria-hidden="true" class="anchor-heading icon-link" href="#correlationdegree-of-linearity"></a></h2>
+<ul>
+<li>normalizing the covariance, we get <em>(Pearson) <strong>correlation coefficient</strong></em></li>
+<li><img src="/notes/assets/images/2022-02-07-18-41-50.png">
+<ul>
+<li>range is <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mo>−</mo><mn>1</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[-1, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">−</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>correlation matrix</summary>
+<p><img src="/notes/assets/images/2022-02-07-18-44-05.png"></p>
+</details>
+<ul>
+<li><img src="/notes/assets/images/2022-02-08-07-21-24.png"> 
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>o</mi><mi>r</mi><mi>r</mi><mo stretchy="false">[</mo><mi>X</mi><mo separator="true">,</mo><mi>Y</mi><mo stretchy="false">]</mo><mo>=</mo><mn>1</mn><mi>i</mi><mi>f</mi><mi>f</mi><mi>Y</mi><mo>=</mo><mi>a</mi><mi>X</mi><mo>+</mo><mi>b</mi><mo separator="true">,</mo><mi>a</mi><mo>></mo><mn>0</mn></mrow><annotation encoding="application/x-tex">Corr[X, Y] = 1 iff Y = aX + b, a > 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord mathnormal" style="margin-right:0.02778em;">orr</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">1</span><span class="mord mathnormal">i</span><span class="mord mathnormal" style="margin-right:0.10764em;">ff</span><span class="mord mathnormal" style="margin-right:0.22222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></span></li>
+</ul>
+</li>
+</ul>
+<h4 id="relation-between-autocovariance-and-autocorrelation">Relation between autocovariance and autocorrelation<a aria-hidden="true" class="anchor-heading icon-link" href="#relation-between-autocovariance-and-autocorrelation"></a></h4>
+<ul>
+<li><img src="/notes/assets/images/2022-02-08-07-24-18.png"></li>
+<li>K is autocorvaiance and R is autocorrelation</li>
+</ul>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em"><b>Uncorrelated does not imply independence</b><br>Corrleation only measure linear dependency. So the data can be completely dependent but may have 0 correlation</blockquote>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">Correlation does not imply causation</blockquote>
+<h3 id="simpsons-paradox">Simpson's Paradox<a aria-hidden="true" class="anchor-heading icon-link" href="#simpsons-paradox"></a></h3>
+<p><img src="/notes/assets/images/2022-02-08-07-31-20.png"></p>
+<ul>
+<li>trends shown by small groups of data can disappear or reverse when the groups are combined
+<ul>
+<li>in small groups, y increases with x, but overall y decreases with x</li>
+</ul>
+</li>
+</ul>
+<h1 id="todo">TODO<a aria-hidden="true" class="anchor-heading icon-link" href="#todo"></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> mutlivariate gaaussian distribuiton</li>
+<li class="task-list-item"><input type="checkbox" disabled> scripts</li>
+</ul>

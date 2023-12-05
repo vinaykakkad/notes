@@ -1,0 +1,41 @@
+<h1 id="lec-7">Lec 7<a aria-hidden="true" class="anchor-heading icon-link" href="#lec-7"></a></h1>
+<h1 id="gaussian-smoothing">Gaussian Smoothing<a aria-hidden="true" class="anchor-heading icon-link" href="#gaussian-smoothing"></a></h1>
+<details>
+<summary>smoothing using gaussian convolution</summary>
+<p><img src="/notes/assets/images/2022-02-08-21-52-43.png"></p>
+</details>
+<ul>
+<li>we use gaussain smoothing to supress the noice by convolving the gaussian</li>
+<li>to save computation power, instead of first smoothening out image and then finding the derivate to find edge, 
+<ul>
+<li>we apply the differentiation on the gaussain filter and then applied the combined filter on the image</li>
+<li><em>this is because the convolution function associativity</em></li>
+<li>this is knows as <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">LoG</code> (<em>laplacian of gaussian</em>)</li>
+</ul>
+</li>
+<li><em>PRINCIPLE</em>: gaussian assign a high value to the central input and also considers the <strong>neighboring</strong> inputs</li>
+</ul>
+<details>
+<summary>gradient vs laplacian</summary>
+<p><img src="/notes/assets/images/2022-02-08-22-10-39.png">
+<img src="/notes/assets/images/2022-02-08-22-11-00.png"></p>
+</details>
+<h1 id="canny-edge-detection">Canny Edge Detection<a aria-hidden="true" class="anchor-heading icon-link" href="#canny-edge-detection"></a></h1>
+<ul>
+<li>combining good points from sobel and laplacian</li>
+</ul>
+<h2 id="objective">objective<a aria-hidden="true" class="anchor-heading icon-link" href="#objective"></a></h2>
+<ul>
+<li>good detection: true edges, and minimal false positives</li>
+<li>good localisation: sub pixel level accuracy</li>
+<li>single point constrains: only one point corresponding to edge point</li>
+</ul>
+<h2 id="steps">Steps<a aria-hidden="true" class="anchor-heading icon-link" href="#steps"></a></h2>
+<ol>
+<li>smoothing with 2D gaussain filter</li>
+<li>compute image gradient using <em>sobel</em> operator</li>
+<li>find magnitude and orientation of gradient at each pixel</li>
+<li>compute the <em>laplacian</em> along the direction of gradient</li>
+<li>apply non maximum supression to remove false positives</li>
+<li>apply hysteresis threshold</li>
+</ol>

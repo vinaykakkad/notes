@@ -1,0 +1,723 @@
+<h1 id="adders">Adders<a aria-hidden="true" class="anchor-heading icon-link" href="#adders"></a></h1>
+<ul>
+<li><a href="#abbreviations">Abbreviations</a></li>
+<li><a href="#lecture-5">Lecture 5</a></li>
+<li><a href="#full-adders-vs-half-adders">Full Adders vs Half Adders</a></li>
+<li><a href="#full-adder-with-gpk">Full adder with GPK</a></li>
+<li><a href="#full-adder-implementations">Full Adder Implementations</a>
+<ul>
+<li><a href="#ripple-carry-adder">Ripple Carry Adder</a></li>
+<li><a href="#using-generate-and-propagate">Using Generate and Propagate</a>
+<ul>
+<li><a href="#expanding-equations-for-carry-out-carry-look-ahead-adders">Expanding equations for carry out (carry look ahead adders)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#what-impacts-the-delay-of-gates">What impacts the delay of GATES</a></li>
+<li><a href="#lecture-6">Lecture 6</a>
+<ul>
+<li><a href="#look-ahead-adder">Look-ahead adder</a></li>
+<li><a href="#hierarchial-look-ahead-adder">Hierarchial look-ahead adder</a></li>
+<li><a href="#think--revise-about">Think / Revise about</a></li>
+</ul>
+</li>
+<li><a href="#lecture-7-8">Lecture 7, 8</a>
+<ul>
+<li><a href="#carry-skip-adders">Carry Skip Adders</a></li>
+<li><a href="#hierarchial-csa">Hierarchial CSA</a></li>
+<li><a href="#carry-select-adders">Carry Select Adders</a>
+<ul>
+<li><a href="#conditional-sum-adder">Conditional Sum Adder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lecture-9">Lecture 9</a>
+<ul>
+<li><a href="#bit-serial-adder">Bit Serial Adder</a></li>
+<li><a href="#general-structure-for-adders-using-generate-and-propagate">General Structure for Adders using generate and propagate</a></li>
+</ul>
+</li>
+<li><a href="#list-of-multipliers">List of Multipliers</a></li>
+<li><a href="#lecture-10-intro-csa">Lecture 10 (Intro CSA)</a></li>
+<li><a href="#lecture-11-csa-numerical--trick-for-signed-numbers">Lecture 11 (CSA Numerical \&#x26;\&#x26; trick for signed numbers)</a></li>
+<li><a href="#lecture-12-csa-signed-number-numerical--booth-re-coding">Lecture 12 (CSA Signed Number numerical \&#x26; Booth re-coding)</a></li>
+<li><a href="#lecture-13-lsm-rsm-booth-example4-8-csa-signed">Lecture 13 (LSM, RSM, booth example(4, 8, CSA signed))</a></li>
+<li><a href="#lecture-14-baugh-wooley-multiplier--fixed-point-notation">Lecture 14 (Baugh Wooley Multiplier \&#x26; fixed point notation)</a></li>
+<li><a href="#lecture-15">Lecture 15</a></li>
+<li><a href="#lecture-16">Lecture 16</a></li>
+</ul>
+<h1 id="abbreviations">Abbreviations<a aria-hidden="true" class="anchor-heading icon-link" href="#abbreviations"></a></h1>
+<ul>
+<li>RCA (ripple carry adder)</li>
+<li>CLA (carry look-ahead adder)</li>
+<li>CSA (carry skip adders)</li>
+<li>CSA (carry select adders)</li>
+<li>BSA (bit serial adder)</li>
+<li>PTA (prefix tree adder)</li>
+<li>CSA (carry save adder)</li>
+</ul>
+<h1 id="lecture-5">Lecture 5<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-5"></a></h1>
+<h1 id="full-adders-vs-half-adders">Full Adders vs Half Adders<a aria-hidden="true" class="anchor-heading icon-link" href="#full-adders-vs-half-adders"></a></h1>
+<ul>
+<li>half adders
+<ul>
+<li><code>sum</code> = a <code>xor</code> b</li>
+<li><code>carry</code> = a * b</li>
+</ul>
+</li>
+<li>full adders
+<ul>
+<li><code>sum</code> = (a <code>xor</code> b) <code>xor</code> c</li>
+<li><code>carry</code> = ab + bc + ac = MAJ(a, b, c)
+<ul>
+<li>MAJ = majority gate</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="full-adder-with-gpk">Full adder with GPK<a aria-hidden="true" class="anchor-heading icon-link" href="#full-adder-with-gpk"></a></h1>
+<p><img src="/notes/assets/images/2022-11-22-11-26-40.png"></p>
+<ul>
+<li>
+<p>g = generate (irrespective of C_in, C_out will be 1)</p>
+</li>
+<li>
+<p>p = propagate (C_out = C_in)</p>
+</li>
+<li>
+<p>k = kill (irrespective of C_in, C_out will be 0)</p>
+</li>
+<li>
+<p>equations</p>
+<ul>
+<li>g = a <code>and</code> b</li>
+<li>p = a <code>xor</code> b</li>
+</ul>
+</li>
+</ul>
+<h1 id="full-adder-implementations">Full Adder Implementations<a aria-hidden="true" class="anchor-heading icon-link" href="#full-adder-implementations"></a></h1>
+<details>
+<summary>sum of products implementation (DNW)</summary>
+<p><img src="/notes/assets/images/2022-11-22-11-27-17.png"></p>
+</details>
+<details>
+<summary>using half adders (DNW)</summary>
+<p><img src="/notes/assets/images/2022-11-22-11-27-39.png"></p>
+</details>
+<h2 id="ripple-carry-adder">Ripple Carry Adder<a aria-hidden="true" class="anchor-heading icon-link" href="#ripple-carry-adder"></a></h2>
+<p><img src="/notes/assets/images/2022-11-22-11-28-03.png"></p>
+<ul>
+<li>acts as subtractor when <code>m = 1</code>
+<ul>
+<li>xor gates give 1's complement of B</li>
+<li>M is also C_0, indirectly adds 1 => we get 2's complement of B</li>
+</ul>
+</li>
+<li>overflow
+<ul>
+<li>only check this when <code>a</code> and <code>b</code> are in `signed 2's representation', and both are +ve or -ve</li>
+<li>do not check in this case</li>
+</ul>
+</li>
+<li>carry flag
+<ul>
+<li>when <code>a</code> and <code>b</code> are <code>unsigned</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="using-generate-and-propagate">Using Generate and Propagate<a aria-hidden="true" class="anchor-heading icon-link" href="#using-generate-and-propagate"></a></h2>
+<ul>
+<li>substituting the values of P and G in equations of full adders
+<ul>
+<li><code>sum</code> = P <code>xor</code> C</li>
+<li><code>carry</code> = G + P * C
+<ul>
+<li>carry is one when
+<ul>
+<li>current stage is generate or</li>
+<li>current is propagate and incoming carry is one</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="expanding-equations-for-carry-out-carry-look-ahead-adders">Expanding equations for carry out (carry look ahead adders)<a aria-hidden="true" class="anchor-heading icon-link" href="#expanding-equations-for-carry-out-carry-look-ahead-adders"></a></h3>
+<p><img src="/notes/assets/images/2022-11-22-11-28-37.png"></p>
+<h1 id="what-impacts-the-delay-of-gates">What impacts the delay of GATES<a aria-hidden="true" class="anchor-heading icon-link" href="#what-impacts-the-delay-of-gates"></a></h1>
+<ul>
+<li>number of inputs</li>
+<li>fan-outs (how many times a output is used again)</li>
+<li>strength of gate (ignore)</li>
+<li>pattern of inputs</li>
+</ul>
+<details>
+<summary>glitchy behavior</summary>
+<p><img src="/notes/assets/images/2022-11-22-11-29-43.png"></p>
+</details>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>derive RCA equation -> GPK equation</em></strong></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>multiple stage c_out equation</em></strong></li>
+</ul>
+<h1 id="lecture-6">Lecture 6<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-6"></a></h1>
+<h2 id="look-ahead-adder">Look-ahead adder<a aria-hidden="true" class="anchor-heading icon-link" href="#look-ahead-adder"></a></h2>
+<ul>
+<li>we get <code>p</code> and <code>g</code> from <code>a</code> and <code>b</code> in one get delay</li>
+<li>and all the c_out can be obtained from <code>p</code> and <code>g</code> in two gate delay(<code>and</code> &#x26; <code>or</code>)</li>
+<li>finding <code>sum</code> will need another one-gate delay of <code>XOR</code>
+<ul>
+<li><strong>thus carry look-ahead is faster than ripple carry adder</strong></li>
+<li><strong>cost is additional circuits to figure out c_outs</strong></li>
+<li><strong>layers are roughly independent of the no. of bits we add</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="hierarchial-look-ahead-adder">Hierarchial look-ahead adder<a aria-hidden="true" class="anchor-heading icon-link" href="#hierarchial-look-ahead-adder"></a></h2>
+<p><img src="/notes/assets/images/2022-11-23-11-21-50.png"></p>
+<ul>
+<li>we make groups of 4 to add one more layer</li>
+<li>we do this to avoid using large gates</li>
+</ul>
+<details>
+<summary>equations</summary>
+<p><img src="/notes/assets/images/2022-11-23-11-22-19.png"></p>
+<p><img src="/notes/assets/images/2022-11-23-11-22-41.png"></p>
+</details>
+<details>
+<summary>3 level 64 bit adder</summary>
+<p><img src="/notes/assets/images/2022-11-23-11-23-14.png"></p>
+</details>
+<h2 id="think--revise-about">Think / Revise about<a aria-hidden="true" class="anchor-heading icon-link" href="#think--revise-about"></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>is the block generating carry or <code>g</code>?</em></strong></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>how many instances of smaller blocks would be used?</em></strong></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>which carry / <code>g</code> is generated by which block?</em></strong></li>
+</ul>
+<h1 id="lecture-7-8">Lecture 7, 8<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-7-8"></a></h1>
+<h2 id="carry-skip-adders">Carry Skip Adders<a aria-hidden="true" class="anchor-heading icon-link" href="#carry-skip-adders"></a></h2>
+<details>
+<summary>simple CSA circuit</summary>
+<p><img src="/notes/assets/images/2022-11-23-10-58-23.png"></p>
+</details>
+<ul>
+<li><strong><em>general strategy to speed-up is to figure out the carry faster</em></strong></li>
+<li>for any stage if propagate signal is set, we skip carry to next stage</li>
+</ul>
+<h2 id="hierarchial-csa">Hierarchial CSA<a aria-hidden="true" class="anchor-heading icon-link" href="#hierarchial-csa"></a></h2>
+<details>
+<summary>circuit diagram</summary>
+<p><img src="/notes/assets/images/2022-11-23-10-51-25.png"></p>
+</details>
+<ul>
+<li>for 32 bit CSA, we have 2 levels of skipping (8bit and 32 bit)</li>
+<li>for 128 bit CSA, we have 3 levels of skipping (8bit, 32bit and 128 bit)</li>
+<li><strong><em>if we are using RCA of <code>x</code> bit, maximum rippling would of size <code>2x</code></em></strong></li>
+</ul>
+<h2 id="carry-select-adders">Carry Select Adders<a aria-hidden="true" class="anchor-heading icon-link" href="#carry-select-adders"></a></h2>
+<ul>
+<li>we divide a higher order number into lower order groups</li>
+<li>normally, we would need c_in from groups on left to execute the RCA for groups on right</li>
+<li>in carry select adders, we find sum for both cases (cin = [0 | 1]) and select after the groups on left have completed</li>
+<li>for 8 bit num:
+<ul>
+<li>RCA would have delay of <code>8 FA</code>, requires <code>8 FA</code></li>
+<li>CSA would have delay of <code>4 FA</code>, requires <code>12 FA</code> + some <code>mux</code></li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>circuit diagram</summary>
+<p><img src="/notes/assets/images/2022-11-23-11-07-23.png"></p>
+</details>
+<ul>
+<li>each k bit adder can be implemented using 3 k/2 bit adders</li>
+<li><strong><em>main idea: all adders work in parallel, and the above idea can be used recursively</em></strong></li>
+</ul>
+<h3 id="conditional-sum-adder">Conditional Sum Adder<a aria-hidden="true" class="anchor-heading icon-link" href="#conditional-sum-adder"></a></h3>
+<ul class="contains-task-list">
+<li>
+<p>when we use 1 bit RCAs, the adder is known as conditional sum adder</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>workout one addition through circuit</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>multiple stage c_out equation</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>carry skip and conditional sum -- numerical <a href="https://drive.google.com/drive/u/1/folders/1XyUdKoB9A_qtemFwSmVRS0SI1lVFQP2v">Examples</a></em></strong></p>
+</li>
+</ul>
+<h1 id="lecture-9">Lecture 9<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-9"></a></h1>
+<h2 id="bit-serial-adder">Bit Serial Adder<a aria-hidden="true" class="anchor-heading icon-link" href="#bit-serial-adder"></a></h2>
+<details>
+<summary>circuit</summary>
+<p><img src="/notes/assets/images/2022-11-23-11-53-34.png"></p>
+</details>
+<ul>
+<li>n bit number, we only have a <code>FA</code> and a <code>FF</code></li>
+<li>we would need n cycle to find the answer</li>
+</ul>
+<h2 id="general-structure-for-adders-using-generate-and-propagate">General Structure for Adders using generate and propagate<a aria-hidden="true" class="anchor-heading icon-link" href="#general-structure-for-adders-using-generate-and-propagate"></a></h2>
+<p><img src="/notes/assets/images/2022-11-23-11-57-32.png"></p>
+<ul>
+<li>we simplify the diagram in terms of prefix tree</li>
+</ul>
+<details>
+<summary>4 bit RCA as prefix tree </summary>
+<p><img src="/notes/assets/images/2022-11-23-12-01-06.png"></p>
+</details>
+<p>brent kung</p>
+<ul class="contains-task-list">
+<li>
+<p>3 types of boxes</p>
+</li>
+<li>
+<p>gray: 3 in -> 1 out</p>
+</li>
+<li>
+<p>black: 4 in -> 2 out</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>given a diagram, write out some equations</em></strong></p>
+</li>
+</ul>
+<h1 id="list-of-multipliers">List of Multipliers<a aria-hidden="true" class="anchor-heading icon-link" href="#list-of-multipliers"></a></h1>
+<ul>
+<li>unsgined
+<ul>
+<li>left shift and right shift (serial multiplication)</li>
+</ul>
+</li>
+<li>singed operands
+<ul>
+<li>booth recoding (radix 2, 4, 8)</li>
+<li>baugh-wooley method</li>
+</ul>
+</li>
+<li>squareing
+<ul>
+<li>special case of multiplication</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-10-intro-csa">Lecture 10 (Intro CSA)<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-10-intro-csa"></a></h1>
+<ul>
+<li>adding more than 2 nums
+<ul>
+<li>iteratively adding pairs of 2</li>
+<li>thinking about binary multiplication
+<ul>
+<li>column counting</li>
+<li>10 to 4 counter
+<ul>
+<li>10 -> 3 + 3 + 3 + 1 using 3 FA</li>
+<li>4, 3 -> 2, 2, 1 using 2 FA</li>
+<li><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^i" href="#^i"></a>columns represent 2</li>
+<li>keep using full orders until every column has &#x3C; 3 elements</li>
+<li>3 dot -> use FA else HA</li>
+<li>finally use a ripply carry, GA</li>
+</ul>
+</li>
+<li>wallace and dada tree
+<ul>
+<li>at every stage we use 3 rows and FA and will 2 ans</li>
+<li>2 ans -> carry save adder</li>
+</ul>
+</li>
+<li>if the expression is of the form y = 2w + 4x + y + 3z
+<ul>
+<li>we just shift w by one column</li>
+<li>we shift x by 2 cols</li>
+<li>when we shift, size of number increases by one</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>advantage of CSA
+<ul>
+<li>from 7 * delay of RCA</li>
+<li>to 1 * delay of RCA + some delay of FA</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-11-csa-numerical--trick-for-signed-numbers">Lecture 11 (CSA Numerical &#x26;&#x26; trick for signed numbers)<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-11-csa-numerical--trick-for-signed-numbers"></a></h1>
+<ul>
+<li>
+<p>formula for addition of n, x bit numbers</p>
+<ul>
+<li>x + log2(n) --> size of accumulator</li>
+<li>accumulator for  </li>
+</ul>
+</li>
+<li>
+<p>numerical</p>
+</li>
+<li>
+<p>understanding diag</p>
+<ul>
+<li>input 3 numbers from col (0 -> k - 1)
+<ul>
+<li>output
+<ul>
+<li>1 number from col (1 -> k) carry vector</li>
+<li>1 number from col (0 -> k - 1) sum vector</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>for making diag
+<ul>
+<li>do one numerical</li>
+<li>then do numerical</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>comparison with traditional method (iterative, time multiplexing)</p>
+</li>
+<li>
+<p>addition using binary tree of CPAs</p>
+<ul>
+<li>delay not very bad</li>
+<li>size of k (adders increase)</li>
+</ul>
+</li>
+<li>
+<p>signed numbers</p>
+<ul>
+<li>check msb
+<ul>
+<li>if 1 --> negative</li>
+<li>else positive</li>
+</ul>
+</li>
+<li>finding value
+<ul>
+<li>method 1
+<ul>
+<li>find 2's complement (1's complement + 1)</li>
+<li>add - sign</li>
+</ul>
+</li>
+<li>method 2
+<ul>
+<li>if msb is one treat is -1 * 2 ^ MSB</li>
+<li>add others simply</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>combination of columns with +/-  </p>
+</li>
+<li>
+<p>difference between squaring and multiplying</p>
+<ul>
+<li>multiplying is optimized for squaring</li>
+</ul>
+</li>
+<li>
+<p>signed numbers for csa</p>
+<ul>
+<li>extending signed numbers
+<ul>
+<li>copy the MSB to left side</li>
+</ul>
+</li>
+<li>in columns
+<ul>
+<li>flip the msb</li>
+<li>add -1 in the msb column</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-12-csa-signed-number-numerical--booth-re-coding">Lecture 12 (CSA Signed Number numerical &#x26; Booth re-coding)<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-12-csa-signed-number-numerical--booth-re-coding"></a></h1>
+<ul>
+<li>
+<p>flip msb add -1 in that column</p>
+</li>
+<li>
+<p>to remove -1 -> shift -1 and add 1 in that column</p>
+</li>
+<li>
+<p>size of the -ve wala vector</p>
+</li>
+<li>
+<p>max size of single vector + log2(total number of vector)</p>
+</li>
+<li>
+<p>start</p>
+<ul>
+<li>based on the column of msb, figure out a new vector of size
+<ul>
+<li>calculating size
+<ul>
+<li>-3 * (2 ^ power of column) --> bits required to represent this</li>
+</ul>
+</li>
+<li>convert 3 -1s to a new vector
+<ul>
+<li>this vector is the signed representation of -3 * ...</li>
+</ul>
+</li>
+<li>add the flipped vectors and the -1 wala vector</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre class="language-text"><code class="language-text">- csa steps signed nos
+  - flip MSBs, combine -1s
+  - based on largest input and #input find size of -wala vector
+  - based on -wala size and sum of -1, find vector (signed rep of sum in -wala size)
+  - use sign extension to make every vector of equal bit
+
+- wherever possible reduce rows by moving ones from one row to empty
+</code></pre>
+<ul>
+<li>
+<p>multiplication</p>
+<ul>
+<li>done using multi operand addition</li>
+</ul>
+</li>
+<li>
+<p>optimizing multiplication -> square</p>
+</li>
+<li>
+<p>booth</p>
+<ul>
+<li>finding value of binary -> decimal
+<ul>
+<li>if we have burst of 1s (011110)
+<ul>
+<li>final value
+<ul>
+<li>= 2 ^ (4 + 1) - 2 ^ 1</li>
+<li>= 32 - 2</li>
+<li>= 30</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>booth re-coding (radix 2)
+<ul>
+<li>look at window of 2 nums
+<ul>
+<li>00 -> 0</li>
+<li>10 -> -1</li>
+<li>11 -> 0</li>
+<li>01 -> 1</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-13-lsm-rsm-booth-example4-8-csa-signed">Lecture 13 (LSM, RSM, booth example(4, 8, CSA signed))<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-13-lsm-rsm-booth-example4-8-csa-signed"></a></h1>
+<ul>
+<li>
+<p>LSM (a, b)</p>
+<ul>
+<li>find bits in ans</li>
+<li>
+<ol>
+<li>start with all 0</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>ls</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>add msb</li>
+</ol>
+</li>
+<li>repeat till lsb</li>
+<li>advantage
+<ul>
+<li>process become iterative</li>
+</ul>
+</li>
+<li>cost
+<ul>
+<li>shifter, ffs, adder, and gates, shifter(to find a single bit)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>RSM (a, b)</p>
+<ul>
+<li>find bits in ans + 1</li>
+<li>start with all 0</li>
+<li>rs</li>
+<li>add lsb on right side</li>
+<li>repeat and append carry in beginning</li>
+</ul>
+</li>
+<li>
+<p>radix 4 booth (signed a, b)</p>
+<ul>
+<li>window has overlap of 1 bit with previous window</li>
+<li>encode second operand(b)
+<ul>
+<li>find possible values of a needed (3, 2, 1, 0, -1, -2, -3)</li>
+</ul>
+</li>
+<li>find bits in ans
+<ul>
+<li>start with all 0</li>
+<li>4 booth => shift twice</li>
+<li>add a*msb(b_coded)</li>
+</ul>
+</li>
+<li>repeat</li>
+<li><strong><em>extension is alway sign extension</em></strong></li>
+</ul>
+</li>
+<li>
+<p>radix 8 (signed a, b)</p>
+<ul>
+<li>window has overlap of 1 bit</li>
+<li>same step as above</li>
+</ul>
+</li>
+<li>
+<p>radix with csa signed trick</p>
+</li>
+<li>
+<p>advantage of signed trick over sign extension</p>
+<ul>
+<li>reduce size of adder</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-14-baugh-wooley-multiplier--fixed-point-notation">Lecture 14 (Baugh Wooley Multiplier &#x26; fixed point notation)<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-14-baugh-wooley-multiplier--fixed-point-notation"></a></h1>
+<ul>
+<li>
+<p>msb negative contributor, others positive</p>
+</li>
+<li>
+<p>take 2's complement of negative contributors and make vectors</p>
+</li>
+<li>
+<p>fill the vectors in empty rows</p>
+</li>
+<li>
+<p>combine 2's wherever possible</p>
+</li>
+<li>
+<p>fxp</p>
+<ul>
+<li>(bd, ad) -- d = decimal</li>
+<li>finding the resolution, largest and smallest numbers
+<ul>
+<li>singed and unsigned</li>
+<li>where to round off</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-15">Lecture 15<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-15"></a></h1>
+<ul>
+<li>Divide and Conquer Multiplier (unsigned)
+<ul>
+<li>triangle lines wala structure</li>
+<li>do simple group multiplication
+<ul>
+<li>combine rows wherever possible</li>
+</ul>
+</li>
+<li>steps #1
+<ul>
+<li>find multiplication of groups</li>
+<li>add using carry save adder
+<ul>
+<li>place items carefully</li>
+<li>add lsb of both number</li>
+<li>msb = lsb + bits req</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>steps #2
+<ul>
+<li>write everything directly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>clk based carry-save adder
+<ul>
+<li>normally
+<ul>
+<li>100 clock cycles, T_cycle is function of no. of bits</li>
+</ul>
+</li>
+<li>with CSA
+<ul>
+<li>100 cycles, size does not impact only 1 FA delay</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Newton-Raphson Method (approximation)
+<ul>
+<li>x_(i+1) = x_i - f(x_i) / f'(x_i)</li>
+<li>to find 1/d
+<ul>
+<li>f(x) = D - 1/x
+<ul>
+<li>x_i+1 = x_i (2 - d.xi)</li>
+<li>division in converted to multilier(2) and sub(1)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>to find 1/root(some number)
+<ul>
+<li>figuring out the fxp req</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-16">Lecture 16<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-16"></a></h1>
+<ul>
+<li>
+<p>find root using some other equation</p>
+</li>
+<li>
+<p>what is a good function</p>
+</li>
+<li>
+<p>Cordic (circular)</p>
+<ul>
+<li>rotating a vector by <code>a</code>
+<ul>
+<li>x = xcosa - ysina</li>
+<li>y = xsina + ycosa</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>

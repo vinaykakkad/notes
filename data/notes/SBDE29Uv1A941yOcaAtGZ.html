@@ -1,0 +1,47 @@
+<h1 id="3-verfitting-and-generalisation">3 Verfitting and Generalisation<a aria-hidden="true" class="anchor-heading icon-link" href="#3-verfitting-and-generalisation"></a></h1>
+<h2 id="overfitting-and-generalisation">Overfitting and generalisation<a aria-hidden="true" class="anchor-heading icon-link" href="#overfitting-and-generalisation"></a></h2>
+<ul>
+<li>empirical risk can be rewrittena as:</li>
+<li><img src="/notes/assets/images/2022-01-17-11-44-05.png" alt="empirical risk"></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∣</mi><msub><mi>D</mi><mrow><mi>t</mi><mi>r</mi><mi>a</mi><mi>i</mi><mi>n</mi></mrow></msub><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|D_{train}|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">ain</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">∣</span></span></span></span></span> is the size of training data <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>t</mi><mi>r</mi><mi>a</mi><mi>i</mi><mi>n</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{train}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">r</span><span class="mord mathnormal mtight">ain</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+<br>
+<ul>
+<li>model that perfectly fits the training
+data, but which is too complex - <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">overfitting</code></li>
+</ul>
+<h3 id="population-risk">Population Risk<a aria-hidden="true" class="anchor-heading icon-link" href="#population-risk"></a></h3>
+<ul>
+<li>We assume that we have <strong><em>access</em></strong> to some distribution <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>p</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">p^*(x,y)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span></span></span></span></span> but it is <strong><em>unknown</em></strong>
+<ul>
+<li>i.e. we can <strong><em>predict</em></strong> but not <strong><em>infere</em></strong></li>
+</ul>
+</li>
+<li>We define <em>theoretical expected loss</em> or <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">population risk</code> as:</li>
+<li><img src="/notes/assets/images/2022-01-17-11-57-17.png" alt="population risk"></li>
+<li>difference between between population risk and the empirical lisk is defined as the <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">generalisation gap</code>
+<ul>
+<li>if a model has high <em>generalisation gap</em>, it is a sign of overfitting</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>As we are only interested in the outcomes to find the <em>population risk</em>, we can divide the given data into <strong><em>train set</em></strong> and <strong><em>test set</em></strong></li>
+<li><em>Population Risk</em> can be then defined as</li>
+<li><img src="/notes/assets/images/2022-01-17-12-02-33.png" alt="PR on test set"></li>
+</ul>
+<h3 id="choosing-the-right-model">Choosing the Right Model<a aria-hidden="true" class="anchor-heading icon-link" href="#choosing-the-right-model"></a></h3>
+<ul class="contains-task-list">
+<li><img src="/notes/assets/images/2022-01-17-12-11-11.png" alt="Graphs"></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/probml/pyprobml/blob/master/scripts/linreg_poly_vs_degree.py">code</a></li>
+<li>from the fourth graph, we can see that as <em>degree of freedom</em> increases, the error on training set decreases
+<ul>
+<li>but the error on testing set follows a <em>U-shaped curve</em></li>
+<li><strong>Thus we should choose the data that minimizes the loss on test set</strong></li>
+</ul>
+</li>
+<li>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">In practice we divide the data into 3 parts<ul><li>validation data - for model selection</li><li>training data - for model training</li><li>testing data- for estimating the performance</li></ul> </blockquote>
+</li>
+</ul>

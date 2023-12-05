@@ -1,0 +1,57 @@
+<h1 id="11-avoiding-overfitting">11 Avoiding Overfitting<a aria-hidden="true" class="anchor-heading icon-link" href="#11-avoiding-overfitting"></a></h1>
+<h2 id="cross-validation">Cross Validation<a aria-hidden="true" class="anchor-heading icon-link" href="#cross-validation"></a></h2>
+<ul>
+<li>when the data is very small, dividing into training, testing and validation set is not a good idea
+<ul>
+<li>very small sets can have a high bias</li>
+</ul>
+</li>
+<li>we split the training data into <strong><em>K folds</em></strong>
+<ul>
+<li>in a round robin fashion, we train on all except one fold</li>
+<li><img src="/notes/assets/images/2022-02-16-11-56-07.png">
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi></mrow><annotation encoding="application/x-tex">R</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span></span></span> is the <em>regularized cross-validated risk</em></li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">D_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> is the data in k'th fold -> train for k'th fold</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mo>−</mo><mi>k</mi></mrow></msub></mrow><annotation encoding="application/x-tex">D_{-k}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8917em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span> is the data in k'th fold -> validate for k'th fold</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>this is known as <strong><em>K fold cross validation</em></strong> or <strong><em>leave-one-out cross validation</em></strong></li>
+</ul>
+<details>
+<summary>schematic for 5-fold cross validation</summary>
+<p><img src="/notes/assets/images/2022-02-16-12-04-58.png"></p>
+</details>
+<ul>
+<li>if the original data set has imbalance
+<ul>
+<li>use weighted strategy, by assigning high weightage to part will smaller size</li>
+</ul>
+</li>
+<li>if cross validation causes imbalance
+<ul>
+<li>use <a href="https://towardsdatascience.com/what-is-stratified-cross-validation-in-machine-learning-8844f3e7ae8e">stratified cross validation</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="early-stopping---simple-form-of-regularization">Early Stopping - simple form of regularization<a aria-hidden="true" class="anchor-heading icon-link" href="#early-stopping---simple-form-of-regularization"></a></h2>
+<ul class="contains-task-list">
+<li>many of the optimization are <em>iterative</em>, so they take many steps to move away from the initial parameter estimates</li>
+<li>if we detect signs of overfitting by monitoring the performance of validation set, we stop the optimization problem</li>
+<li><img src="/notes/assets/images/2022-02-16-12-12-55.png"></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/probml/pyprobml/blob/master/scripts/imdb_mlp_bow_tf.py">code</a></li>
+</ul>
+<h2 id="using-more-data">Using More Data<a aria-hidden="true" class="anchor-heading icon-link" href="#using-more-data"></a></h2>
+<ul>
+<li>as the data increases, overfitting decreases(assuming the new data adds to the diversity and is not redundant)</li>
+<li><img src="/notes/assets/images/2022-02-16-12-26-24.png">
+<ul>
+<li>black line is true error (noise with variance 4), we cannot go below it -> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">noise floor</code></li>
+<li>for a small degree, the error always remains high -> <em>undefitting</em></li>
+<li>test error decreases for other models, but it reduces more rapidly for simpler models</li>
+<li><em>generalization gap</em> is initially larger for complex model, but decreases as size grows</li>
+</ul>
+</li>
+</ul>

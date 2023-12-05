@@ -1,0 +1,299 @@
+<h1 id="intro">Intro<a aria-hidden="true" class="anchor-heading icon-link" href="#intro"></a></h1>
+<ul>
+<li><a href="#lecture-0">Lecture 0</a>
+<ul>
+<li><a href="#moore-fsm">moore fsm</a></li>
+<li><a href="#sequence-detector">sequence detector</a></li>
+</ul>
+</li>
+<li><a href="#lecture-2">Lecture 2</a>
+<ul>
+<li><a href="#arbiter">arbiter</a>
+<ul>
+<li><a href="#steps">steps</a></li>
+</ul>
+</li>
+<li><a href="#hamming-code-1bit-error-correcting-code">hamming Code (1bit error correcting code)</a></li>
+<li><a href="#crc-cyclic-redundancy-check">CRC (cyclic redundancy check)</a></li>
+</ul>
+</li>
+<li><a href="#lecture-3">Lecture 3</a>
+<ul>
+<li><a href="#types-of-crc-implementation">Types of CRC implementation</a>
+<ul>
+<li><a href="#combinational">Combinational</a></li>
+<li><a href="#iterative">Iterative</a>
+<ul>
+<li><a href="#rolled-version">Rolled Version</a></li>
+<li><a href="#unrolled-version">Unrolled Version</a></li>
+</ul>
+</li>
+<li><a href="#setup-time-in-flip-flops-for-iterative-versions">Setup Time in Flip-Flops (for iterative versions)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lecture-4">Lecture 4</a>
+<ul>
+<li><a href="#lfsr-linear-feedback-shift-register">LFSR (linear feedback shift register)</a>
+<ul>
+<li><a href="#standard-format">Standard Format</a></li>
+<li><a href="#modular-format">Modular Format</a>
+<ul>
+<li><a href="#differences">Differences</a></li>
+</ul>
+</li>
+<li><a href="#lfsr-based-crc">LFSR based CRC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="lecture-0">Lecture 0<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-0"></a></h1>
+<h2 id="moore-fsm">moore fsm<a aria-hidden="true" class="anchor-heading icon-link" href="#moore-fsm"></a></h2>
+<p><img src="/notes/assets/images/2022-11-21-11-01-34.png"></p>
+<ul>
+<li>it is a sequential circuit</li>
+<li>combinational circuit followed by flip-flops</li>
+<li><em>next state is a function of present state</em></li>
+</ul>
+<h2 id="sequence-detector">sequence detector<a aria-hidden="true" class="anchor-heading icon-link" href="#sequence-detector"></a></h2>
+<p><img src="/notes/assets/images/2022-11-21-11-15-18.png"></p>
+<ul class="contains-task-list">
+<li>use cases: <em>sender and receiver (CN)</em>, to check for some code(error code)</li>
+<li>steps:
+<ul>
+<li>start with reset(<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">S_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>)</li>
+<li>keep expanding leaves</li>
+<li>discard leaves whose pattern is not required and connect back</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>practice some random sequence detector</em></strong></li>
+</ul>
+<h1 id="lecture-2">Lecture 2<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-2"></a></h1>
+<h2 id="arbiter">arbiter<a aria-hidden="true" class="anchor-heading icon-link" href="#arbiter"></a></h2>
+<ul>
+<li>allocate access to shared resources</li>
+<li>consider a shared memory and 3 processes
+<ul>
+<li>input: [r1, r2, r3]</li>
+<li>output: [a1, a2, a3]</li>
+<li>arbiter gives ack to one of the process at a time</li>
+</ul>
+</li>
+<li>types: <strong>priority</strong> based, <strong>history</strong> based</li>
+</ul>
+<h3 id="steps">steps<a aria-hidden="true" class="anchor-heading icon-link" href="#steps"></a></h3>
+<ul class="contains-task-list">
+<li>write list of states describing the current state of the system
+<ul>
+<li>used, waiting, not waiting</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://drive.google.com/drive/u/1/folders/14yvGxRrt4DxzK01nqcRt2KcST_RHMpMS">Arbiter Practice</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>write states for priority and history based</em></strong></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>write next states for some random states in both cases</em></strong></li>
+</ul>
+<h2 id="hamming-code-1bit-error-correcting-code">hamming Code (1bit error correcting code)<a aria-hidden="true" class="anchor-heading icon-link" href="#hamming-code-1bit-error-correcting-code"></a></h2>
+<ul class="contains-task-list">
+<li>steps
+<ul>
+<li>sender
+<ol>
+<li>figure out the number of parity bits required (<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>p</mi></msup><mo>≥</mo><mi>m</mi><mo>+</mo><mi>p</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^p \geq m + p + 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8004em;vertical-align:-0.136em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">m</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span>)</li>
+<li>make the structure for the encoded message</li>
+<li>form groups and find the value of parity bits
+<ol>
+<li>parity bit = <code>xnor</code> of all message bits in its group</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>receiver
+<ul>
+<li>write all groups with parity bit</li>
+<li>write 1 against group with even number of 1s</li>
+<li><strong><em>combined bits(in reverse) gives the position of the error</em></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://drive.google.com/drive/u/1/folders/1OZRbEKXlzcwTNG6a1cZO0YHb-327ovGH">Arbiter Practice</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <strong><em>practice 2 messages (with and without error)</em></strong></li>
+</ul>
+<h2 id="crc-cyclic-redundancy-check">CRC (cyclic redundancy check)<a aria-hidden="true" class="anchor-heading icon-link" href="#crc-cyclic-redundancy-check"></a></h2>
+<ul>
+<li>divisor(generate) polynomial</li>
+<li>dividend(message) polynomial</li>
+<li><strong><em>Encoded message: for a k-bit divisor select (k-1) bit from remainder and append to the end of dividend</em></strong></li>
+<li>additionally, there is an look-up table to find the position of bit</li>
+</ul>
+<h1 id="lecture-3">Lecture 3<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-3"></a></h1>
+<ul>
+<li>sequential => involvement of clock</li>
+</ul>
+<h2 id="types-of-crc-implementation">Types of CRC implementation<a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-crc-implementation"></a></h2>
+<h3 id="combinational">Combinational<a aria-hidden="true" class="anchor-heading icon-link" href="#combinational"></a></h3>
+<details>
+<summary>Diagram</summary>
+<p><img src="/notes/assets/images/2022-11-21-14-27-22.png"></p>
+</details>
+<ul>
+<li>separate hardware for separate stages</li>
+<li>each continuously driving values from previous ones</li>
+<li>we will get output in single cycle
+<ul>
+<li>but the delay will be very large (delay of 8 <code>XOR</code> gates)</li>
+<li>might not be possible to connect with other components with large delay</li>
+</ul>
+</li>
+</ul>
+<h3 id="iterative">Iterative<a aria-hidden="true" class="anchor-heading icon-link" href="#iterative"></a></h3>
+<ul>
+<li>additional hardware is required
+<ul>
+<li>register to store the answer of previous stage</li>
+<li>hardware for counter(kmap or adder)</li>
+</ul>
+</li>
+</ul>
+<h4 id="rolled-version">Rolled Version<a aria-hidden="true" class="anchor-heading icon-link" href="#rolled-version"></a></h4>
+<details>
+<summary>Diagram</summary>
+<p><img src="/notes/assets/images/2022-11-21-14-27-59.png"></p>
+</details>
+<ul>
+<li>time period is small / frequency is high</li>
+<li>less <code>XOR</code> gates are required</li>
+<li>we have to wait for 8 cycles to get an answer</li>
+</ul>
+<h4 id="unrolled-version">Unrolled Version<a aria-hidden="true" class="anchor-heading icon-link" href="#unrolled-version"></a></h4>
+<details>
+<summary>Diagram</summary>
+<p><img src="/notes/assets/images/2022-11-21-14-28-17.png"></p>
+</details>  
+<ul>
+<li>pipelined version</li>
+<li>more <code>XOR</code> and flip-flops are required</li>
+<li>new input can be fed every cycle</li>
+<li>output is also obtained every cycle
+<ul>
+<li>initially -- we will have to weight for 8 cycles</li>
+</ul>
+</li>
+</ul>
+<h3 id="setup-time-in-flip-flops-for-iterative-versions">Setup Time in Flip-Flops (for iterative versions)<a aria-hidden="true" class="anchor-heading icon-link" href="#setup-time-in-flip-flops-for-iterative-versions"></a></h3>
+<details>
+<summary>Diagram</summary>
+<p><img src="/notes/assets/images/2022-11-21-14-28-43.png"></p>
+</details>
+<ul class="contains-task-list">
+<li>
+<p>setup delay is common and is required for every</p>
+<ul>
+<li>between rolled and combinational, combinational takes less time
+<ul>
+<li>combinational: <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>c</mi><mi>l</mi><mi>k</mi><mi>q</mi></mrow></msub><mo>+</mo><mn>8</mn><mo>∗</mo><msub><mi>T</mi><mrow><mi>x</mi><mi>o</mi><mi>r</mi></mrow></msub><mo>+</mo><msub><mi>T</mi><mrow><mi>s</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{clkq} + 8 * T_{xor} + T_{setup}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">se</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></li>
+<li>iterative: <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>c</mi><mi>l</mi><mi>k</mi><mi>q</mi></mrow></msub><mo>+</mo><mn>8</mn><mo>∗</mo><msub><mi>T</mi><mrow><mi>x</mi><mi>o</mi><mi>r</mi></mrow></msub><mo>+</mo><mn>8</mn><mo>∗</mo><msub><mi>T</mi><mrow><mi>s</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">T_{clkq} + 8 * T_{xor} + 8 * T_{setup}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">q</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">or</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">8</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">se</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span></span></li>
+</ul>
+</li>
+<li><strong><em>still rolled is preferred, as frequency of combinational is very large and can cause problem in connecting</em></strong></li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>practice a sum on CRC</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>revise the names and comparison of 3 formats</em></strong></p>
+</li>
+</ul>
+<h1 id="lecture-4">Lecture 4<a aria-hidden="true" class="anchor-heading icon-link" href="#lecture-4"></a></h1>
+<h2 id="lfsr-linear-feedback-shift-register">LFSR (linear feedback shift register)<a aria-hidden="true" class="anchor-heading icon-link" href="#lfsr-linear-feedback-shift-register"></a></h2>
+<ul>
+<li>
+<p>uses: <em>random number generator</em></p>
+</li>
+<li>
+<p>steps:</p>
+<ul>
+<li>from the generic circuit, create <code>polynomial</code> specific circuit</li>
+<li>0 => short, 1 => keep xor gate</li>
+</ul>
+</li>
+<li>
+<p>example: <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>x</mi><mn>3</mn></msup><mo>+</mo><msup><mi>x</mi><mn>4</mn></msup><mo>+</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">1 + x^2 + x^3 + x^4 + x^n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8974em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6644em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span></span></span></span></p>
+</li>
+</ul>
+<h3 id="standard-format">Standard Format<a aria-hidden="true" class="anchor-heading icon-link" href="#standard-format"></a></h3>
+<ul>
+<li>next state equation
+<ul>
+<li>shift every bit to right</li>
+<li>xor the ones with XOR gate before it</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>general</summary>
+<p><img src="/notes/assets/images/2022-11-21-23-12-07.png"></p>
+</details>
+<details>
+<summary>converted for example</summary>
+<ul>
+<li><img src="/notes/assets/images/2022-11-21-19-36-11.png"></li>
+</ul>
+</details>
+<h3 id="modular-format">Modular Format<a aria-hidden="true" class="anchor-heading icon-link" href="#modular-format"></a></h3>
+<ul>
+<li>next state equation
+<ul>
+<li>shift every bit to right</li>
+<li>for LSB: xor MSB with registers having XOR gates before them</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>general</summary>
+<ul>
+<li><img src="/notes/assets/images/2022-11-21-19-34-34.png"></li>
+</ul>
+</details>
+<details>
+<summary>converted for example</summary>
+<p><img src="/notes/assets/images/2022-11-21-23-14-29.png"></p>
+</details>
+<h4 id="differences">Differences<a aria-hidden="true" class="anchor-heading icon-link" href="#differences"></a></h4>
+<ul>
+<li>looking at the structures:</li>
+<li>in modular format, maximum delay is 1 <code>XOR</code> only</li>
+<li>in standard format, this delay can be larger(more than 1 <code>XOR</code>)</li>
+</ul>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">non-zero seed would not work</blockquote>
+<h3 id="lfsr-based-crc">LFSR based CRC<a aria-hidden="true" class="anchor-heading icon-link" href="#lfsr-based-crc"></a></h3>
+<details>
+<summary>structure</summary>
+<p><img src="/notes/assets/images/2022-11-22-00-05-36.png"></p>
+</details>
+<details>
+<summary>example</summary>
+<p><img src="/notes/assets/images/2022-11-22-00-05-04.png"></p>
+</details>
+<ul class="contains-task-list">
+<li>
+<p>one additional <code>XOR</code> gate at the input</p>
+</li>
+<li>
+<p>steps</p>
+<ul>
+<li>LFSR is initialized to all zeros</li>
+<li>We keep passing a single bit, starting from the MSB of <code>msg</code> + <code>0_padded</code></li>
+<li>we update the LFSR values based on the equation(created using generate polynomial)</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>derive specific circuit from general</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> <strong><em>derive equations and work out LFSR CRC</em></strong></p>
+</li>
+</ul>

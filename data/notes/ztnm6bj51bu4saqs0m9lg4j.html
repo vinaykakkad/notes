@@ -1,0 +1,148 @@
+<h1 id="generators">Generators<a aria-hidden="true" class="anchor-heading icon-link" href="#generators"></a></h1>
+<h1 id="what-is-a-generator">What is a generator?<a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-a-generator"></a></h1>
+<ol>
+<li>generator is a function:
+<ul>
+<li>that returns an object when you call <code>next()</code>
+<ul>
+<li>stores the state between multiple <code>next()</code> executions</li>
+<li><code>next()</code> can be called until we encounter a <code>StopIteration</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>generator is a function:
+<ul>
+<li>that behaves like an <code>iterator</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="exampleuse-case">Example(use case)<a aria-hidden="true" class="anchor-heading icon-link" href="#exampleuse-case"></a></h1>
+<ul>
+<li>we write a program that makes a list of first</li>
+</ul>
+<h2 id="the-non-efficient-way">The non-efficient way<a aria-hidden="true" class="anchor-heading icon-link" href="#the-non-efficient-way"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">first_n</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''Build and return a list'''</span>
+    num<span class="token punctuation">,</span> nums <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> num <span class="token operator">&#x3C;</span> n<span class="token punctuation">:</span>
+        nums<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+        num <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> nums
+   
+   
+sum_of_first_n <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>first_n<span class="token punctuation">(</span><span class="token number">1000000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>this will create the entire list in memory
+<ul>
+<li><strong><em>would be very bad if we something other than integer(ex: file)</em></strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="efficient-custom-iterator-way">Efficient Custom Iterator way<a aria-hidden="true" class="anchor-heading icon-link" href="#efficient-custom-iterator-way"></a></h2>
+<ul>
+<li>adding the <code>__iter__</code> and <code>__next__</code> methods</li>
+<li>sum will now take values using the <code>next()</code></li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">first_n</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>n <span class="token operator">=</span> n
+        self<span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">0</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">__iter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+
+    <span class="token keyword">def</span> <span class="token function">__next__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>num <span class="token operator">&#x3C;</span> self<span class="token punctuation">.</span>n<span class="token punctuation">:</span>
+            cur<span class="token punctuation">,</span> self<span class="token punctuation">.</span>num <span class="token operator">=</span> self<span class="token punctuation">.</span>num<span class="token punctuation">,</span> self<span class="token punctuation">.</span>num<span class="token operator">+</span><span class="token number">1</span>
+            <span class="token keyword">return</span> cur
+        <span class="token keyword">raise</span> StopIteration<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+sum_of_first_n <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>first_n<span class="token punctuation">(</span><span class="token number">1000000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>this is memory efficient, but there is still a lot of boilerplate code</li>
+</ul>
+<h2 id="efficient-generator-way">Efficient Generator Way<a aria-hidden="true" class="anchor-heading icon-link" href="#efficient-generator-way"></a></h2>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">firstn</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> num <span class="token operator">&#x3C;</span> n<span class="token punctuation">:</span>
+        <span class="token keyword">yield</span> num
+        num <span class="token operator">+=</span> <span class="token number">1</span>
+
+sum_of_first_n <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>firstn<span class="token punctuation">(</span><span class="token number">1000000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h1 id="understanding-generator">Understanding Generator<a aria-hidden="true" class="anchor-heading icon-link" href="#understanding-generator"></a></h1>
+<ul>
+<li>generator looks like a normal function, except for the <code>yield</code> statement
+<ul>
+<li><code>yield</code> sends the value back to the caller like return, <strong><em>but the function</em></strong> is not exited yet</li>
+<li>the <strong>state</strong> of the function is stored until the next <code>next()</code> function call (implicitly using <code>for</code> or explicitly using <code>next()</code>)</li>
+</ul>
+</li>
+</ul>
+<h2 id="understanding-the-yield-statement">Understanding the <code>yield</code> statement<a aria-hidden="true" class="anchor-heading icon-link" href="#understanding-the-yield-statement"></a></h2>
+<ul>
+<li>the <code>next()</code> call on a generator object triggers the execution of function until a <code>yield</code> statement is encountered
+<ul>
+<li>on encountering <code>yield</code> the value is returned and that <strong>state</strong> is saved</li>
+<li>this includes
+<ul>
+<li>any local variables</li>
+<li>instruction pointer</li>
+<li>internal stack</li>
+<li>exception handling</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>the next <code>next()</code> continues the execution of function right below the <code>yield statement</code>
+<ul>
+<li>if there is no next yield in the function, a <code>StopIteration</code> error would be thrown</li>
+</ul>
+</li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">def</span> <span class="token function">multi_yield</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     yield_str <span class="token operator">=</span> <span class="token string">"This will print the first string"</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">yield</span> yield_str
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     yield_str <span class="token operator">=</span> <span class="token string">"This will print the second string"</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     <span class="token keyword">yield</span> yield_str
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">>></span><span class="token operator">></span> multi_obj <span class="token operator">=</span> multi_yield<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>multi_obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+This will <span class="token keyword">print</span> the first string
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>multi_obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+This will <span class="token keyword">print</span> the second string
+<span class="token operator">>></span><span class="token operator">></span> <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>multi_obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  File <span class="token string">"&#x3C;stdin>"</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&#x3C;</span>module<span class="token operator">></span>
+StopIteration
+</code></pre>
+<h1 id="tradeoffs-memory-vs-speed">Tradeoffs (memory vs speed)<a aria-hidden="true" class="anchor-heading icon-link" href="#tradeoffs-memory-vs-speed"></a></h1>
+<ul>
+<li>generators are memory efficient but can be slow</li>
+<li><a href="https://realpython.com/introduction-to-python-generators/#profiling-generator-performance">generator vs list comprehension -- profiling</a></li>
+</ul>
+<h1 id="further-reading">Further Reading<a aria-hidden="true" class="anchor-heading icon-link" href="#further-reading"></a></h1>
+<ul class="contains-task-list">
+<li><a href="https://realpython.com/introduction-to-python-generators/#profiling-generator-performance">real python article</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> advanced generator methods
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <code>.send()</code></li>
+<li class="task-list-item"><input type="checkbox" disabled> <code>.throw()</code></li>
+<li class="task-list-item"><input type="checkbox" disabled> <code>.close()</code></li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled> use (data pipeline)</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/notes/9iyitjbahuhp1l0cy75kxvv">Asynchrnous Programming</a></li>
+</ul>

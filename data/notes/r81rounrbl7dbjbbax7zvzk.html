@@ -1,0 +1,44 @@
+<h1 id="how-js-works">How JS Works<a aria-hidden="true" class="anchor-heading icon-link" href="#how-js-works"></a></h1>
+<ul>
+<li>everything in JS happens inside an <code>execution context</code></li>
+</ul>
+<h1 id="execution-context">Execution Context<a aria-hidden="true" class="anchor-heading icon-link" href="#execution-context"></a></h1>
+<p><img src="/notes/assets/images/2022-10-09-18-59-44.png"></p>
+<ul>
+<li>has two main components
+<ul>
+<li><code>variable environment</code> or <code>memory-space</code> for storing key value pairs of variables and functions</li>
+<li><code>thread of execution</code> or <code>code-component</code> where code is executed</li>
+</ul>
+</li>
+</ul>
+<h1 id="how-code-is-executed">How Code is executed<a aria-hidden="true" class="anchor-heading icon-link" href="#how-code-is-executed"></a></h1>
+<ul>
+<li>code is executed in two phases
+<ul>
+<li><em>phase 1</em>: memory allocation
+<ul>
+<li>key value pairs for all variables and functions are stored
+<ul>
+<li>variables are stored as undefined</li>
+<li>for functions the entire code is stored in memory</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>phase 2</em>: execution
+<ul>
+<li>every context is executed line by line</li>
+<li>when a function is called, a new context(in call stack) is created and entire process is repeated</li>
+<li>when the function returns, the new context is deleted and control is returned back to global context</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="call-stack">Call Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#call-stack"></a></h2>
+<ul>
+<li>global context always at the bottom</li>
+<li>others are pushed at the time of functions</li>
+<li>contexts are popped when control is returned</li>
+</ul>

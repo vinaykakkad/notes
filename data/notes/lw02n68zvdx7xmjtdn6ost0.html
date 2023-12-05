@@ -1,0 +1,82 @@
+<h1 id="python-asyncio">Python Asyncio<a aria-hidden="true" class="anchor-heading icon-link" href="#python-asyncio"></a></h1>
+<ul>
+<li>python async IO is not threading, nor is it multiprocessing</li>
+<li>async IO is a single-threaded, single-process design: it uses <code>cooperative multitasking</code></li>
+</ul>
+<details>
+<summary>Simultaneous chess playing Example</summary>
+<ul>
+<li>Chess master Judit Polgár hosts a chess exhibition in which she plays multiple amateur players. She has two ways of conducting the exhibition: synchronously and asynchronously.</li>
+<li>Assumptions:
+<ul>
+<li>24 opponents</li>
+<li>Judit makes each chess move in 5 seconds</li>
+<li>Opponents each take 55 seconds to make a move</li>
+<li>Games average 30 pair-moves (60 moves total)</li>
+</ul>
+</li>
+<li><strong>Synchronous version</strong>: Judit plays one game at a time, never two at the same time, until the game is complete. Each game takes <strong>(55 + 5) * 30 == 1800</strong> seconds, or 30 minutes. The entire exhibition takes <strong>24 * 30 == 720</strong> minutes, or <strong>12 hours</strong>.</li>
+<li><strong>Asynchronous version</strong>: Judit moves from table to table, making one move at each table. She leaves the table and lets the opponent make their next move during the wait time. One move on all 24 games takes Judit <strong>24 * 5 == 120</strong> seconds, or 2 minutes. The entire exhibition is now cut down to <strong>120 * 30 == 3600</strong> seconds, or just <strong>1 hour</strong>. <a href="https://youtu.be/iG6fr81xHKA?t=4m29s">(Source)</a></li>
+</ul>
+</details>
+<h2 id="rules-of-asyncio">Rules of asyncio<a aria-hidden="true" class="anchor-heading icon-link" href="#rules-of-asyncio"></a></h2>
+<ul>
+<li>syntax <code>async def</code> introduces either a <strong>native coroutine</strong> or an <strong>asynchronous generator</strong>
+<ul>
+<li>expressions <code>async with</code> and <code>async for</code> are also valid</li>
+</ul>
+</li>
+<li>keyword <code>await</code> passes function control back to the event loop.</li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">g</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Pause here and come back to g() when f() is ready</span>
+    r <span class="token operator">=</span> <span class="token keyword">await</span> f<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> r
+</code></pre>
+<details>
+<summary>explanation</summary>
+<ul>
+<li>If Python encounters an <code>await f()</code> expression in the scope of <code>g()</code>, this is how <code>await</code> tells the event loop, “Suspend execution of <code>g()</code> until whatever I’m waiting on—the result of <code>f()</code> —is returned. In the meantime, go let something else run.”</li>
+</ul>
+</details>
+<ul>
+<li>function that you introduce with <code>async def</code> is a <strong>coroutine</strong>
+<ul>
+<li>To call a coroutine function, you must <code>await</code> it to get its results</li>
+<li>It is less common (and only recently legal in Python) to use <code>yield</code> in an <code>async def</code> block.
+<ul>
+<li>This creates an <a href="https://www.python.org/dev/peps/pep-0525/">asynchronous generator</a>, which you iterate over with <code>async for</code>.</li>
+</ul>
+</li>
+<li>Anything defined with <code>async def</code> may not use <code>yield from</code>, which will raise a <code>SyntaxError</code>.</li>
+</ul>
+</li>
+<li>it is a <code>SyntaxError</code> to use <code>await</code> outside of an <code>async def</code> coroutine.</li>
+</ul>
+<details>
+<summary>code examples</summary>
+<pre class="language-python"><code class="language-python"><span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">f</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y <span class="token operator">=</span> <span class="token keyword">await</span> z<span class="token punctuation">(</span>x<span class="token punctuation">)</span>  <span class="token comment"># OK - `await` and `return` allowed in coroutines</span>
+    <span class="token keyword">return</span> y
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">g</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">yield</span> x  <span class="token comment"># OK - this is an async generator</span>
+
+<span class="token keyword">async</span> <span class="token keyword">def</span> <span class="token function">m</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">yield</span> <span class="token keyword">from</span> gen<span class="token punctuation">(</span>x<span class="token punctuation">)</span>  <span class="token comment"># No - SyntaxError</span>
+
+<span class="token keyword">def</span> <span class="token function">m</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    y <span class="token operator">=</span> <span class="token keyword">await</span> z<span class="token punctuation">(</span>x<span class="token punctuation">)</span>  <span class="token comment"># Still no - SyntaxError (no `async def` here)</span>
+    <span class="token keyword">return</span> y
+</code></pre>
+</details>
+<ul>
+<li>when you use <code>await f()</code>, it’s required that <code>f()</code> be an object that is <a href="https://docs.python.org/3/reference/datamodel.html#awaitable-objects">awaitable</a></li>
+<li>an awaitable object is either
+<ol>
+<li>another coroutine or</li>
+<li>an object defining an <code>.__await__()</code> dunder method that returns an iterator</li>
+</ol>
+</li>
+</ul>
+<h2 id="design-patterns">Design Patterns<a aria-hidden="true" class="anchor-heading icon-link" href="#design-patterns"></a></h2>

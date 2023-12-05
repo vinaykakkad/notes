@@ -1,0 +1,126 @@
+<h1 id="1-introduction">1-Introduction<a aria-hidden="true" class="anchor-heading icon-link" href="#1-introduction"></a></h1>
+<h1 id="pillars-of-the-course">Pillars of the course<a aria-hidden="true" class="anchor-heading icon-link" href="#pillars-of-the-course"></a></h1>
+<ul>
+<li>classifcation</li>
+<li>regression</li>
+<li>dimensionality reduction</li>
+<li>clustering</li>
+</ul>
+<h1 id="what-is-machine-learning">What is machine learning<a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-machine-learning"></a></h1>
+<p>John Mitchell' definition</p>
+<blockquote style="background-color: #43b02a20; padding:3px 2px; border-radius: 5px; border-left: 0.25em solid #43b02a; padding-left: 0.75em">A computer program is said to learn from an experience <b>E</b>, with respect to some task <b>T</b> and using some performance measure <b>P</b>, if its pefromance improves with experience
+</blockquote>
+<h1 id="probabilistic-approach-for-ml">Probabilistic approach for ML<a aria-hidden="true" class="anchor-heading icon-link" href="#probabilistic-approach-for-ml"></a></h1>
+<ul>
+<li>treat every unknown quantity as a <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">RV</code></li>
+<li>use different proability distributions to model that uncertainity</li>
+<li>we use probabilistic approach because:
+<ul>
+<li>it is optimal decision making strategy under some uncertainity</li>
+<li>other areas of science and engineerig also use the same approach</li>
+</ul>
+</li>
+</ul>
+<h1 id="supervised-machine-learning">Supervised Machine Learning<a aria-hidden="true" class="anchor-heading icon-link" href="#supervised-machine-learning"></a></h1>
+<ul>
+<li>data with outputs corresponding to inputs is provided</li>
+<li>we try to find the mapping between theese inputs and outputs</li>
+</ul>
+<h2 id="classification-problem">Classification Problem<a aria-hidden="true" class="anchor-heading icon-link" href="#classification-problem"></a></h2>
+<ul>
+<li>output space is a set of c <em>distinct</em> and <em>mutually exclusive</em> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">labels</code></li>
+<li>output is a <em>categorical variable</em></li>
+<li>the problem is also called <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">pattern recognition</code></li>
+</ul>
+<h3 id="iris-flowers-dataset">IRIS flowers dataset<a aria-hidden="true" class="anchor-heading icon-link" href="#iris-flowers-dataset"></a></h3>
+<ul>
+<li>
+<p>labels:</p>
+<ol>
+<li>setosa</li>
+<li>versicolor</li>
+<li>virginica</li>
+</ol>
+</li>
+<li>
+<p>featues:</p>
+<ol>
+<li>petal length</li>
+<li>petal width</li>
+<li>sepal width</li>
+<li>sepal length</li>
+</ol>
+</li>
+<li>
+<p>In cases similar to this, when the size is fixed, the data is stored using <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">design matrix</code></p>
+</li>
+<li>
+<p>Such a dataset is <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">tabular data</code></p>
+</li>
+<li>
+<p>when the inputs are of variable size we may need to store the data in some other format</p>
+</li>
+</ul>
+<p><img src="/notes/assets/images/2022-01-14-23-01-57.png" alt="Pairwise Scatter Plot for Iris Dataset"></p>
+<ul class="contains-task-list">
+<li>pairwise scatter plot for iris dataset</li>
+<li>the diagonal shows the probability distribution for that particular <em>predictor</em></li>
+<li>from this we can get intution for decision rules
+<ul>
+<li>ex: if petal length exceeds some limit, it won't be of a particular type</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/vinaykakkad/pyprobml/blob/master/scripts/iris_plot.py">code for the scatter plot</a></li>
+</ul>
+<h3 id="eda-note">EDA note<a aria-hidden="true" class="anchor-heading icon-link" href="#eda-note"></a></h3>
+<ul>
+<li>for such datasets with very few predictors, it is common to plot such pair plots to get the intution</li>
+<li>for datasets with high number of predictors, <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">dimensionality reduction is performed</code></li>
+</ul>
+<p><img src="/notes/assets/images/2022-01-14-23-11-37.png" alt="Decision Tree"></p>
+<ul class="contains-task-list">
+<li>decision tree for the iris dataset</li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/vinaykakkad/pyprobml/blob/master/scripts/iris_dtree.py">code_1 for decision tree</a></li>
+<li class="task-list-item"><input type="checkbox" disabled> <a href="https://github.com/vinaykakkad/pyprobml/blob/master/scripts/iris_dtree2.py">code_2 for decision tree</a></li>
+</ul>
+<h1 id="empricialexperimental-risk-minimisation">Empricial(experimental) Risk Minimisation<a aria-hidden="true" class="anchor-heading icon-link" href="#empricialexperimental-risk-minimisation"></a></h1>
+<h2 id="missclassification-rate">Missclassification Rate<a aria-hidden="true" class="anchor-heading icon-link" href="#missclassification-rate"></a></h2>
+<ul>
+<li>in the above example, error in the model can be expressed as missclassifcation rate which is given by:</li>
+<li><img src="/notes/assets/images/2022-01-16-14-05-56.png" alt="Misclassification Rate">
+<ul>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo stretchy="false">(</mo><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi>s</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\theta(parameters)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">am</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mord mathnormal">ers</span><span class="mclose">)</span></span></span></span></span> are the decision rules that we make </li>
+<li>in case of linear regression, <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></span> are the weights that we assign to the predictors</li>
+</ul>
+</li>
+<li>Here <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I(e)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mclose">)</span></span></span></span></span> is the binary indicator function, which return when the output return by our model does not match the actual output</li>
+<li><img src="/notes/assets/images/2022-01-16-14-07-57.png" alt="Indicator function"></li>
+</ul>
+<br>
+<ul>
+<li>here we assume that each incorrect prediction has the same loss</li>
+<li>in general, we can define a <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">loss function</code>, which is a function of the predicted output and actual output on the training set</li>
+<li>the <em>empirical risk</em> is then defined as:</li>
+<li><img src="/notes/assets/images/2022-01-16-14-22-51.png" alt="Empirical Risk"></li>
+</ul>
+<h2 id="model-fitting-or-training">Model Fitting or Training<a aria-hidden="true" class="anchor-heading icon-link" href="#model-fitting-or-training"></a></h2>
+<ul>
+<li>one way is to find <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\theta</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span></span></span></span></span> that minimize the empirical risk (<em>empirical risk minimization</em>)</li>
+<li><img src="/notes/assets/images/2022-01-16-14-31-19.png" alt="ERM"></li>
+<li>true goal: <em>minimize the loss on future data</em> - <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">generalization</code></li>
+</ul>
+<h1 id="todos">TODOs<a aria-hidden="true" class="anchor-heading icon-link" href="#todos"></a></h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> ISLR</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Random Variables</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Tranformation of RVs</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Diff probability distribution</p>
+</li>
+</ul>

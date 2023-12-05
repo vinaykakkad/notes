@@ -1,0 +1,22 @@
+<h1 id="hoisting">Hoisting<a aria-hidden="true" class="anchor-heading icon-link" href="#hoisting"></a></h1>
+<h1 id="hoisting-in-js">Hoisting in JS<a aria-hidden="true" class="anchor-heading icon-link" href="#hoisting-in-js"></a></h1>
+<ul>
+<li>accessing variables and functions before initialization</li>
+</ul>
+<h2 id="why-this-happens">Why this happens<a aria-hidden="true" class="anchor-heading icon-link" href="#why-this-happens"></a></h2>
+<ul>
+<li>before the actual execution
+<ul>
+<li>memory is allocated to every variable and function</li>
+<li>thus we can access variables before initialization</li>
+</ul>
+</li>
+</ul>
+<h2 id="cases">Cases<a aria-hidden="true" class="anchor-heading icon-link" href="#cases"></a></h2>
+<ul>
+<li>accessing variable: return <code>undefined</code></li>
+<li>accessing a named function: returns <code>the code of the function</code></li>
+<li>calling the function: executes the function without any errors</li>
+<li>accessing anonymous function: returns <code>undefined</code> (is ultimately an variable)</li>
+<li>accessing undeclared variable: returns <code>not-defined</code> error</li>
+</ul>

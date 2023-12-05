@@ -1,0 +1,173 @@
+<h1 id="shell-scripting">Shell Scripting<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-scripting"></a></h1>
+<h2 id="shell-vs-terminal">Shell vs Terminal<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-vs-terminal"></a></h2>
+<ul>
+<li>kernel - server</li>
+<li>shell - middleware</li>
+<li>terminal - client</li>
+</ul>
+<h2 id="shell-prompt">shell prompt<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-prompt"></a></h2>
+<ul>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$</code> at the end of the prompt ⇒ normal user</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">#</code> at the end of the prompt ⇒ root user
+<ul>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">sudo su</code> to open a terminal as a root user</li>
+</ul>
+</li>
+</ul>
+<h2 id="shell-functions">shell functions<a aria-hidden="true" class="anchor-heading icon-link" href="#shell-functions"></a></h2>
+<ul>
+<li>they are built-in programs stored on our file system</li>
+<li>the shell searches for these programs through the <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">PATH</code> environment variable</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">which</code> gives the path of the program that would be executed for a particular command</li>
+</ul>
+<h2 id="environment-variables">environment variables<a aria-hidden="true" class="anchor-heading icon-link" href="#environment-variables"></a></h2>
+<ul>
+<li>variables that are automatically set when you start the shell</li>
+<li>example: <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">path</code></li>
+</ul>
+<h2 id="interesting-stuff-from-missing-semester">interesting stuff from <a href="https://missing.csail.mit.edu/2020/course-shell/">missing semester</a><a aria-hidden="true" class="anchor-heading icon-link" href="#interesting-stuff-from-missing-semester"></a></h2>
+<ul>
+<li>almost all files in <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">/bin</code> have a <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">x</code> permission set for the last group
+<ul>
+<li>so that anyone can execute those programs</li>
+</ul>
+</li>
+<li>sudo - do as su(superuser)</li>
+<li>using the sys directory we can interact and do cool stuff with hardware
+<ul>
+<li><a href="https://missing.csail.mit.edu/2020/course-shell/#:~:text=a%20versatile%20and%20powerful%20tool">controling the backlit programtically</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="flags-vs-options">flags vs options<a aria-hidden="true" class="anchor-heading icon-link" href="#flags-vs-options"></a></h2>
+<ul>
+<li>if we pass some value with a flag - option</li>
+<li>here <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">-p</code> (don't follow symlinks) is a flag and <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">iname</code> is an option</li>
+</ul>
+<pre class="language-bash"><code class="language-bash"><span class="token function">find</span> -P -iname <span class="token string">'*some_string*'</span>
+</code></pre>
+<h2 id="streams">streams<a aria-hidden="true" class="anchor-heading icon-link" href="#streams"></a></h2>
+<ul>
+<li>in shell, every program have input and output streams, by default set to terminal</li>
+<li>this can be configured using <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">&#x3C; file</code> and <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">> file</code></li>
+<li>this  command reads from hello1 and writes to hello2</li>
+</ul>
+<pre class="language-bash"><code class="language-bash"><span class="token function">cat</span> <span class="token operator">&#x3C;</span> hello1.txt <span class="token operator">></span> hello2.txt
+</code></pre>
+<ul>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">>> file</code> will append instead of overwriting to a file</li>
+<li>can be also used for streaming media files when combined with <a href="https://vitux.com/how-to-cast-video-from-ubuntu-to-chromecast/">chormecast</a></li>
+</ul>
+<h2 id="strings">strings<a aria-hidden="true" class="anchor-heading icon-link" href="#strings"></a></h2>
+<ul>
+<li>defined with <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">'</code> are string literals</li>
+<li>defined with <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">"</code> will expand and substitute variables</li>
+<li><a href="https://www.gnu.org/software/bash/manual/html_node/Quoting.html">bash quoting</a></li>
+</ul>
+<h2 id="special-variable-in-bash-scripting">special variable in bash scripting<a aria-hidden="true" class="anchor-heading icon-link" href="#special-variable-in-bash-scripting"></a></h2>
+<ul>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$0</code> - Name of the script</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$1</code>to <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$9</code> - Arguments to the script. <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$1</code> is the first argument and so on.</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$@</code> - All the arguments</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$#</code> - Number of arguments</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$?</code> - Return code of the previous command</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$$</code> - Process identification number (PID) for the current script</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">!!</code> - Entire last command, including arguments
+<ul>
+<li>can be useful if we realize that the command needs root privileges after executing it for the first time</li>
+<li>just type <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">sudo !!</code> followed by a <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">tab</code></li>
+</ul>
+</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">$_</code> - Last argument from the last command</li>
+</ul>
+<h2 id="exit-codes-and-short-circuiting">exit codes and short-circuiting<a aria-hidden="true" class="anchor-heading icon-link" href="#exit-codes-and-short-circuiting"></a></h2>
+<pre class="language-bash"><code class="language-bash"><span class="token boolean">false</span> <span class="token operator">||</span> <span class="token builtin class-name">echo</span> <span class="token string">"Oops, fail"</span>
+<span class="token comment"># Oops, fail</span>
+
+<span class="token boolean">true</span> <span class="token operator">||</span> <span class="token builtin class-name">echo</span> <span class="token string">"Will not be printed"</span>
+<span class="token comment">#</span>
+
+<span class="token boolean">true</span> <span class="token operator">&#x26;&#x26;</span> <span class="token builtin class-name">echo</span> <span class="token string">"Things went well"</span>
+<span class="token comment"># Things went well</span>
+
+<span class="token boolean">false</span> <span class="token operator">&#x26;&#x26;</span> <span class="token builtin class-name">echo</span> <span class="token string">"Will not be printed"</span>
+<span class="token comment">#</span>
+
+<span class="token boolean">true</span> <span class="token punctuation">;</span> <span class="token builtin class-name">echo</span> <span class="token string">"This will always run"</span>
+<span class="token comment"># This will always run</span>
+
+<span class="token boolean">false</span> <span class="token punctuation">;</span> <span class="token builtin class-name">echo</span> <span class="token string">"This will always run"</span>
+<span class="token comment"># This will always run</span>
+</code></pre>
+<h2 id="wildstars-and-globbing">wildstars and globbing<a aria-hidden="true" class="anchor-heading icon-link" href="#wildstars-and-globbing"></a></h2>
+<ul>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">?</code> - to match one character only</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">*</code> - to match any amount of characters</li>
+<li><code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">{}</code> - expand command using a list of arguments</li>
+</ul>
+<pre class="language-bash"><code class="language-bash">convert image.<span class="token punctuation">{</span>png,jpg<span class="token punctuation">}</span>
+<span class="token comment"># Will expand to</span>
+convert image.png image.jpg
+
+<span class="token comment"># Globbing techniques can also be combined</span>
+
+<span class="token comment"># This will move all *.py and *.sh files</span>
+<span class="token function">mv</span> *<span class="token punctuation">{</span>.py,.sh<span class="token punctuation">}</span> folder
+
+<span class="token function">mkdir</span> foo bar
+<span class="token comment"># This creates files foo/a, foo/b, ... foo/h, bar/a, bar/b, ... bar/h</span>
+<span class="token function">touch</span> <span class="token punctuation">{</span>foo,bar<span class="token punctuation">}</span>/<span class="token punctuation">{</span>a<span class="token punctuation">..</span>h<span class="token punctuation">}</span>
+<span class="token function">touch</span> foo/x bar/y
+
+<span class="token comment"># Show differences between files in foo and bar</span>
+<span class="token function">diff</span> <span class="token operator">&#x3C;</span><span class="token punctuation">(</span><span class="token function">ls</span> foo<span class="token punctuation">)</span> <span class="token operator">&#x3C;</span><span class="token punctuation">(</span><span class="token function">ls</span> bar<span class="token punctuation">)</span>
+<span class="token comment"># Outputs</span>
+<span class="token comment"># &#x3C; x</span>
+<span class="token comment"># ---</span>
+<span class="token comment"># > y</span>
+</code></pre>
+<h2 id="scripting-vs-functions">scripting vs functions<a aria-hidden="true" class="anchor-heading icon-link" href="#scripting-vs-functions"></a></h2>
+<ul>
+<li>
+<p>functions should be in the same language</p>
+</li>
+<li>
+<p>scripts can be in any language</p>
+<ul>
+<li>env can be specified using the <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">shebang</code></li>
+<li>a good practice is to give env name as an argument, rather than the direct path    </li>
+<li>
+<pre class="language-bash"><code class="language-bash">    <span class="token comment">#! usr/bin/env env_name</span>
+    ```
+<span class="token operator">&#x3C;</span>br<span class="token operator">></span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>functions are loaded only for the first time ⇒ they are faster</p>
+</li>
+<li>
+<p>scripts are loaded every time they are executed</p>
+</li>
+</ul>
+<br>
+<ul>
+<li>functions are loaded in the current shell environment
+<ul>
+<li>functions can modify environment variables</li>
+</ul>
+</li>
+<li>scripts are executed in their separate processes</li>
+</ul>
+<h2 id="tools">tools<a aria-hidden="true" class="anchor-heading icon-link" href="#tools"></a></h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">TLDR</code> pages or <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">bro</code> pages instead of <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">man</code> pages</li>
+<li class="task-list-item"><input type="checkbox" disabled> for finding and performing ops on file
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">find</code> command</li>
+<li class="task-list-item"><input type="checkbox" disabled> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">fd</code> - better alternative</li>
+<li class="task-list-item"><input type="checkbox" disabled> <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">locate</code> - uses indexing</li>
+</ul>
+</li>
+</ul>

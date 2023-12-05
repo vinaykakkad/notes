@@ -1,0 +1,46 @@
+<h1 id="lec-10">Lec 10<a aria-hidden="true" class="anchor-heading icon-link" href="#lec-10"></a></h1>
+<h2 id="fitting-a-curve-to-edges">Fitting a curve to edges<a aria-hidden="true" class="anchor-heading icon-link" href="#fitting-a-curve-to-edges"></a></h2>
+<p><img src="/notes/assets/images/2022-02-10-13-39-39.png"></p>
+<ul>
+<li>we need to find the polynominal which minimizes the perpendicular distance</li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><msub><mo>∑</mo><mi>i</mi></msub><mo stretchy="false">(</mo><msub><mi>y</mi><mi>i</mi></msub><mo>−</mo><mi>a</mi><msubsup><mi>x</mi><mi>i</mi><mn>3</mn></msubsup><mo>−</mo><mi>b</mi><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo>−</mo><mi>c</mi><msub><mi>x</mi><mi>i</mi></msub><mo>−</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">E = \frac{1}{N} \sum_i (y_i - ax_i^3 - bx_i^2 - cx_i - d)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.162em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0728em;vertical-align:-0.2587em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4413em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2587em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0728em;vertical-align:-0.2587em;"></span><span class="mord mathnormal">b</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-2.4413em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2587em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.7333em;vertical-align:-0.15em;"></span><span class="mord mathnormal">c</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">d</span><span class="mclose">)</span></span></span></span></span>
+<ul>
+<li>we solve linear(linear function of parameters) system of equations using <em>least squares</em></li>
+<li>we find the <em>partial derivative</em> with respect to all the params and set it to zero to find the minima</li>
+</ul>
+</li>
+</ul>
+<br>
+<ul>
+<li>we need to determine the <em>degree</em> of the polynomial that best fits the given edges
+<ul>
+<li>as the number of params is very less comprared to the number of equation, get a <strong><em>over-determined</em></strong> linear system</li>
+</ul>
+</li>
+<li>rearraning these equation into a matrix form, we get</li>
+<li><img src="/notes/assets/images/2022-02-10-13-53-14.png"></li>
+<li>finding the moore penrose <em>pseduo-inverse</em> for this system of equation, we get the least squares solution</li>
+<li><img src="/notes/assets/images/2022-02-10-13-59-30.png"></li>
+</ul>
+<h1 id="active-contourssnakes">Active Contours(Snakes)<a aria-hidden="true" class="anchor-heading icon-link" href="#active-contourssnakes"></a></h1>
+<p><img src="/notes/assets/images/2022-02-10-14-04-21.png"></p>
+<ul>
+<li>iterativel deforms initial contours unitl:
+<ul>
+<li>it is near the pixel with <em>high gradients</em> (edges)</li>
+<li>it is smooth</li>
+</ul>
+</li>
+</ul>
+<h2 id="representing-a-contour">Representing a contour<a aria-hidden="true" class="anchor-heading icon-link" href="#representing-a-contour"></a></h2>
+<p><img src="/notes/assets/images/2022-02-10-14-10-25.png"></p>
+<ul>
+<li>contour is described using a ordered list of 2d vertices(control points)</li>
+<li>lines connecting the <em>control points</em></li>
+</ul>
+<h2 id="attracting-contours-to-edges">Attracting contours to edges<a aria-hidden="true" class="anchor-heading icon-link" href="#attracting-contours-to-edges"></a></h2>
+<p><img src="/notes/assets/images/2022-02-10-14-18-51.png"></p>
+<ul>
+<li>we attract the contour by maximizing the sum of <em>gradient magnitude square</em></li>
+<li>this is process is knows as <code style="background-color: #43b02a40; padding:3px 2px; border-radius: 5px">boundary tracking</code></li>
+</ul>

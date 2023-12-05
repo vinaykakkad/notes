@@ -1,0 +1,3728 @@
+{
+  "notes": {
+    "403": {
+      "vault": {
+        "fsPath": "vault"
+      },
+      "fname": "403",
+      "id": "403",
+      "title": "This page has not yet sprouted",
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799808968,
+      "created": 1701799808968,
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": null,
+      "data": {}
+    },
+    "LBE6GBZjFtOaX27nwRSpq": {
+      "id": "LBE6GBZjFtOaX27nwRSpq",
+      "title": "Notes 📚",
+      "desc": "",
+      "updated": 1642916746120,
+      "created": 1642875904363,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "f3ab1afac9d88a8f51c98f4e257b81a2",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "H8OS9Ap2DDjZ7XSIZWpQT",
+        "m2fe4910vhlj3cwsbw45wfc",
+        "tpmpx2xkasjhbntai7ejfx3",
+        "ydBpHsjLwIGYomDZo8NtB",
+        "g9m1mlmymq7qvcjzi8ap2qu"
+      ],
+      "parent": null,
+      "data": {}
+    },
+    "g9m1mlmymq7qvcjzi8ap2qu": {
+      "fname": "dev",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807649,
+      "created": 1701799807649,
+      "id": "g9m1mlmymq7qvcjzi8ap2qu",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "28qngwsk8m7bvqg9s7bz7f7"
+      ],
+      "parent": "LBE6GBZjFtOaX27nwRSpq",
+      "data": {},
+      "title": "Dev"
+    },
+    "28qngwsk8m7bvqg9s7bz7f7": {
+      "fname": "dev.js",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807649,
+      "created": 1701799807649,
+      "id": "28qngwsk8m7bvqg9s7bz7f7",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "71vmk221iuw1r44eg87i9k1",
+        "r81rounrbl7dbjbbax7zvzk",
+        "j9y5pz6ueb0uong1v6f1unc"
+      ],
+      "parent": "g9m1mlmymq7qvcjzi8ap2qu",
+      "data": {},
+      "title": "JS"
+    },
+    "j9y5pz6ueb0uong1v6f1unc": {
+      "id": "j9y5pz6ueb0uong1v6f1unc",
+      "title": "Var Let Const",
+      "desc": "",
+      "updated": 1696333457934,
+      "created": 1666015367380,
+      "custom": {},
+      "fname": "dev.js.var-let-const",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "3ffe6b7c57ef68acdbc0cba8a55094ce",
+      "links": [],
+      "anchors": {
+        "lexical-environment-and-scope": {
+          "type": "header",
+          "text": "Lexical environment and scope",
+          "value": "lexical-environment-and-scope",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "scope": {
+          "type": "header",
+          "text": "Scope",
+          "value": "scope",
+          "line": 16,
+          "column": 0,
+          "depth": 2
+        },
+        "shortest-js-code": {
+          "type": "header",
+          "text": "Shortest JS code",
+          "value": "shortest-js-code",
+          "line": 20,
+          "column": 0,
+          "depth": 1
+        },
+        "let-and-const": {
+          "type": "header",
+          "text": "Let and Const",
+          "value": "let-and-const",
+          "line": 28,
+          "column": 0,
+          "depth": 1
+        },
+        "re-declaration-vs-re-initialization": {
+          "type": "header",
+          "text": "Re-declaration vs re-initialization",
+          "value": "re-declaration-vs-re-initialization",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "errors": {
+          "type": "header",
+          "text": "Errors",
+          "value": "errors",
+          "line": 46,
+          "column": 0,
+          "depth": 2
+        },
+        "block-scope": {
+          "type": "header",
+          "text": "Block Scope",
+          "value": "block-scope",
+          "line": 53,
+          "column": 0,
+          "depth": 1
+        },
+        "shadowing": {
+          "type": "header",
+          "text": "Shadowing",
+          "value": "shadowing",
+          "line": 64,
+          "column": 0,
+          "depth": 2
+        },
+        "illegal-shadowing": {
+          "type": "header",
+          "text": "Illegal Shadowing",
+          "value": "illegal-shadowing",
+          "line": 74,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "28qngwsk8m7bvqg9s7bz7f7",
+      "data": {}
+    },
+    "r81rounrbl7dbjbbax7zvzk": {
+      "id": "r81rounrbl7dbjbbax7zvzk",
+      "title": "How JS Works",
+      "desc": "",
+      "updated": 1696332046973,
+      "created": 1665321974645,
+      "custom": {},
+      "fname": "dev.js.how-js-works",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "77d1286aa9aaaa4b778c8baeef9702a8",
+      "links": [],
+      "anchors": {
+        "execution-context": {
+          "type": "header",
+          "text": "Execution Context",
+          "value": "execution-context",
+          "line": 10,
+          "column": 0,
+          "depth": 1
+        },
+        "how-code-is-executed": {
+          "type": "header",
+          "text": "How Code is executed",
+          "value": "how-code-is-executed",
+          "line": 18,
+          "column": 0,
+          "depth": 1
+        },
+        "call-stack": {
+          "type": "header",
+          "text": "Call Stack",
+          "value": "call-stack",
+          "line": 30,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "28qngwsk8m7bvqg9s7bz7f7",
+      "data": {}
+    },
+    "71vmk221iuw1r44eg87i9k1": {
+      "id": "71vmk221iuw1r44eg87i9k1",
+      "title": "Hoisting",
+      "desc": "",
+      "updated": 1696330891519,
+      "created": 1666015185595,
+      "custom": {},
+      "fname": "dev.js.hoisting",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "f1ffb50f95045deac4d4cdb3a6d30d47",
+      "links": [],
+      "anchors": {
+        "hoisting-in-js": {
+          "type": "header",
+          "text": "Hoisting in JS",
+          "value": "hoisting-in-js",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "why-this-happens": {
+          "type": "header",
+          "text": "Why this happens",
+          "value": "why-this-happens",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "cases": {
+          "type": "header",
+          "text": "Cases",
+          "value": "cases",
+          "line": 17,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "28qngwsk8m7bvqg9s7bz7f7",
+      "data": {}
+    },
+    "ydBpHsjLwIGYomDZo8NtB": {
+      "id": "ydBpHsjLwIGYomDZo8NtB",
+      "title": "CLI",
+      "desc": "",
+      "updated": 1646901658817,
+      "created": 1646901658817,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "cli",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "dd68e12938ac1abe5eaef8d93dbae82c",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "r459rk8iofn446t6nshevjt",
+        "oQYRM3sMDt7Q6JWDzbjG4"
+      ],
+      "parent": "LBE6GBZjFtOaX27nwRSpq",
+      "data": {}
+    },
+    "oQYRM3sMDt7Q6JWDzbjG4": {
+      "id": "oQYRM3sMDt7Q6JWDzbjG4",
+      "title": "Shell Scripting",
+      "desc": "",
+      "updated": 1672923910585,
+      "created": 1642880615533,
+      "custom": {},
+      "fname": "cli.shell-scripting",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "abf2e24277574caf438790c1b7c97886",
+      "links": [],
+      "anchors": {
+        "shell-vs-terminal": {
+          "type": "header",
+          "text": "Shell vs Terminal",
+          "value": "shell-vs-terminal",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "shell-prompt": {
+          "type": "header",
+          "text": "shell prompt",
+          "value": "shell-prompt",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "shell-functions": {
+          "type": "header",
+          "text": "shell functions",
+          "value": "shell-functions",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "environment-variables": {
+          "type": "header",
+          "text": "environment variables",
+          "value": "environment-variables",
+          "line": 26,
+          "column": 0,
+          "depth": 2
+        },
+        "interesting-stuff-from-missing-semester": {
+          "type": "header",
+          "text": "interesting stuff from missing semester",
+          "value": "interesting-stuff-from-missing-semester",
+          "line": 31,
+          "column": 0,
+          "depth": 2
+        },
+        "flags-vs-options": {
+          "type": "header",
+          "text": "flags vs options",
+          "value": "flags-vs-options",
+          "line": 39,
+          "column": 0,
+          "depth": 2
+        },
+        "streams": {
+          "type": "header",
+          "text": "streams",
+          "value": "streams",
+          "line": 48,
+          "column": 0,
+          "depth": 2
+        },
+        "strings": {
+          "type": "header",
+          "text": "strings",
+          "value": "strings",
+          "line": 61,
+          "column": 0,
+          "depth": 2
+        },
+        "special-variable-in-bash-scripting": {
+          "type": "header",
+          "text": "special variable in bash scripting",
+          "value": "special-variable-in-bash-scripting",
+          "line": 67,
+          "column": 0,
+          "depth": 2
+        },
+        "exit-codes-and-short-circuiting": {
+          "type": "header",
+          "text": "exit codes and short-circuiting",
+          "value": "exit-codes-and-short-circuiting",
+          "line": 80,
+          "column": 0,
+          "depth": 2
+        },
+        "wildstars-and-globbing": {
+          "type": "header",
+          "text": "wildstars and globbing",
+          "value": "wildstars-and-globbing",
+          "line": 102,
+          "column": 0,
+          "depth": 2
+        },
+        "scripting-vs-functions": {
+          "type": "header",
+          "text": "scripting vs functions",
+          "value": "scripting-vs-functions",
+          "line": 131,
+          "column": 0,
+          "depth": 2
+        },
+        "tools": {
+          "type": "header",
+          "text": "tools",
+          "value": "tools",
+          "line": 151,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ydBpHsjLwIGYomDZo8NtB",
+      "data": {}
+    },
+    "r459rk8iofn446t6nshevjt": {
+      "id": "r459rk8iofn446t6nshevjt",
+      "title": "Intro",
+      "desc": "",
+      "updated": 1672924359735,
+      "created": 1672922272663,
+      "custom": {},
+      "fname": "cli.intro",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d41874f8873ca0dab161ca4802ad0b1b",
+      "links": [],
+      "anchors": {
+        "shell-vs-terminal": {
+          "type": "header",
+          "text": "Shell vs Terminal",
+          "value": "shell-vs-terminal",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "directory-structure": {
+          "type": "header",
+          "text": "Directory Structure",
+          "value": "directory-structure",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "bin": {
+          "type": "header",
+          "text": "/bin",
+          "value": "bin",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "boot": {
+          "type": "header",
+          "text": "/boot",
+          "value": "boot",
+          "line": 27,
+          "column": 0,
+          "depth": 3
+        },
+        "var": {
+          "type": "header",
+          "text": "/var",
+          "value": "var",
+          "line": 32,
+          "column": 0,
+          "depth": 3
+        },
+        "usr---user-system-resources": {
+          "type": "header",
+          "text": "/usr - user system resources",
+          "value": "usr---user-system-resources",
+          "line": 36,
+          "column": 0,
+          "depth": 3
+        },
+        "dev": {
+          "type": "header",
+          "text": "/dev",
+          "value": "dev",
+          "line": 40,
+          "column": 0,
+          "depth": 3
+        },
+        "etc": {
+          "type": "header",
+          "text": "/etc",
+          "value": "etc",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "mnt": {
+          "type": "header",
+          "text": "/mnt",
+          "value": "mnt",
+          "line": 49,
+          "column": 0,
+          "depth": 3
+        },
+        "shell-variable": {
+          "type": "header",
+          "text": "Shell Variable",
+          "value": "shell-variable",
+          "line": 53,
+          "column": 0,
+          "depth": 2
+        },
+        "some-builtins": {
+          "type": "header",
+          "text": "Some builtins",
+          "value": "some-builtins",
+          "line": 58,
+          "column": 0,
+          "depth": 3
+        },
+        "a-script-file": {
+          "type": "header",
+          "text": "A Script file",
+          "value": "a-script-file",
+          "line": 63,
+          "column": 0,
+          "depth": 2
+        },
+        "trivia": {
+          "type": "header",
+          "text": "Trivia",
+          "value": "trivia",
+          "line": 75,
+          "column": 0,
+          "depth": 2
+        },
+        "some-useful-manuals": {
+          "type": "header",
+          "text": "Some useful manuals",
+          "value": "some-useful-manuals",
+          "line": 80,
+          "column": 0,
+          "depth": 2
+        },
+        "access-right-code": {
+          "type": "header",
+          "text": "Access Right Code",
+          "value": "access-right-code",
+          "line": 86,
+          "column": 0,
+          "depth": 2
+        },
+        "foreground-and-background-processes": {
+          "type": "header",
+          "text": "Foreground and Background processes",
+          "value": "foreground-and-background-processes",
+          "line": 99,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ydBpHsjLwIGYomDZo8NtB",
+      "data": {}
+    },
+    "tpmpx2xkasjhbntai7ejfx3": {
+      "id": "tpmpx2xkasjhbntai7ejfx3",
+      "title": "Capture",
+      "desc": "",
+      "updated": 1675603860832,
+      "created": 1675603844786,
+      "custom": {},
+      "fname": "capture",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "6505b045826fbb1f0ae8360aaacb6f91",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "paeeqd28g50sypy53mq6m8s"
+      ],
+      "parent": "LBE6GBZjFtOaX27nwRSpq",
+      "data": {}
+    },
+    "paeeqd28g50sypy53mq6m8s": {
+      "fname": "capture.dev",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807662,
+      "created": 1701799807662,
+      "id": "paeeqd28g50sypy53mq6m8s",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "t2ichjginaesbclr4uiw1fw"
+      ],
+      "parent": "tpmpx2xkasjhbntai7ejfx3",
+      "data": {},
+      "title": "Dev"
+    },
+    "t2ichjginaesbclr4uiw1fw": {
+      "fname": "capture.dev.python",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807662,
+      "created": 1701799807662,
+      "id": "t2ichjginaesbclr4uiw1fw",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "xrw9257ex1h94sfvwweuywe"
+      ],
+      "parent": "paeeqd28g50sypy53mq6m8s",
+      "data": {},
+      "title": "Python"
+    },
+    "xrw9257ex1h94sfvwweuywe": {
+      "fname": "capture.dev.python.functional-programming",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807662,
+      "created": 1701799807662,
+      "id": "xrw9257ex1h94sfvwweuywe",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "9iyitjbahuhp1l0cy75kxvv",
+        "ztnm6bj51bu4saqs0m9lg4j"
+      ],
+      "parent": "t2ichjginaesbclr4uiw1fw",
+      "data": {},
+      "title": "Functional Programming"
+    },
+    "ztnm6bj51bu4saqs0m9lg4j": {
+      "id": "ztnm6bj51bu4saqs0m9lg4j",
+      "title": "Generators",
+      "desc": "",
+      "updated": 1673326092823,
+      "created": 1673322981537,
+      "custom": {},
+      "fname": "capture.dev.python.functional-programming.generators",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "cedd9228b7b7479ba7c14d6322bcc6b5",
+      "links": [
+        {
+          "from": {
+            "fname": "capture.dev.python.functional-programming.asynchrnous-programming",
+            "id": "9iyitjbahuhp1l0cy75kxvv",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 3,
+              "offset": 871
+            },
+            "end": {
+              "line": 29,
+              "column": 59,
+              "offset": 927
+            },
+            "indent": []
+          },
+          "value": "capture.dev.python.functional-programming.generators"
+        }
+      ],
+      "anchors": {
+        "what-is-a-generator": {
+          "type": "header",
+          "text": "What is a generator?",
+          "value": "what-is-a-generator",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "exampleuse-case": {
+          "type": "header",
+          "text": "Example(use case)",
+          "value": "exampleuse-case",
+          "line": 16,
+          "column": 0,
+          "depth": 1
+        },
+        "the-non-efficient-way": {
+          "type": "header",
+          "text": "The non-efficient way",
+          "value": "the-non-efficient-way",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "efficient-custom-iterator-way": {
+          "type": "header",
+          "text": "Efficient Custom Iterator way",
+          "value": "efficient-custom-iterator-way",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        },
+        "efficient-generator-way": {
+          "type": "header",
+          "text": "Efficient Generator Way",
+          "value": "efficient-generator-way",
+          "line": 68,
+          "column": 0,
+          "depth": 2
+        },
+        "understanding-generator": {
+          "type": "header",
+          "text": "Understanding Generator",
+          "value": "understanding-generator",
+          "line": 80,
+          "column": 0,
+          "depth": 1
+        },
+        "understanding-the-yield-statement": {
+          "type": "header",
+          "text": "Understanding the yield statement",
+          "value": "understanding-the-yield-statement",
+          "line": 86,
+          "column": 0,
+          "depth": 2
+        },
+        "tradeoffs-memory-vs-speed": {
+          "type": "header",
+          "text": "Tradeoffs (memory vs speed)",
+          "value": "tradeoffs-memory-vs-speed",
+          "line": 116,
+          "column": 0,
+          "depth": 1
+        },
+        "further-reading": {
+          "type": "header",
+          "text": "Further Reading",
+          "value": "further-reading",
+          "line": 121,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "xrw9257ex1h94sfvwweuywe",
+      "data": {}
+    },
+    "9iyitjbahuhp1l0cy75kxvv": {
+      "id": "9iyitjbahuhp1l0cy75kxvv",
+      "title": "Asynchrnous Programming",
+      "desc": "",
+      "updated": 1674886881939,
+      "created": 1673269366201,
+      "custom": {},
+      "fname": "capture.dev.python.functional-programming.asynchrnous-programming",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "a33335676a645bd422f1a741b404c763",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "capture.dev.python.functional-programming.asynchrnous-programming",
+            "id": "9iyitjbahuhp1l0cy75kxvv",
+            "vaultName": "vault"
+          },
+          "value": "capture.dev.python.functional-programming.generators",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 3,
+              "offset": 871
+            },
+            "end": {
+              "line": 29,
+              "column": 59,
+              "offset": 927
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "capture.dev.python.functional-programming.generators"
+          }
+        }
+      ],
+      "anchors": {
+        "asynchronism": {
+          "type": "header",
+          "text": "Asynchronism",
+          "value": "asynchronism",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "why-async": {
+          "type": "header",
+          "text": "Why Async?",
+          "value": "why-async",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "generator-analogy-for-async": {
+          "type": "header",
+          "text": "Generator Analogy for async",
+          "value": "generator-analogy-for-async",
+          "line": 33,
+          "column": 0,
+          "depth": 3
+        },
+        "example": {
+          "type": "header",
+          "text": "Example",
+          "value": "example",
+          "line": 39,
+          "column": 0,
+          "depth": 1
+        },
+        "async-function-anatomy": {
+          "type": "header",
+          "text": "Async function anatomy",
+          "value": "async-function-anatomy",
+          "line": 52,
+          "column": 0,
+          "depth": 2
+        },
+        "common-methods-of-asyncio": {
+          "type": "header",
+          "text": "Common methods of asyncio",
+          "value": "common-methods-of-asyncio",
+          "line": 56,
+          "column": 0,
+          "depth": 1
+        },
+        "todos": {
+          "type": "header",
+          "text": "TODOs",
+          "value": "todos",
+          "line": 68,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "lw02n68zvdx7xmjtdn6ost0"
+      ],
+      "parent": "xrw9257ex1h94sfvwweuywe",
+      "data": {}
+    },
+    "lw02n68zvdx7xmjtdn6ost0": {
+      "id": "lw02n68zvdx7xmjtdn6ost0",
+      "title": "Python Asyncio",
+      "desc": "",
+      "updated": 1674888188069,
+      "created": 1674884611859,
+      "custom": {},
+      "fname": "capture.dev.python.functional-programming.asynchrnous-programming.python-asyncio",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e972ec601f40951e271b42076cf7da22",
+      "links": [],
+      "anchors": {
+        "rules-of-asyncio": {
+          "type": "header",
+          "text": "Rules of asyncio",
+          "value": "rules-of-asyncio",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        },
+        "design-patterns": {
+          "type": "header",
+          "text": "Design Patterns",
+          "value": "design-patterns",
+          "line": 77,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "9iyitjbahuhp1l0cy75kxvv",
+      "data": {}
+    },
+    "m2fe4910vhlj3cwsbw45wfc": {
+      "id": "m2fe4910vhlj3cwsbw45wfc",
+      "title": "Archive",
+      "desc": "",
+      "updated": 1675603922012,
+      "created": 1675603829591,
+      "custom": {},
+      "fname": "archive",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d33699515b540409e3ab3398d6206cad",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "lm8hdx9tjk5aqitlcvdqtb1",
+        "p9l8ptl7bskaee2p920uziq"
+      ],
+      "parent": "LBE6GBZjFtOaX27nwRSpq",
+      "data": {}
+    },
+    "p9l8ptl7bskaee2p920uziq": {
+      "fname": "archive.acads",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807661,
+      "created": 1701799807661,
+      "id": "p9l8ptl7bskaee2p920uziq",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "unp1bqfnow0w4xw4pdwxsd3"
+      ],
+      "parent": "m2fe4910vhlj3cwsbw45wfc",
+      "data": {},
+      "title": "Acads"
+    },
+    "unp1bqfnow0w4xw4pdwxsd3": {
+      "fname": "archive.acads.sem-6",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807661,
+      "created": 1701799807661,
+      "id": "unp1bqfnow0w4xw4pdwxsd3",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "huq1pbaeqc3zby297lcdmnu"
+      ],
+      "parent": "p9l8ptl7bskaee2p920uziq",
+      "data": {},
+      "title": "Sem 6"
+    },
+    "huq1pbaeqc3zby297lcdmnu": {
+      "fname": "archive.acads.sem-6.machine-learning",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807661,
+      "created": 1701799807661,
+      "id": "huq1pbaeqc3zby297lcdmnu",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "im6ddcj0duixhbp1zdo25xq"
+      ],
+      "parent": "unp1bqfnow0w4xw4pdwxsd3",
+      "data": {},
+      "title": "Machine Learning"
+    },
+    "im6ddcj0duixhbp1zdo25xq": {
+      "id": "im6ddcj0duixhbp1zdo25xq",
+      "title": "Decision Trees",
+      "desc": "",
+      "updated": 1673867962270,
+      "created": 1673861806394,
+      "custom": {},
+      "fname": "archive.acads.sem-6.machine-learning.decision-trees",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "ff9fceedb3775cb1c41452950421d80c",
+      "links": [],
+      "anchors": {
+        "regression-trees": {
+          "type": "header",
+          "text": "Regression Trees",
+          "value": "regression-trees",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "how-to-construct-the-regions": {
+          "type": "header",
+          "text": "How to construct the regions",
+          "value": "how-to-construct-the-regions",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "overfitting-and-tree-pruning": {
+          "type": "header",
+          "text": "Overfitting and Tree Pruning",
+          "value": "overfitting-and-tree-pruning",
+          "line": 27,
+          "column": 0,
+          "depth": 4
+        },
+        "classification-trees": {
+          "type": "header",
+          "text": "Classification Trees",
+          "value": "classification-trees",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "error-functions-for-classification-trees": {
+          "type": "header",
+          "text": "Error functions for classification trees",
+          "value": "error-functions-for-classification-trees",
+          "line": 45,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "huq1pbaeqc3zby297lcdmnu",
+      "data": {}
+    },
+    "lm8hdx9tjk5aqitlcvdqtb1": {
+      "fname": "archive.cs",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807649,
+      "created": 1701799807649,
+      "id": "lm8hdx9tjk5aqitlcvdqtb1",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "35a46skqrqiqp2dn2abgana",
+        "8opnas8cdnt6jk96eyiv181"
+      ],
+      "parent": "m2fe4910vhlj3cwsbw45wfc",
+      "data": {},
+      "title": "Cs"
+    },
+    "8opnas8cdnt6jk96eyiv181": {
+      "fname": "archive.cs.dl",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807662,
+      "created": 1701799807662,
+      "id": "8opnas8cdnt6jk96eyiv181",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "3zk3gn7stqvl4qi0qeu2hz0"
+      ],
+      "parent": "lm8hdx9tjk5aqitlcvdqtb1",
+      "data": {},
+      "title": "Dl"
+    },
+    "3zk3gn7stqvl4qi0qeu2hz0": {
+      "fname": "archive.cs.dl.pytorch",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807662,
+      "created": 1701799807662,
+      "id": "3zk3gn7stqvl4qi0qeu2hz0",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "mnujjdth4kn8mnozy4xlz16"
+      ],
+      "parent": "8opnas8cdnt6jk96eyiv181",
+      "data": {},
+      "title": "Pytorch"
+    },
+    "mnujjdth4kn8mnozy4xlz16": {
+      "id": "mnujjdth4kn8mnozy4xlz16",
+      "title": "Quickstart",
+      "desc": "",
+      "updated": 1647246161292,
+      "created": 1647193471098,
+      "custom": {},
+      "fname": "archive.cs.dl.pytorch.quickstart",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "15289a66f1e9c1c591431887e2e9768b",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "3zk3gn7stqvl4qi0qeu2hz0",
+      "data": {}
+    },
+    "35a46skqrqiqp2dn2abgana": {
+      "id": "35a46skqrqiqp2dn2abgana",
+      "title": "Os",
+      "desc": "",
+      "updated": 1675547559162,
+      "created": 1675547559162,
+      "custom": {},
+      "fname": "archive.cs.os",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "53dee74415598803c74ac9c7bcc32144",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "c8q7hkwe6ynjl1lqtjppdpb"
+      ],
+      "parent": "lm8hdx9tjk5aqitlcvdqtb1",
+      "data": {}
+    },
+    "c8q7hkwe6ynjl1lqtjppdpb": {
+      "id": "c8q7hkwe6ynjl1lqtjppdpb",
+      "title": "Intro",
+      "desc": "",
+      "updated": 1666464434479,
+      "created": 1666434967383,
+      "custom": {},
+      "fname": "archive.cs.os.intro",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "c73355c56d5b9dff6267fc7401989a5d",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "35a46skqrqiqp2dn2abgana",
+      "data": {}
+    },
+    "H8OS9Ap2DDjZ7XSIZWpQT": {
+      "id": "H8OS9Ap2DDjZ7XSIZWpQT",
+      "title": "Acads",
+      "desc": "",
+      "updated": 1643979402419,
+      "created": 1643979402419,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1b939118e5644926b4075f1132d1f8f0",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "d8PKo09LSN88vNc7MOk1T",
+        "3flb46vfacm3gin43z633bg"
+      ],
+      "parent": "LBE6GBZjFtOaX27nwRSpq",
+      "data": {}
+    },
+    "3flb46vfacm3gin43z633bg": {
+      "fname": "acads.sem-7",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807659,
+      "created": 1701799807659,
+      "id": "3flb46vfacm3gin43z633bg",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "kvnu5kew5wvkwmka2si2ftc"
+      ],
+      "parent": "H8OS9Ap2DDjZ7XSIZWpQT",
+      "data": {},
+      "title": "Sem 7"
+    },
+    "kvnu5kew5wvkwmka2si2ftc": {
+      "fname": "acads.sem-7.aca",
+      "stub": true,
+      "vault": {
+        "fsPath": "vault"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1701799807660,
+      "created": 1701799807660,
+      "id": "kvnu5kew5wvkwmka2si2ftc",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "9joakunj7egivkoo8jxaar6",
+        "60ial221sf2kqr5a6v67fjv"
+      ],
+      "parent": "3flb46vfacm3gin43z633bg",
+      "data": {},
+      "title": "Aca"
+    },
+    "60ial221sf2kqr5a6v67fjv": {
+      "id": "60ial221sf2kqr5a6v67fjv",
+      "title": "Intro",
+      "desc": "",
+      "updated": 1671597930092,
+      "created": 1671597696289,
+      "custom": {},
+      "fname": "acads.sem-7.aca.intro",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "865f2b7a59ca31d7ca9d06ee2f5ba71a",
+      "links": [],
+      "anchors": {
+        "lecture-0": {
+          "type": "header",
+          "text": "Lecture 0",
+          "value": "lecture-0",
+          "line": 30,
+          "column": 0,
+          "depth": 1
+        },
+        "moore-fsm": {
+          "type": "header",
+          "text": "moore fsm",
+          "value": "moore-fsm",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "sequence-detector": {
+          "type": "header",
+          "text": "sequence detector",
+          "value": "sequence-detector",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "lecture-2": {
+          "type": "header",
+          "text": "Lecture 2",
+          "value": "lecture-2",
+          "line": 51,
+          "column": 0,
+          "depth": 1
+        },
+        "arbiter": {
+          "type": "header",
+          "text": "arbiter",
+          "value": "arbiter",
+          "line": 53,
+          "column": 0,
+          "depth": 2
+        },
+        "steps": {
+          "type": "header",
+          "text": "steps",
+          "value": "steps",
+          "line": 62,
+          "column": 0,
+          "depth": 3
+        },
+        "hamming-code-1bit-error-correcting-code": {
+          "type": "header",
+          "text": "hamming Code (1bit error correcting code)",
+          "value": "hamming-code-1bit-error-correcting-code",
+          "line": 70,
+          "column": 0,
+          "depth": 2
+        },
+        "crc-cyclic-redundancy-check": {
+          "type": "header",
+          "text": "CRC (cyclic redundancy check)",
+          "value": "crc-cyclic-redundancy-check",
+          "line": 85,
+          "column": 0,
+          "depth": 2
+        },
+        "lecture-3": {
+          "type": "header",
+          "text": "Lecture 3",
+          "value": "lecture-3",
+          "line": 92,
+          "column": 0,
+          "depth": 1
+        },
+        "types-of-crc-implementation": {
+          "type": "header",
+          "text": "Types of CRC implementation",
+          "value": "types-of-crc-implementation",
+          "line": 96,
+          "column": 0,
+          "depth": 2
+        },
+        "combinational": {
+          "type": "header",
+          "text": "Combinational",
+          "value": "combinational",
+          "line": 98,
+          "column": 0,
+          "depth": 3
+        },
+        "iterative": {
+          "type": "header",
+          "text": "Iterative",
+          "value": "iterative",
+          "line": 113,
+          "column": 0,
+          "depth": 3
+        },
+        "rolled-version": {
+          "type": "header",
+          "text": "Rolled Version",
+          "value": "rolled-version",
+          "line": 119,
+          "column": 0,
+          "depth": 4
+        },
+        "unrolled-version": {
+          "type": "header",
+          "text": "Unrolled Version",
+          "value": "unrolled-version",
+          "line": 132,
+          "column": 0,
+          "depth": 4
+        },
+        "setup-time-in-flip-flops-for-iterative-versions": {
+          "type": "header",
+          "text": "Setup Time in Flip-Flops (for iterative versions)",
+          "value": "setup-time-in-flip-flops-for-iterative-versions",
+          "line": 147,
+          "column": 0,
+          "depth": 3
+        },
+        "lecture-4": {
+          "type": "header",
+          "text": "Lecture 4",
+          "value": "lecture-4",
+          "line": 165,
+          "column": 0,
+          "depth": 1
+        },
+        "lfsr-linear-feedback-shift-register": {
+          "type": "header",
+          "text": "LFSR (linear feedback shift register)",
+          "value": "lfsr-linear-feedback-shift-register",
+          "line": 167,
+          "column": 0,
+          "depth": 2
+        },
+        "standard-format": {
+          "type": "header",
+          "text": "Standard Format",
+          "value": "standard-format",
+          "line": 176,
+          "column": 0,
+          "depth": 3
+        },
+        "modular-format": {
+          "type": "header",
+          "text": "Modular Format",
+          "value": "modular-format",
+          "line": 196,
+          "column": 0,
+          "depth": 3
+        },
+        "differences": {
+          "type": "header",
+          "text": "Differences",
+          "value": "differences",
+          "line": 216,
+          "column": 0,
+          "depth": 4
+        },
+        "lfsr-based-crc": {
+          "type": "header",
+          "text": "LFSR based CRC",
+          "value": "lfsr-based-crc",
+          "line": 224,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "kvnu5kew5wvkwmka2si2ftc",
+      "data": {}
+    },
+    "9joakunj7egivkoo8jxaar6": {
+      "id": "9joakunj7egivkoo8jxaar6",
+      "title": "Adders",
+      "desc": "",
+      "updated": 1671598361564,
+      "created": 1671598359660,
+      "custom": {},
+      "fname": "acads.sem-7.aca.adders",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "10f563cc457b36a5b3c75dea7aef153d",
+      "links": [],
+      "anchors": {
+        "abbreviations": {
+          "type": "header",
+          "text": "Abbreviations",
+          "value": "abbreviations",
+          "line": 38,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-5": {
+          "type": "header",
+          "text": "Lecture 5",
+          "value": "lecture-5",
+          "line": 48,
+          "column": 0,
+          "depth": 1
+        },
+        "full-adders-vs-half-adders": {
+          "type": "header",
+          "text": "Full Adders vs Half Adders",
+          "value": "full-adders-vs-half-adders",
+          "line": 50,
+          "column": 0,
+          "depth": 1
+        },
+        "full-adder-with-gpk": {
+          "type": "header",
+          "text": "Full adder with GPK",
+          "value": "full-adder-with-gpk",
+          "line": 60,
+          "column": 0,
+          "depth": 1
+        },
+        "full-adder-implementations": {
+          "type": "header",
+          "text": "Full Adder Implementations",
+          "value": "full-adder-implementations",
+          "line": 72,
+          "column": 0,
+          "depth": 1
+        },
+        "ripple-carry-adder": {
+          "type": "header",
+          "text": "Ripple Carry Adder",
+          "value": "ripple-carry-adder",
+          "line": 88,
+          "column": 0,
+          "depth": 2
+        },
+        "using-generate-and-propagate": {
+          "type": "header",
+          "text": "Using Generate and Propagate",
+          "value": "using-generate-and-propagate",
+          "line": 101,
+          "column": 0,
+          "depth": 2
+        },
+        "expanding-equations-for-carry-out-carry-look-ahead-adders": {
+          "type": "header",
+          "text": "Expanding equations for carry out (carry look ahead adders)",
+          "value": "expanding-equations-for-carry-out-carry-look-ahead-adders",
+          "line": 110,
+          "column": 0,
+          "depth": 3
+        },
+        "what-impacts-the-delay-of-gates": {
+          "type": "header",
+          "text": "What impacts the delay of GATES",
+          "value": "what-impacts-the-delay-of-gates",
+          "line": 114,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-6": {
+          "type": "header",
+          "text": "Lecture 6",
+          "value": "lecture-6",
+          "line": 131,
+          "column": 0,
+          "depth": 1
+        },
+        "look-ahead-adder": {
+          "type": "header",
+          "text": "Look-ahead adder",
+          "value": "look-ahead-adder",
+          "line": 133,
+          "column": 0,
+          "depth": 2
+        },
+        "hierarchial-look-ahead-adder": {
+          "type": "header",
+          "text": "Hierarchial look-ahead adder",
+          "value": "hierarchial-look-ahead-adder",
+          "line": 142,
+          "column": 0,
+          "depth": 2
+        },
+        "think--revise-about": {
+          "type": "header",
+          "text": "Think / Revise about",
+          "value": "think--revise-about",
+          "line": 165,
+          "column": 0,
+          "depth": 2
+        },
+        "lecture-7-8": {
+          "type": "header",
+          "text": "Lecture 7, 8",
+          "value": "lecture-7-8",
+          "line": 171,
+          "column": 0,
+          "depth": 1
+        },
+        "carry-skip-adders": {
+          "type": "header",
+          "text": "Carry Skip Adders",
+          "value": "carry-skip-adders",
+          "line": 173,
+          "column": 0,
+          "depth": 2
+        },
+        "hierarchial-csa": {
+          "type": "header",
+          "text": "Hierarchial CSA",
+          "value": "hierarchial-csa",
+          "line": 185,
+          "column": 0,
+          "depth": 2
+        },
+        "carry-select-adders": {
+          "type": "header",
+          "text": "Carry Select Adders",
+          "value": "carry-select-adders",
+          "line": 198,
+          "column": 0,
+          "depth": 2
+        },
+        "conditional-sum-adder": {
+          "type": "header",
+          "text": "Conditional Sum Adder",
+          "value": "conditional-sum-adder",
+          "line": 217,
+          "column": 0,
+          "depth": 3
+        },
+        "lecture-9": {
+          "type": "header",
+          "text": "Lecture 9",
+          "value": "lecture-9",
+          "line": 225,
+          "column": 0,
+          "depth": 1
+        },
+        "bit-serial-adder": {
+          "type": "header",
+          "text": "Bit Serial Adder",
+          "value": "bit-serial-adder",
+          "line": 227,
+          "column": 0,
+          "depth": 2
+        },
+        "general-structure-for-adders-using-generate-and-propagate": {
+          "type": "header",
+          "text": "General Structure for Adders using generate and propagate",
+          "value": "general-structure-for-adders-using-generate-and-propagate",
+          "line": 239,
+          "column": 0,
+          "depth": 2
+        },
+        "list-of-multipliers": {
+          "type": "header",
+          "text": "List of Multipliers",
+          "value": "list-of-multipliers",
+          "line": 260,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-10-intro-csa": {
+          "type": "header",
+          "text": "Lecture 10 (Intro CSA)",
+          "value": "lecture-10-intro-csa",
+          "line": 270,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-11-csa-numerical--trick-for-signed-numbers": {
+          "type": "header",
+          "text": "Lecture 11 (CSA Numerical && trick for signed numbers)",
+          "value": "lecture-11-csa-numerical--trick-for-signed-numbers",
+          "line": 294,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-12-csa-signed-number-numerical--booth-re-coding": {
+          "type": "header",
+          "text": "Lecture 12 (CSA Signed Number numerical & Booth re-coding)",
+          "value": "lecture-12-csa-signed-number-numerical--booth-re-coding",
+          "line": 339,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-13-lsm-rsm-booth-example4-8-csa-signed": {
+          "type": "header",
+          "text": "Lecture 13 (LSM, RSM, booth example(4, 8, CSA signed))",
+          "value": "lecture-13-lsm-rsm-booth-example4-8-csa-signed",
+          "line": 384,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-14-baugh-wooley-multiplier--fixed-point-notation": {
+          "type": "header",
+          "text": "Lecture 14 (Baugh Wooley Multiplier & fixed point notation)",
+          "value": "lecture-14-baugh-wooley-multiplier--fixed-point-notation",
+          "line": 421,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-15": {
+          "type": "header",
+          "text": "Lecture 15",
+          "value": "lecture-15",
+          "line": 434,
+          "column": 0,
+          "depth": 1
+        },
+        "lecture-16": {
+          "type": "header",
+          "text": "Lecture 16",
+          "value": "lecture-16",
+          "line": 462,
+          "column": 0,
+          "depth": 1
+        },
+        "^i": {
+          "type": "block",
+          "value": "i",
+          "line": 279,
+          "column": 27
+        }
+      },
+      "children": [],
+      "parent": "kvnu5kew5wvkwmka2si2ftc",
+      "data": {}
+    },
+    "d8PKo09LSN88vNc7MOk1T": {
+      "id": "d8PKo09LSN88vNc7MOk1T",
+      "title": "Sem 6",
+      "desc": "",
+      "updated": 1643979402420,
+      "created": 1643979402420,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1a4804f3c261735a53a8e423d6165283",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "S64b0OlCF4BigiCwOZ3e5",
+        "RPmQFNcvUb89M2nYu802I",
+        "ZnnjqzTxyepMvwsX6Lytr",
+        "Tkka57jlsUneqiwb6VK1Z",
+        "TN2l8VL0nEIPfVAADRxm5"
+      ],
+      "parent": "H8OS9Ap2DDjZ7XSIZWpQT",
+      "data": {}
+    },
+    "TN2l8VL0nEIPfVAADRxm5": {
+      "id": "TN2l8VL0nEIPfVAADRxm5",
+      "title": "Machine Learning",
+      "desc": "",
+      "updated": 1643979402427,
+      "created": 1643979402427,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6.machine-learning",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "7b2a8d6c37251f3aa7473170c60c400d",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "KD1xsuehs6CiHzKbTJtCC",
+        "o9V4uumi3Tls8uGzJEcos",
+        "MEXC6Rz6vhnGF1xxGucSo",
+        "BmxWSEoOhHxbfsbIbBBSN",
+        "SBDE29Uv1A941yOcaAtGZ",
+        "Rh3CSk5AzxljaDfFQC5wQ",
+        "PmPoZMCNzvQB44gE1Tg5L",
+        "ei9JWoeceRbHDcPoNblcb",
+        "stO81oij4841YX11cSuZI",
+        "thpLKumUhUP0f83D2CMWq",
+        "DJi8CEAOjDzqGAxO5KP87"
+      ],
+      "parent": "d8PKo09LSN88vNc7MOk1T",
+      "data": {}
+    },
+    "DJi8CEAOjDzqGAxO5KP87": {
+      "id": "DJi8CEAOjDzqGAxO5KP87",
+      "title": "9 Regularization",
+      "desc": "",
+      "updated": 1644390032472,
+      "created": 1644384936817,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.9-regularization",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "abe300a89dd91acde80aaee99191caf1",
+      "links": [],
+      "anchors": {
+        "solutions-to-overfitting---regularisation": {
+          "type": "header",
+          "text": "Solutions to overfitting - Regularisation",
+          "value": "solutions-to-overfitting---regularisation",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "bernoulli-example-with-regularisation": {
+          "type": "header",
+          "text": "Bernoulli Example with Regularisation",
+          "value": "bernoulli-example-with-regularisation",
+          "line": 36,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "thpLKumUhUP0f83D2CMWq": {
+      "id": "thpLKumUhUP0f83D2CMWq",
+      "title": "8-MLE-2",
+      "desc": "",
+      "updated": 1644386683578,
+      "created": 1644211663972,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.8-MLE-2",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "f861b00dd977ef0e21ea6005ae6a1e1b",
+      "links": [],
+      "anchors": {
+        "model-fitting-or-training": {
+          "type": "header",
+          "text": "Model Fitting or Training",
+          "value": "model-fitting-or-training",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "maximum-likelihood-estimation": {
+          "type": "header",
+          "text": "Maximum Likelihood Estimation",
+          "value": "maximum-likelihood-estimation",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "optimal-theta-for-unsupervisedunconditional-models": {
+          "type": "header",
+          "text": "Optimal theta for unsupervised(unconditional) models",
+          "value": "optimal-theta-for-unsupervisedunconditional-models",
+          "line": 35,
+          "column": 0,
+          "depth": 4
+        },
+        "example-mle-for-bernoulli-distribution": {
+          "type": "header",
+          "text": "Example: MLE for Bernoulli distribution",
+          "value": "example-mle-for-bernoulli-distribution",
+          "line": 42,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "stO81oij4841YX11cSuZI": {
+      "id": "stO81oij4841YX11cSuZI",
+      "title": "7 Multivariance Models",
+      "desc": "",
+      "updated": 1646905556768,
+      "created": 1643780631948,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.7-multivariance-models",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "eb11d26c3bf5a741039b33fd55ebc2d1",
+      "links": [],
+      "anchors": {
+        "multivariate-models": {
+          "type": "header",
+          "text": "Multivariate Models",
+          "value": "multivariate-models",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "covariance": {
+          "type": "header",
+          "text": "Covariance",
+          "value": "covariance",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "imortant-properties": {
+          "type": "header",
+          "text": "Imortant Properties",
+          "value": "imortant-properties",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        },
+        "correlationdegree-of-linearity": {
+          "type": "header",
+          "text": "Correlation(degree of linearity)",
+          "value": "correlationdegree-of-linearity",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "relation-between-autocovariance-and-autocorrelation": {
+          "type": "header",
+          "text": "Relation between autocovariance and autocorrelation",
+          "value": "relation-between-autocovariance-and-autocorrelation",
+          "line": 43,
+          "column": 0,
+          "depth": 4
+        },
+        "simpsons-paradox": {
+          "type": "header",
+          "text": "Simpson's Paradox",
+          "value": "simpsons-paradox",
+          "line": 52,
+          "column": 0,
+          "depth": 3
+        },
+        "todo": {
+          "type": "header",
+          "text": "TODO",
+          "value": "todo",
+          "line": 59,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "ei9JWoeceRbHDcPoNblcb": {
+      "id": "ei9JWoeceRbHDcPoNblcb",
+      "title": "6 Curse of Dimensionality",
+      "desc": "",
+      "updated": 1643746611893,
+      "created": 1643607271875,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.6-curse-of-dimensionality",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1dac0c62b74cca67aeff1d61b8128109",
+      "links": [],
+      "anchors": {
+        "curse-of-dimensionality": {
+          "type": "header",
+          "text": "Curse of Dimensionality",
+          "value": "curse-of-dimensionality",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "unit-cube-example": {
+          "type": "header",
+          "text": "Unit cube example",
+          "value": "unit-cube-example",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "implications": {
+          "type": "header",
+          "text": "Implications",
+          "value": "implications",
+          "line": 35,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "PmPoZMCNzvQB44gE1Tg5L": {
+      "id": "PmPoZMCNzvQB44gE1Tg5L",
+      "title": "5-KNN",
+      "desc": "",
+      "updated": 1644935322273,
+      "created": 1643746638590,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.5-KNN",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "9e3f82824a4c904c50a669bf22deb815",
+      "links": [],
+      "anchors": {
+        "examplar-based-methods": {
+          "type": "header",
+          "text": "Examplar based methods",
+          "value": "examplar-based-methods",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "knn-classification": {
+          "type": "header",
+          "text": "KNN classification",
+          "value": "knn-classification",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "choosing-the-optimal-k": {
+          "type": "header",
+          "text": "choosing the optimal k",
+          "value": "choosing-the-optimal-k",
+          "line": 26,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "Rh3CSk5AzxljaDfFQC5wQ": {
+      "id": "Rh3CSk5AzxljaDfFQC5wQ",
+      "title": "4 Bias Variance Tradeoff",
+      "desc": "",
+      "updated": 1642997952584,
+      "created": 1642923168514,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.4-bias-variance-tradeoff",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "ab5904e58d467996df109dc24b40ca86",
+      "links": [],
+      "anchors": {
+        "bias-variance-tradeoff": {
+          "type": "header",
+          "text": "Bias Variance Tradeoff",
+          "value": "bias-variance-tradeoff",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "bias": {
+          "type": "header",
+          "text": "Bias",
+          "value": "bias",
+          "line": 12,
+          "column": 0,
+          "depth": 2
+        },
+        "variance": {
+          "type": "header",
+          "text": "Variance",
+          "value": "variance",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "no-free-lunch-theorem": {
+          "type": "header",
+          "text": "No Free Lunch Theorem",
+          "value": "no-free-lunch-theorem",
+          "line": 25,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "SBDE29Uv1A941yOcaAtGZ": {
+      "id": "SBDE29Uv1A941yOcaAtGZ",
+      "title": "3 Verfitting and Generalisation",
+      "desc": "",
+      "updated": 1643000616284,
+      "created": 1642922795725,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.3-verfitting-and-generalisation",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "dfc7e90af935cc2cdaf7c6a1a19658bc",
+      "links": [],
+      "anchors": {
+        "overfitting-and-generalisation": {
+          "type": "header",
+          "text": "Overfitting and generalisation",
+          "value": "overfitting-and-generalisation",
+          "line": 7,
+          "column": 0,
+          "depth": 2
+        },
+        "population-risk": {
+          "type": "header",
+          "text": "Population Risk",
+          "value": "population-risk",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "choosing-the-right-model": {
+          "type": "header",
+          "text": "Choosing the Right Model",
+          "value": "choosing-the-right-model",
+          "line": 33,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "BmxWSEoOhHxbfsbIbBBSN": {
+      "id": "BmxWSEoOhHxbfsbIbBBSN",
+      "title": "2-MLE-and-regression",
+      "desc": "",
+      "updated": 1643001168394,
+      "created": 1642921088327,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.2-MLE-and-regression",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "4df8c616952e1031132bdc94cadcd863",
+      "links": [],
+      "anchors": {
+        "capturing-uncertainity": {
+          "type": "header",
+          "text": "Capturing Uncertainity",
+          "value": "capturing-uncertainity",
+          "line": 7,
+          "column": 0,
+          "depth": 2
+        },
+        "maximum-likelihood-estimation": {
+          "type": "header",
+          "text": "Maximum Likelihood Estimation",
+          "value": "maximum-likelihood-estimation",
+          "line": 21,
+          "column": 0,
+          "depth": 2
+        },
+        "negative-log-likelihood": {
+          "type": "header",
+          "text": "Negative Log Likelihood",
+          "value": "negative-log-likelihood",
+          "line": 27,
+          "column": 0,
+          "depth": 3
+        },
+        "regression": {
+          "type": "header",
+          "text": "Regression",
+          "value": "regression",
+          "line": 37,
+          "column": 0,
+          "depth": 1
+        },
+        "loss-function": {
+          "type": "header",
+          "text": "Loss Function",
+          "value": "loss-function",
+          "line": 41,
+          "column": 0,
+          "depth": 2
+        },
+        "empirical-risk": {
+          "type": "header",
+          "text": "Empirical Risk",
+          "value": "empirical-risk",
+          "line": 48,
+          "column": 0,
+          "depth": 2
+        },
+        "negative-log-likelihood-1": {
+          "type": "header",
+          "text": "Negative Log Likelihood",
+          "value": "negative-log-likelihood-1",
+          "line": 53,
+          "column": 0,
+          "depth": 3
+        },
+        "capturing-uncertainity-1": {
+          "type": "header",
+          "text": "Capturing Uncertainity",
+          "value": "capturing-uncertainity-1",
+          "line": 59,
+          "column": 0,
+          "depth": 2
+        },
+        "linear-regression": {
+          "type": "header",
+          "text": "Linear Regression",
+          "value": "linear-regression",
+          "line": 66,
+          "column": 0,
+          "depth": 2
+        },
+        "polynomial-regression": {
+          "type": "header",
+          "text": "Polynomial Regression",
+          "value": "polynomial-regression",
+          "line": 79,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "MEXC6Rz6vhnGF1xxGucSo": {
+      "id": "MEXC6Rz6vhnGF1xxGucSo",
+      "title": "11 Avoiding Overfitting",
+      "desc": "",
+      "updated": 1644994861575,
+      "created": 1644992487566,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.11-avoiding-overfitting",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1ef5efe480082b584cc24aac9185093e",
+      "links": [],
+      "anchors": {
+        "cross-validation": {
+          "type": "header",
+          "text": "Cross Validation",
+          "value": "cross-validation",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "early-stopping---simple-form-of-regularization": {
+          "type": "header",
+          "text": "Early Stopping - simple form of regularization",
+          "value": "early-stopping---simple-form-of-regularization",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "using-more-data": {
+          "type": "header",
+          "text": "Using More Data",
+          "value": "using-more-data",
+          "line": 39,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "o9V4uumi3Tls8uGzJEcos": {
+      "id": "o9V4uumi3Tls8uGzJEcos",
+      "title": "10 Bayesian Statistics",
+      "desc": "",
+      "updated": 1644951005537,
+      "created": 1644818744038,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.10-bayesian-statistics",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "bc3233d19cd6151fde0365a8efcfb7e5",
+      "links": [],
+      "anchors": {
+        "approaches-for-machine-learning": {
+          "type": "header",
+          "text": "Approaches for Machine Learning",
+          "value": "approaches-for-machine-learning",
+          "line": 7,
+          "column": 0,
+          "depth": 2
+        },
+        "weight-decay": {
+          "type": "header",
+          "text": "Weight Decay",
+          "value": "weight-decay",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "finding-the-optimal-regularization-parameter": {
+          "type": "header",
+          "text": "Finding the optimal regularization parameter",
+          "value": "finding-the-optimal-regularization-parameter",
+          "line": 33,
+          "column": 0,
+          "depth": 2
+        },
+        "todo": {
+          "type": "header",
+          "text": "TODO",
+          "value": "todo",
+          "line": 44,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "KD1xsuehs6CiHzKbTJtCC": {
+      "id": "KD1xsuehs6CiHzKbTJtCC",
+      "title": "1-Introduction",
+      "desc": "",
+      "updated": 1642884276822,
+      "created": 1642880535091,
+      "custom": {},
+      "fname": "acads.sem-6.machine-learning.1-Introduction",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "3e0edcded83a6458fd5b2f988b7434c2",
+      "links": [],
+      "anchors": {
+        "pillars-of-the-course": {
+          "type": "header",
+          "text": "Pillars of the course",
+          "value": "pillars-of-the-course",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "what-is-machine-learning": {
+          "type": "header",
+          "text": "What is machine learning",
+          "value": "what-is-machine-learning",
+          "line": 14,
+          "column": 0,
+          "depth": 1
+        },
+        "probabilistic-approach-for-ml": {
+          "type": "header",
+          "text": "Probabilistic approach for ML",
+          "value": "probabilistic-approach-for-ml",
+          "line": 20,
+          "column": 0,
+          "depth": 1
+        },
+        "supervised-machine-learning": {
+          "type": "header",
+          "text": "Supervised Machine Learning",
+          "value": "supervised-machine-learning",
+          "line": 28,
+          "column": 0,
+          "depth": 1
+        },
+        "classification-problem": {
+          "type": "header",
+          "text": "Classification Problem",
+          "value": "classification-problem",
+          "line": 33,
+          "column": 0,
+          "depth": 2
+        },
+        "iris-flowers-dataset": {
+          "type": "header",
+          "text": "IRIS flowers dataset",
+          "value": "iris-flowers-dataset",
+          "line": 39,
+          "column": 0,
+          "depth": 3
+        },
+        "eda-note": {
+          "type": "header",
+          "text": "EDA note",
+          "value": "eda-note",
+          "line": 62,
+          "column": 0,
+          "depth": 3
+        },
+        "empricialexperimental-risk-minimisation": {
+          "type": "header",
+          "text": "Empricial(experimental) Risk Minimisation",
+          "value": "empricialexperimental-risk-minimisation",
+          "line": 72,
+          "column": 0,
+          "depth": 1
+        },
+        "missclassification-rate": {
+          "type": "header",
+          "text": "Missclassification Rate",
+          "value": "missclassification-rate",
+          "line": 74,
+          "column": 0,
+          "depth": 2
+        },
+        "model-fitting-or-training": {
+          "type": "header",
+          "text": "Model Fitting or Training",
+          "value": "model-fitting-or-training",
+          "line": 90,
+          "column": 0,
+          "depth": 2
+        },
+        "todos": {
+          "type": "header",
+          "text": "TODOs",
+          "value": "todos",
+          "line": 96,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "TN2l8VL0nEIPfVAADRxm5",
+      "data": {}
+    },
+    "Tkka57jlsUneqiwb6VK1Z": {
+      "id": "Tkka57jlsUneqiwb6VK1Z",
+      "title": "Fundamentals of Environmental Studies",
+      "desc": "",
+      "updated": 1643979402425,
+      "created": 1643979402425,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6.fundamentals-of-environmental-studies",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "dfa6583b67d2b00be7d00f9bdd986743",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "hXsCdZz8wGcRX1j2ul3AW",
+        "gI3HOwMaDPupfjkZGGVZz",
+        "BJt6j2bNDhOoQKtcmGZp4"
+      ],
+      "parent": "d8PKo09LSN88vNc7MOk1T",
+      "data": {}
+    },
+    "BJt6j2bNDhOoQKtcmGZp4": {
+      "id": "BJt6j2bNDhOoQKtcmGZp4",
+      "title": "Lec 4",
+      "desc": "",
+      "updated": 1644934300766,
+      "created": 1643106246841,
+      "custom": {},
+      "fname": "acads.sem-6.fundamentals-of-environmental-studies.lec-4",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "a8be546e7eb43f77bfe37dd16b61f83b",
+      "links": [],
+      "anchors": {
+        "minerals": {
+          "type": "header",
+          "text": "minerals",
+          "value": "minerals",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "rocks": {
+          "type": "header",
+          "text": "rocks",
+          "value": "rocks",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "types": {
+          "type": "header",
+          "text": "types",
+          "value": "types",
+          "line": 24,
+          "column": 0,
+          "depth": 3
+        },
+        "soil": {
+          "type": "header",
+          "text": "soil",
+          "value": "soil",
+          "line": 35,
+          "column": 0,
+          "depth": 2
+        },
+        "types-1": {
+          "type": "header",
+          "text": "types",
+          "value": "types-1",
+          "line": 39,
+          "column": 0,
+          "depth": 3
+        },
+        "soil-pollution": {
+          "type": "header",
+          "text": "Soil Pollution",
+          "value": "soil-pollution",
+          "line": 45,
+          "column": 0,
+          "depth": 1
+        },
+        "types-of-pesticides--pollutants": {
+          "type": "header",
+          "text": "Types of pesticides / pollutants",
+          "value": "types-of-pesticides--pollutants",
+          "line": 50,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "Tkka57jlsUneqiwb6VK1Z",
+      "data": {}
+    },
+    "gI3HOwMaDPupfjkZGGVZz": {
+      "id": "gI3HOwMaDPupfjkZGGVZz",
+      "title": "Lec 2",
+      "desc": "",
+      "updated": 1642881535033,
+      "created": 1642881374810,
+      "custom": {},
+      "fname": "acads.sem-6.fundamentals-of-environmental-studies.lec-2",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "2bccbd9077bf9d65606d06857fcaa3ea",
+      "links": [],
+      "anchors": {
+        "origins-of-life": {
+          "type": "header",
+          "text": "Origins of Life",
+          "value": "origins-of-life",
+          "line": 23,
+          "column": 0,
+          "depth": 2
+        },
+        "ecosystem": {
+          "type": "header",
+          "text": "Ecosystem",
+          "value": "ecosystem",
+          "line": 33,
+          "column": 0,
+          "depth": 1
+        },
+        "terrestial-ecosystems": {
+          "type": "header",
+          "text": "terrestial ecosystems",
+          "value": "terrestial-ecosystems",
+          "line": 41,
+          "column": 0,
+          "depth": 2
+        },
+        "forest-ecosystem": {
+          "type": "header",
+          "text": "forest ecosystem",
+          "value": "forest-ecosystem",
+          "line": 48,
+          "column": 0,
+          "depth": 3
+        },
+        "tropical-evergreen-forest": {
+          "type": "header",
+          "text": "tropical evergreen forest",
+          "value": "tropical-evergreen-forest",
+          "line": 52,
+          "column": 0,
+          "depth": 4
+        },
+        "tropical-deciduous-forest": {
+          "type": "header",
+          "text": "tropical deciduous forest",
+          "value": "tropical-deciduous-forest",
+          "line": 57,
+          "column": 0,
+          "depth": 4
+        },
+        "temperate-evergreen-forest": {
+          "type": "header",
+          "text": "temperate evergreen forest",
+          "value": "temperate-evergreen-forest",
+          "line": 62,
+          "column": 0,
+          "depth": 4
+        },
+        "temperate-deciduous-forest": {
+          "type": "header",
+          "text": "temperate deciduous forest",
+          "value": "temperate-deciduous-forest",
+          "line": 66,
+          "column": 0,
+          "depth": 4
+        },
+        "taiga-boreal-forest": {
+          "type": "header",
+          "text": "taiga (boreal) forest",
+          "value": "taiga-boreal-forest",
+          "line": 68,
+          "column": 0,
+          "depth": 4
+        },
+        "desert-ecosystem": {
+          "type": "header",
+          "text": "desert ecosystem",
+          "value": "desert-ecosystem",
+          "line": 76,
+          "column": 0,
+          "depth": 3
+        },
+        "grassland-ecosystem": {
+          "type": "header",
+          "text": "grassland ecosystem",
+          "value": "grassland-ecosystem",
+          "line": 80,
+          "column": 0,
+          "depth": 3
+        },
+        "montane-or-mountain-ecosystem": {
+          "type": "header",
+          "text": "montane or mountain ecosystem",
+          "value": "montane-or-mountain-ecosystem",
+          "line": 85,
+          "column": 0,
+          "depth": 3
+        },
+        "tundra-or-alpine-ecosystem": {
+          "type": "header",
+          "text": "tundra or alpine ecosystem",
+          "value": "tundra-or-alpine-ecosystem",
+          "line": 87,
+          "column": 0,
+          "depth": 3
+        },
+        "ice-ecosystem": {
+          "type": "header",
+          "text": "ice ecosystem",
+          "value": "ice-ecosystem",
+          "line": 93,
+          "column": 0,
+          "depth": 3
+        },
+        "biological-terms": {
+          "type": "header",
+          "text": "Biological Terms",
+          "value": "biological-terms",
+          "line": 97,
+          "column": 0,
+          "depth": 1
+        },
+        "importance-of-mangronves": {
+          "type": "header",
+          "text": "importance of mangronves",
+          "value": "importance-of-mangronves",
+          "line": 115,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "Tkka57jlsUneqiwb6VK1Z",
+      "data": {}
+    },
+    "hXsCdZz8wGcRX1j2ul3AW": {
+      "id": "hXsCdZz8wGcRX1j2ul3AW",
+      "title": "Lec 1",
+      "desc": "",
+      "updated": 1642881269686,
+      "created": 1642880519981,
+      "custom": {},
+      "fname": "acads.sem-6.fundamentals-of-environmental-studies.lec-1",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "392506970a4b87670bf0c4c6e8421fcb",
+      "links": [],
+      "anchors": {
+        "environment-vs-ecology": {
+          "type": "header",
+          "text": "environment vs ecology",
+          "value": "environment-vs-ecology",
+          "line": 7,
+          "column": 0,
+          "depth": 2
+        },
+        "biosphere": {
+          "type": "header",
+          "text": "biosphere",
+          "value": "biosphere",
+          "line": 12,
+          "column": 0,
+          "depth": 2
+        },
+        "ecosystem": {
+          "type": "header",
+          "text": "ecosystem",
+          "value": "ecosystem",
+          "line": 17,
+          "column": 0,
+          "depth": 2
+        },
+        "types": {
+          "type": "header",
+          "text": "types",
+          "value": "types",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        },
+        "aquatic": {
+          "type": "header",
+          "text": "aquatic",
+          "value": "aquatic",
+          "line": 23,
+          "column": 0,
+          "depth": 4
+        },
+        "tundra-exteme-cold-climate": {
+          "type": "header",
+          "text": "tundra (exteme cold climate)",
+          "value": "tundra-exteme-cold-climate",
+          "line": 30,
+          "column": 0,
+          "depth": 4
+        },
+        "terrestial": {
+          "type": "header",
+          "text": "terrestial",
+          "value": "terrestial",
+          "line": 32,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "Tkka57jlsUneqiwb6VK1Z",
+      "data": {}
+    },
+    "ZnnjqzTxyepMvwsX6Lytr": {
+      "id": "ZnnjqzTxyepMvwsX6Lytr",
+      "title": "Computer Vision",
+      "desc": "",
+      "updated": 1643979402423,
+      "created": 1643979402423,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6.computer-vision",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1b369c3ccdfb8a90f179707aa0c89d43",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "7iwle7bwr3wgmqx19n1i3sh",
+        "jnYmiJo5s2BuF2CYJe4b1",
+        "s9k71a9JQIZGzZjsXUmWR",
+        "kFdhjexbkBPW1a47YdOKh",
+        "Y2iLGKl9mabCkYXe9njir",
+        "ifmGOHRpG2boYwe9mTk8d",
+        "BgB9oRCh7UiA8oSQuR6Ly",
+        "rKL0p5CPTbP8562FTO8Mr",
+        "U9lUxkH7Gix1SnSBfN7bb",
+        "KCOBAxohhtwsLjnxlV4w2",
+        "PezPhIacmef48kh1E5p9d"
+      ],
+      "parent": "d8PKo09LSN88vNc7MOk1T",
+      "data": {}
+    },
+    "PezPhIacmef48kh1E5p9d": {
+      "id": "PezPhIacmef48kh1E5p9d",
+      "title": "Lec 9",
+      "desc": "",
+      "updated": 1644479325215,
+      "created": 1644305421621,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-9",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "1d4e4be49a3f22673e60aff07f81d35c",
+      "links": [],
+      "anchors": {
+        "second-moments-of-a-region": {
+          "type": "header",
+          "text": "Second moments of a region",
+          "value": "second-moments-of-a-region",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "harris-corner-detection": {
+          "type": "header",
+          "text": "Harris Corner Detection",
+          "value": "harris-corner-detection",
+          "line": 23,
+          "column": 0,
+          "depth": 3
+        },
+        "non-maximal-supression": {
+          "type": "header",
+          "text": "Non Maximal Supression",
+          "value": "non-maximal-supression",
+          "line": 33,
+          "column": 0,
+          "depth": 4
+        },
+        "boundary-detection": {
+          "type": "header",
+          "text": "Boundary Detection",
+          "value": "boundary-detection",
+          "line": 41,
+          "column": 0,
+          "depth": 1
+        },
+        "fitting-lines-and-curves-to-edges": {
+          "type": "header",
+          "text": "Fitting lines and curves to edges",
+          "value": "fitting-lines-and-curves-to-edges",
+          "line": 57,
+          "column": 0,
+          "depth": 2
+        },
+        "extendel-learning--todo": {
+          "type": "header",
+          "text": "Extendel Learning / TODO",
+          "value": "extendel-learning--todo",
+          "line": 65,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "KCOBAxohhtwsLjnxlV4w2": {
+      "id": "KCOBAxohhtwsLjnxlV4w2",
+      "title": "Lec 8",
+      "desc": "",
+      "updated": 1644344196075,
+      "created": 1643873384253,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-8",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "a0b870658b8a8acb94b0053f32c590dd",
+      "links": [],
+      "anchors": {
+        "canny-edge-detection-steps-in-detail": {
+          "type": "header",
+          "text": "Canny edge detection steps in detail",
+          "value": "canny-edge-detection-steps-in-detail",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "corner": {
+          "type": "header",
+          "text": "Corner",
+          "value": "corner",
+          "line": 40,
+          "column": 0,
+          "depth": 1
+        },
+        "corner-detection": {
+          "type": "header",
+          "text": "Corner Detection",
+          "value": "corner-detection",
+          "line": 45,
+          "column": 0,
+          "depth": 2
+        },
+        "todo": {
+          "type": "header",
+          "text": "TODO",
+          "value": "todo",
+          "line": 60,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "U9lUxkH7Gix1SnSBfN7bb": {
+      "id": "U9lUxkH7Gix1SnSBfN7bb",
+      "title": "Lec 7",
+      "desc": "",
+      "updated": 1644344196078,
+      "created": 1644336629713,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-7",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "6646717b559cf749fb994ce4fa9fee1b",
+      "links": [],
+      "anchors": {
+        "gaussian-smoothing": {
+          "type": "header",
+          "text": "Gaussian Smoothing",
+          "value": "gaussian-smoothing",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "canny-edge-detection": {
+          "type": "header",
+          "text": "Canny Edge Detection",
+          "value": "canny-edge-detection",
+          "line": 32,
+          "column": 0,
+          "depth": 1
+        },
+        "objective": {
+          "type": "header",
+          "text": "objective",
+          "value": "objective",
+          "line": 36,
+          "column": 0,
+          "depth": 2
+        },
+        "steps": {
+          "type": "header",
+          "text": "Steps",
+          "value": "steps",
+          "line": 42,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "rKL0p5CPTbP8562FTO8Mr": {
+      "id": "rKL0p5CPTbP8562FTO8Mr",
+      "title": "Lec 6",
+      "desc": "",
+      "updated": 1643713763645,
+      "created": 1643270579021,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-6",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "28c588aa5c5862bbbdf55449e733344f",
+      "links": [],
+      "anchors": {
+        "thresholding": {
+          "type": "header",
+          "text": "Thresholding",
+          "value": "thresholding",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "hysteresis-thresholding": {
+          "type": "header",
+          "text": "Hysteresis Thresholding",
+          "value": "hysteresis-thresholding",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "implementation": {
+          "type": "header",
+          "text": "Implementation",
+          "value": "implementation",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        },
+        "edge-detection-using-second-derivative": {
+          "type": "header",
+          "text": "Edge Detection using Second Derivative",
+          "value": "edge-detection-using-second-derivative",
+          "line": 27,
+          "column": 0,
+          "depth": 1
+        },
+        "discrete-lapacian-operator": {
+          "type": "header",
+          "text": "Discrete lapacian operator",
+          "value": "discrete-lapacian-operator",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "implementation-1": {
+          "type": "header",
+          "text": "Implementation",
+          "value": "implementation-1",
+          "line": 50,
+          "column": 0,
+          "depth": 3
+        },
+        "effect-of-noise": {
+          "type": "header",
+          "text": "Effect of noise",
+          "value": "effect-of-noise",
+          "line": 59,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "BgB9oRCh7UiA8oSQuR6Ly": {
+      "id": "BgB9oRCh7UiA8oSQuR6Ly",
+      "title": "Lec 5",
+      "desc": "",
+      "updated": 1644889224891,
+      "created": 1643521022646,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-5",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "ec0b43a4df6576adfcba56b6fad8744c",
+      "links": [],
+      "anchors": {
+        "edge-detection-using-gradients": {
+          "type": "header",
+          "text": "Edge Detection using Gradients",
+          "value": "edge-detection-using-gradients",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "finite-differences-for-matrices": {
+          "type": "header",
+          "text": "Finite differences for matrices",
+          "value": "finite-differences-for-matrices",
+          "line": 25,
+          "column": 0,
+          "depth": 2
+        },
+        "kernel-examples": {
+          "type": "header",
+          "text": "Kernel examples",
+          "value": "kernel-examples",
+          "line": 31,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "ifmGOHRpG2boYwe9mTk8d": {
+      "id": "ifmGOHRpG2boYwe9mTk8d",
+      "title": "Lec 4",
+      "desc": "",
+      "updated": 1643520881078,
+      "created": 1643096100305,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-4",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "4037691bce746cba67a13e76ded70d26",
+      "links": [],
+      "anchors": {
+        "edge-detection": {
+          "type": "header",
+          "text": "Edge Detection",
+          "value": "edge-detection",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "edge-formation": {
+          "type": "header",
+          "text": "Edge Formation",
+          "value": "edge-formation",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "edge-types": {
+          "type": "header",
+          "text": "Edge Types",
+          "value": "edge-types",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        },
+        "edge-detector-and-performance": {
+          "type": "header",
+          "text": "Edge Detector and Performance",
+          "value": "edge-detector-and-performance",
+          "line": 29,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "Y2iLGKl9mabCkYXe9njir": {
+      "id": "Y2iLGKl9mabCkYXe9njir",
+      "title": "Lec 3",
+      "desc": "",
+      "updated": 1643292614960,
+      "created": 1643183477024,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-3",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "859a6080401e393b04c5a6eb4ebd1141",
+      "links": [],
+      "anchors": {
+        "camera-calibration": {
+          "type": "header",
+          "text": "Camera Calibration",
+          "value": "camera-calibration",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "constrained-least--squares": {
+          "type": "header",
+          "text": "Constrained Least  Squares",
+          "value": "constrained-least--squares",
+          "line": 19,
+          "column": 0,
+          "depth": 2
+        },
+        "finding-the-intrinsic-and-extrinsic-parameters": {
+          "type": "header",
+          "text": "Finding the intrinsic and extrinsic parameters",
+          "value": "finding-the-intrinsic-and-extrinsic-parameters",
+          "line": 34,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "kFdhjexbkBPW1a47YdOKh": {
+      "id": "kFdhjexbkBPW1a47YdOKh",
+      "title": "Lec 2",
+      "desc": "",
+      "updated": 1644747842768,
+      "created": 1643181184689,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-2",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d9b5f17ce533499c0578135e2fe790d9",
+      "links": [
+        {
+          "type": "ref",
+          "from": {
+            "fname": "acads.sem-6.computer-vision.lec-2",
+            "id": "kFdhjexbkBPW1a47YdOKh",
+            "vaultName": "vault"
+          },
+          "value": "acads.sem-6.computer-vision.lec-1",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 142
+            },
+            "end": {
+              "line": 5,
+              "column": 67,
+              "offset": 208
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "acads.sem-6.computer-vision.lec-1",
+            "anchorHeader": "^dAINqR5UIUcW"
+          }
+        }
+      ],
+      "anchors": {
+        "using-homogeneous-coordinates-to-get-a-linear-equation": {
+          "type": "header",
+          "text": "Using Homogeneous Coordinates to get a linear equation",
+          "value": "using-homogeneous-coordinates-to-get-a-linear-equation",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "world-coordinate-to-camera-coordinate": {
+          "type": "header",
+          "text": "World Coordinate to Camera Coordinate",
+          "value": "world-coordinate-to-camera-coordinate",
+          "line": 41,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "s9k71a9JQIZGzZjsXUmWR": {
+      "id": "s9k71a9JQIZGzZjsXUmWR",
+      "title": "Lec 10",
+      "desc": "",
+      "updated": 1644483197212,
+      "created": 1644478289786,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-10",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e80f01a57eb0cae435ffdedc43a63b68",
+      "links": [],
+      "anchors": {
+        "fitting-a-curve-to-edges": {
+          "type": "header",
+          "text": "Fitting a curve to edges",
+          "value": "fitting-a-curve-to-edges",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "active-contourssnakes": {
+          "type": "header",
+          "text": "Active Contours(Snakes)",
+          "value": "active-contourssnakes",
+          "line": 25,
+          "column": 0,
+          "depth": 1
+        },
+        "representing-a-contour": {
+          "type": "header",
+          "text": "Representing a contour",
+          "value": "representing-a-contour",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "attracting-contours-to-edges": {
+          "type": "header",
+          "text": "Attracting contours to edges",
+          "value": "attracting-contours-to-edges",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "jnYmiJo5s2BuF2CYJe4b1": {
+      "id": "jnYmiJo5s2BuF2CYJe4b1",
+      "title": "Lec 1",
+      "desc": "",
+      "updated": 1643204263155,
+      "created": 1642880549600,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.lec-1",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "52839475e23198cab8fcf90c527ae15d",
+      "links": [
+        {
+          "from": {
+            "fname": "acads.sem-6.computer-vision.lec-2",
+            "id": "kFdhjexbkBPW1a47YdOKh",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 142
+            },
+            "end": {
+              "line": 5,
+              "column": 67,
+              "offset": 208
+            },
+            "indent": []
+          },
+          "value": "acads.sem-6.computer-vision.lec-1"
+        }
+      ],
+      "anchors": {
+        "computer-vision": {
+          "type": "header",
+          "text": "Computer Vision",
+          "value": "computer-vision",
+          "line": 7,
+          "column": 0,
+          "depth": 1
+        },
+        "image-formation-model": {
+          "type": "header",
+          "text": "Image formation model",
+          "value": "image-formation-model",
+          "line": 16,
+          "column": 0,
+          "depth": 1
+        },
+        "perspective-projection-with-pinhole": {
+          "type": "header",
+          "text": "Perspective projection with Pinhole",
+          "value": "perspective-projection-with-pinhole",
+          "line": 21,
+          "column": 0,
+          "depth": 2
+        },
+        "properties-of-perspective-projection": {
+          "type": "header",
+          "text": "Properties of perspective projection",
+          "value": "properties-of-perspective-projection",
+          "line": 31,
+          "column": 0,
+          "depth": 3
+        },
+        "linear-camera-model": {
+          "type": "header",
+          "text": "Linear Camera Model",
+          "value": "linear-camera-model",
+          "line": 37,
+          "column": 0,
+          "depth": 2
+        },
+        "camera-to-image-transformation": {
+          "type": "header",
+          "text": "Camera to image transformation",
+          "value": "camera-to-image-transformation",
+          "line": 50,
+          "column": 0,
+          "depth": 3
+        },
+        "image-plane-to-image-matrix": {
+          "type": "header",
+          "text": "Image plane to image matrix",
+          "value": "image-plane-to-image-matrix",
+          "line": 57,
+          "column": 0,
+          "depth": 4
+        },
+        "^dAINqR5UIUcW": {
+          "type": "block",
+          "value": "dAINqR5UIUcW",
+          "line": 73,
+          "column": 0
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "7iwle7bwr3wgmqx19n1i3sh": {
+      "id": "7iwle7bwr3wgmqx19n1i3sh",
+      "title": "Deep Learning",
+      "desc": "",
+      "updated": 1652029489346,
+      "created": 1651560141913,
+      "custom": {},
+      "fname": "acads.sem-6.computer-vision.deep-learning",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e3269f676519f61c1777c8fd9633febf",
+      "links": [],
+      "anchors": {
+        "beyond-linear-mapping": {
+          "type": "header",
+          "text": "Beyond Linear Mapping",
+          "value": "beyond-linear-mapping",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "multi-layer-perceptron": {
+          "type": "header",
+          "text": "Multi Layer Perceptron",
+          "value": "multi-layer-perceptron",
+          "line": 29,
+          "column": 0,
+          "depth": 1
+        },
+        "importance-of-depth": {
+          "type": "header",
+          "text": "Importance of depth",
+          "value": "importance-of-depth",
+          "line": 45,
+          "column": 0,
+          "depth": 2
+        },
+        "ann-and-neuron-structure": {
+          "type": "header",
+          "text": "ANN and Neuron Structure",
+          "value": "ann-and-neuron-structure",
+          "line": 50,
+          "column": 0,
+          "depth": 1
+        },
+        "learning": {
+          "type": "header",
+          "text": "Learning",
+          "value": "learning",
+          "line": 54,
+          "column": 0,
+          "depth": 1
+        },
+        "gradient-descent": {
+          "type": "header",
+          "text": "Gradient Descent",
+          "value": "gradient-descent",
+          "line": 56,
+          "column": 0,
+          "depth": 2
+        },
+        "batch-gradient-descent": {
+          "type": "header",
+          "text": "Batch gradient descent",
+          "value": "batch-gradient-descent",
+          "line": 61,
+          "column": 0,
+          "depth": 2
+        },
+        "stochastic-gradient-descent": {
+          "type": "header",
+          "text": "Stochastic gradient descent",
+          "value": "stochastic-gradient-descent",
+          "line": 71,
+          "column": 0,
+          "depth": 2
+        },
+        "mini-batch-graident-descent": {
+          "type": "header",
+          "text": "Mini-batch graident descent",
+          "value": "mini-batch-graident-descent",
+          "line": 81,
+          "column": 0,
+          "depth": 2
+        },
+        "loss-plots": {
+          "type": "header",
+          "text": "Loss Plots",
+          "value": "loss-plots",
+          "line": 94,
+          "column": 0,
+          "depth": 3
+        },
+        "properties": {
+          "type": "header",
+          "text": "Properties",
+          "value": "properties",
+          "line": 97,
+          "column": 0,
+          "depth": 3
+        },
+        "problems-in-descent": {
+          "type": "header",
+          "text": "Problems in Descent",
+          "value": "problems-in-descent",
+          "line": 103,
+          "column": 0,
+          "depth": 2
+        },
+        "solutions": {
+          "type": "header",
+          "text": "Solutions",
+          "value": "solutions",
+          "line": 124,
+          "column": 0,
+          "depth": 2
+        },
+        "momentum": {
+          "type": "header",
+          "text": "Momentum",
+          "value": "momentum",
+          "line": 126,
+          "column": 0,
+          "depth": 3
+        },
+        "neterov-accelerate-gradient": {
+          "type": "header",
+          "text": "Neterov Accelerate Gradient",
+          "value": "neterov-accelerate-gradient",
+          "line": 148,
+          "column": 0,
+          "depth": 3
+        },
+        "adagrad": {
+          "type": "header",
+          "text": "AdaGrad",
+          "value": "adagrad",
+          "line": 162,
+          "column": 0,
+          "depth": 3
+        },
+        "regularization": {
+          "type": "header",
+          "text": "Regularization",
+          "value": "regularization",
+          "line": 170,
+          "column": 0,
+          "depth": 3
+        },
+        "dropouts": {
+          "type": "header",
+          "text": "Dropouts",
+          "value": "dropouts",
+          "line": 181,
+          "column": 0,
+          "depth": 3
+        },
+        "backpropogation": {
+          "type": "header",
+          "text": "Backpropogation",
+          "value": "backpropogation",
+          "line": 186,
+          "column": 0,
+          "depth": 1
+        },
+        "activation-functions": {
+          "type": "header",
+          "text": "Activation Functions",
+          "value": "activation-functions",
+          "line": 189,
+          "column": 0,
+          "depth": 1
+        },
+        "some-common-activation-functions": {
+          "type": "header",
+          "text": "Some common activation functions",
+          "value": "some-common-activation-functions",
+          "line": 195,
+          "column": 0,
+          "depth": 2
+        },
+        "sigmoid": {
+          "type": "header",
+          "text": "Sigmoid",
+          "value": "sigmoid",
+          "line": 197,
+          "column": 0,
+          "depth": 3
+        },
+        "tanh": {
+          "type": "header",
+          "text": "tanh",
+          "value": "tanh",
+          "line": 203,
+          "column": 0,
+          "depth": 3
+        },
+        "relu": {
+          "type": "header",
+          "text": "ReLU",
+          "value": "relu",
+          "line": 208,
+          "column": 0,
+          "depth": 3
+        },
+        "automatic-differentiation-and-computational-graphs": {
+          "type": "header",
+          "text": "Automatic Differentiation and Computational Graphs",
+          "value": "automatic-differentiation-and-computational-graphs",
+          "line": 214,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "ZnnjqzTxyepMvwsX6Lytr",
+      "data": {}
+    },
+    "RPmQFNcvUb89M2nYu802I": {
+      "id": "RPmQFNcvUb89M2nYu802I",
+      "title": "Computer Networks",
+      "desc": "",
+      "updated": 1643979402422,
+      "created": 1643979402422,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6.computer-networks",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "75f0e01df5482e78a0333e285f7ebe73",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "d8PKo09LSN88vNc7MOk1T",
+      "data": {}
+    },
+    "S64b0OlCF4BigiCwOZ3e5": {
+      "id": "S64b0OlCF4BigiCwOZ3e5",
+      "title": "Big Data Analytics",
+      "desc": "",
+      "updated": 1643979402421,
+      "created": 1643979402421,
+      "stub": true,
+      "custom": {
+        "stub": true
+      },
+      "fname": "acads.sem-6.big-data-analytics",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "74b9d972bc653e3f2f6585807a688a4b",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "kj2OZpfrI93bGmYCBMLgM"
+      ],
+      "parent": "d8PKo09LSN88vNc7MOk1T",
+      "data": {}
+    },
+    "kj2OZpfrI93bGmYCBMLgM": {
+      "id": "kj2OZpfrI93bGmYCBMLgM",
+      "title": "Lec 1",
+      "desc": "",
+      "updated": 1642880583746,
+      "created": 1642880583746,
+      "custom": {},
+      "fname": "acads.sem-6.big-data-analytics.lec-1",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "5785f6e7da06c15f6ed095c349f1d722",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "S64b0OlCF4BigiCwOZ3e5",
+      "data": {}
+    }
+  },
+  "domains": [
+    {
+      "id": "LBE6GBZjFtOaX27nwRSpq",
+      "title": "Notes 📚",
+      "desc": "",
+      "updated": 1642916746120,
+      "created": 1642875904363,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "f3ab1afac9d88a8f51c98f4e257b81a2",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "H8OS9Ap2DDjZ7XSIZWpQT",
+        "m2fe4910vhlj3cwsbw45wfc",
+        "tpmpx2xkasjhbntai7ejfx3",
+        "ydBpHsjLwIGYomDZo8NtB",
+        "g9m1mlmymq7qvcjzi8ap2qu"
+      ],
+      "parent": null,
+      "data": {},
+      "body": "\n![home](/assets/images/home.png)\n"
+    }
+  ],
+  "noteIndex": {
+    "id": "LBE6GBZjFtOaX27nwRSpq",
+    "title": "Notes 📚",
+    "desc": "",
+    "updated": 1642916746120,
+    "created": 1642875904363,
+    "custom": {
+      "nav_order": 0,
+      "permalink": "/"
+    },
+    "fname": "root",
+    "type": "note",
+    "vault": {
+      "fsPath": "vault"
+    },
+    "contentHash": "f3ab1afac9d88a8f51c98f4e257b81a2",
+    "links": [],
+    "anchors": {},
+    "children": [
+      "H8OS9Ap2DDjZ7XSIZWpQT",
+      "m2fe4910vhlj3cwsbw45wfc",
+      "tpmpx2xkasjhbntai7ejfx3",
+      "ydBpHsjLwIGYomDZo8NtB",
+      "g9m1mlmymq7qvcjzi8ap2qu"
+    ],
+    "parent": null,
+    "data": {},
+    "body": "\n![home](/assets/images/home.png)\n"
+  },
+  "vaults": [
+    {
+      "fsPath": "vault"
+    }
+  ]
+}
